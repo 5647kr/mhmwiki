@@ -260,90 +260,7 @@
   }
 }
 
-#filter {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(160, 160, 160, 0.5);
-  top: 0;
-  left: 0;
-  z-index: 20;
-  overflow-y: hidden;
-  display: none;
-
-  .filterWrap {
-    width: 40rem;
-    padding: 2rem;
-    background-color: var(--white-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 1rem;
-
-    & div {
-      margin-top: 4rem;
-    }
-
-    & h2 {
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    & h3 {
-      font-size: 1.6rem;
-    }
-
-    & ul {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 1rem;
-
-      & li {
-        width: 100%;
-      }
-
-      & label {
-        width: 100%;
-        border-radius: 1rem;
-        border: 1px solid var(--content-color);
-        display: block;
-        padding: 1rem;
-        border-radius: 1rem;
-        font-size: 1.4rem;
-        text-align: center;
-        font-weight: var(--font-bw);
-        cursor: pointer;
-      }
-
-      & input:checked + label {
-        background-color: var(--content-color);
-        color: var(--white-color);
-      }
-
-      & abbr {
-        text-decoration: none;
-      }
-    }
-
-    & button {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-
-      & i {
-        font-size: 1.4rem;
-      }
-    }
-  }
-}
-
-#filter.active,
-#roulette.active {
-  display: block;
-}
-
+#filter,
 #roulette {
   position: fixed;
   width: 100%;
@@ -354,58 +271,128 @@
   z-index: 20;
   overflow-y: hidden;
   display: none;
+}
 
-  .rouletteWrap {
-    width: 40rem;
-    padding: 4rem 2rem 2rem 2rem;
+#filter.active,
+#roulette.active {
+  display: block;
+}
 
-    background-color: var(--white-color);
+.filterWrap,
+.rouletteWrap {
+  width: 40rem;
+  min-height: auto;
+  max-height: calc(100% - 4rem);
+  background-color: var(--white-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.filterWrap {
+  padding: 2rem;
+
+  & div {
+    margin-top: 4rem;
+  }
+
+  & h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.6rem;
+  }
+
+  & ul {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+
+    & li {
+      width: 100%;
+    }
+
+    & label {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid var(--content-color);
+      display: block;
+      padding: 1rem;
+      border-radius: 1rem;
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: var(--font-bw);
+      cursor: pointer;
+    }
+
+    & input:checked + label {
+      background-color: var(--content-color);
+      color: var(--white-color);
+    }
+
+    & abbr {
+      text-decoration: none;
+    }
+  }
+
+  & button {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 1rem;
+    top: 2rem;
+    right: 2rem;
 
-    & .rouletteState {
-      margin-bottom: 4rem;
+    & i {
+      font-size: 1.4rem;
+    }
+  }
+}
 
-      & ul {
-        display: flex;
+.rouletteWrap {
+  padding: 4rem 2rem 2rem 2rem;
+
+  & .rouletteState {
+    margin-bottom: 4rem;
+
+    & ul {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid var(--content-color);
+
+      & > li {
         width: 100%;
-        border-bottom: 1px solid var(--content-color);
+        padding-block: 1rem;
 
-        & > li {
+        & button {
           width: 100%;
-          padding-block: 1rem;
-
-          & button {
-            width: 100%;
-          }
         }
+      }
 
-        & > li.active {
-          background-color: var(--sub-color);
-          & > button {
-            color: var(--white-color);
-          }
+      & > li.active {
+        background-color: var(--sub-color);
+        & > button {
+          color: var(--white-color);
         }
       }
     }
+  }
 
-    & .closeBtn {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
+  & .closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
 
-      & i {
-        font-size: 1.4rem;
-      }
+    & i {
+      font-size: 1.4rem;
     }
   }
 }
 
 .teamGen {
-  height: 80vh;
   & .total {
     text-align: right;
     color: var(--content-color);
@@ -487,8 +474,6 @@
     }
 
     & ul {
-      height: 30vh;
-      overflow-y: auto;
       padding: 2rem 1rem;
     }
 

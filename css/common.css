@@ -11,7 +11,7 @@
   --content-color: #606060;
   --sub-color: #a0a0a0;
   --black-color: #000000;
-  --white-color: #fff
+  --white-color: #fff;
 }
 
 html {
@@ -49,11 +49,13 @@ button {
   height: 2rem;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
-input, textarea {
+input,
+textarea {
   color: var(--content-color);
   display: block;
 }
@@ -111,7 +113,7 @@ i {
     background-color: var(--white-color);
     box-shadow: 0 2px 4px var(--shadow-color);
     overflow-y: auto;
-    
+
     & ul {
       width: 35%;
       max-height: 40rem;
@@ -131,7 +133,8 @@ i {
         aspect-ratio: 1 / 1;
       }
 
-      & span, strong {
+      & span,
+      strong {
         font-size: 1.2rem;
       }
     }
@@ -144,7 +147,6 @@ main {
   column-gap: 1.6rem;
   padding-inline: 1.6rem;
 }
-
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   main {
@@ -188,4 +190,25 @@ footer {
     text-align: center;
     font-size: 1.4rem;
   }
+}
+
+/* 스크롤바 전체 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* 스크롤바 트랙 (배경) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 스크롤바 손잡이 */
+::-webkit-scrollbar-thumb {
+  background-color: var(--sub-color);
+  border-radius: 4px;
+}
+
+/* hover 시 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
 }

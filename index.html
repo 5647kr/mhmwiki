@@ -34,7 +34,9 @@
             <img src="./img/mobile.webp" alt="정보, 오류 제보 받아요 배너" />
           </picture>
           <div class="noticeTitle">
-            <h2 data-content="MHMWIKI는&#10;몬스터 헌터부터 몬스터 헌터 와일즈까지&#10;모든 대형 몬스터의 최신 정보를 제공합니다.">
+            <h2
+              data-content="MHMWIKI는&#10;몬스터 헌터부터 몬스터 헌터 와일즈까지&#10;모든 대형 몬스터의 최신 정보를 제공합니다."
+            >
               MHMWIKI는 <br />
               몬스터 헌터부터 몬스터 헌터 와일즈까지 <br />
               모든 대형 몬스터의 최신 정보를 제공합니다.
@@ -93,7 +95,57 @@
         </div>
       </article>
 
+      <!-- 팀뽑기 -->
+      <article id="roulette">
+        <div class="rouletteWrap">
+          <div class="rouletteState">
+            <ul>
+              <li class="active"><button>팀 생성</button></li>
+              <li><button disabled>몬스터 룰렛</button></li>
+              <li><button disabled>무기 룰렛</button></li>
+              <li><button disabled>아이템 룰렛</button></li>
+            </ul>
+          </div>
+
+          <!-- 팀 생성Wrap -->
+          <div class="teamGen">
+            <div class="team-inputWrap">
+              <p class="total">0명</p>
+              <textarea placeholder="이름1&#10;이름2&#10;이름3"></textarea>
+              <label
+                >팀당 인원수
+                <input type="number" min="1" max="4" placeholder="1~4" />
+              </label>
+
+              <div class="team-btnWrap">
+                <button type="button" class="team-resetBtn">초기화</button>
+                <button type="button" class="team-genBtn">팀 생성</button>
+              </div>
+            </div>
+
+            <div class="team-result">
+              <div class="team-resultBtn">
+                <h4>결과: 0팀</h4>
+                <button class="copyBtn">복사</button>
+              </div>
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <button class="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </article>
+
       <!-- Top버튼 -->
+      <button class="circleBtn">
+        <div class="circle">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </button>
       <button class="topBtn">
         <i class="fa-solid fa-chevron-up"></i>
       </button>
@@ -103,5 +155,6 @@
     </footer>
 
     <script type="module" src="/js/main.js"></script>
+    <script src="./js/mainRoulette.js"></script>
   </body>
 </html>

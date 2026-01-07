@@ -8,7 +8,7 @@ const filterWrap = main.querySelector("#filter");
 const contentLength = searchWrap.querySelector(".contentLength");
 const searchBtn = searchWrap.querySelector("button");
 const filterBtn = searchWrap.querySelector(".filterBtn");
-const closeBtn = filterWrap.querySelector(".closeBtn");
+const filterCloseBtn = filterWrap.querySelector(".closeBtn");
 const layoutBtns = searchWrap.querySelectorAll(".layoutBtn button");
 const topBtn = main.querySelector(".topBtn");
 
@@ -432,7 +432,7 @@ function createSearchListItem(value) {
   searchList.appendChild(fragment);
 }
 
-closeBtn.addEventListener("click", () => {
+filterCloseBtn.addEventListener("click", () => {
   contentFilter(true);
   moveTop(552.5);
   filterWrap.classList.remove("active");

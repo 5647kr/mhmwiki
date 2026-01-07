@@ -240,4 +240,43 @@
       font-size: 1.8rem;
     }
   }
+
+  #roulette {
+    .rouletteWrap {
+      width: 100rem;
+      padding: 4rem;
+    }
+
+    & .team-inputWrap {
+      & textarea {
+        min-height: 30rem;
+        font-size: 1.6rem;
+      }
+
+      & label {
+        font-size: 1.6rem;
+
+        & input {
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .teamGen {
+      height: 60vh;
+      display: flex;
+      gap: 4rem;
+
+      & div {
+        width: 100%;
+      }
+
+      & .team-result {
+        margin-top: 0;
+
+        & ul {
+          height: calc(100% - 60px);
+        }
+      }
+    }
+  }
 }

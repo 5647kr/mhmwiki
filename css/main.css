@@ -541,17 +541,42 @@
   }
 
   & .rouletteBoard {
-    width: 25rem;
-    height: 25rem;
+    width: 21rem;
+    height: 21rem;
     border-radius: 50%;
     border: 8px solid var(--content-color);
     margin: 0 auto;
+    position: relative;
+  }
+
+  & .roulette-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+
+    & span {
+      font-weight: var(--font-bw);
+      font-size: 1.4rem;
+      color: var(--content-color);
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      max-height: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   & .actionBtnWrap {
     display: flex;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 6rem;
     & > button {
       width: 100%;
       height: auto;

@@ -18,7 +18,8 @@ export async function fetchFilterData() {
 
   const filterData = {
     type: data.type,
-    series: data.series
+    series: data.series,
+    weak: data.weak
   }
 
   return filterData

@@ -26,6 +26,7 @@ let isContentLoading = false;
 // 필터링 기능을 위한 변수
 let filterTypeArr = JSON.parse(localStorage.getItem("typeFilter")) || [];
 let filterSeriesArr = JSON.parse(localStorage.getItem("seriesFilter")) || [];
+let filterWeakArr = JSON.parse(localStorage.getItem("weakFilter")) || [];
 let layoutState = localStorage.getItem("layoutState") || "grid";
 
 // 이미지URL
@@ -44,7 +45,11 @@ async function fetchInitialContent() {
 fetchInitialContent();
 
 function contentFilterState() {
-  if (filterTypeArr.length === 0 && filterSeriesArr.length === 0) {
+  if (
+    filterTypeArr.length === 0 &&
+    filterSeriesArr.length === 0 &&
+    filterWeakArr.length === 0
+  ) {
     displayArr = [...contentArr];
     return;
   }
@@ -59,7 +64,12 @@ function contentFilterState() {
       filterSeriesArr.length === 0 ||
       seriesArr.some((id) => filterSeriesArr.includes(id));
 
-    return typeMatch && seriesMatch;
+    const weakArr = content.weakEl.split(",").map((id) => id.trim());
+    const weakMatch =
+      filterWeakArr.length === 0 ||
+      weakArr.some((id) => filterWeakArr.includes(id));
+
+    return typeMatch && seriesMatch && weakMatch;
   });
 }
 
@@ -210,16 +220,42 @@ function contentInfiniteScroll() {
 
 // 필터데이터 fetch함수
 async function filterDataFetch() {
-  let filterJson = localStorage.getItem("filter");
+  const filterJson = localStorage.getItem("filter");
 
   if (filterJson) {
     const filterStorage = JSON.parse(filterJson);
-    filterRender(filterStorage.type, filterStorage.series);
-    return;
-  } else {
+
+    // 데이터 존재 여부 및 배열 내용물 확인 (Optional Chaining 사용)
+    const isDataValid =
+      filterStorage.type &&
+      filterStorage.type.length > 0 &&
+      filterStorage.series &&
+      filterStorage.series.length > 0 &&
+      filterStorage.weak &&
+      filterStorage.weak.length > 0;
+
+    if (isDataValid) {
+      // 로컬 데이터가 온전하면 바로 렌더링 후 함수 종료
+      filterRender(
+        filterStorage.type,
+        filterStorage.series,
+        filterStorage.weak
+      );
+      return;
+    }
+  }
+
+  // 로컬 데이터가 없거나, 구버전(weak 누락 등)일 경우 서버 통신 실행
+  try {
     const data = await fetchFilterData();
+
+    // 가져온 데이터를 로컬스토리지에 갱신
     localStorage.setItem("filter", JSON.stringify(data));
-    filterRender(data.type, data.series);
+
+    // 서버에서 받은 데이터로 렌더링
+    filterRender(data.type, data.series, data.weak);
+  } catch (error) {
+    console.error("필터 데이터를 불러오는 중 오류가 발생했습니다:", error);
   }
 }
 
@@ -230,20 +266,25 @@ async function filterDataFetch() {
 // }
 
 // 필터링 아이템 생성 부모 함수
-function filterRender(type, series) {
+function filterRender(type, series, weak) {
   const typeList = filterWrap.querySelector(".type ul");
   const seriesList = filterWrap.querySelector(".series ul");
+  const weakList = filterWrap.querySelector(".weakness ul");
 
   typeList.innerHTML = "";
   seriesList.innerHTML = "";
+  weakList.innerHTML = "";
 
   createFilterItem(typeList, type, "type");
   createFilterItem(seriesList, series, "series");
+  createFilterItem(weakList, weak, "weak");
 }
 
 // 필터링 아이템 생성함수
 function createFilterItem(listElement, data, category) {
   const fragment = document.createDocumentFragment();
+
+  console.log(data);
   data.forEach((item) => {
     const li = document.createElement("li");
     let liContent;
@@ -252,11 +293,14 @@ function createFilterItem(listElement, data, category) {
     // 필터링 활성화 여부 확인
     if (category === "type") {
       isChecked = filterTypeArr.includes(item.title) ? "checked" : "";
-    } else {
-      isChecked = filterSeriesArr.includes(item.id) ? "checked" : "";
-    }
 
-    if (item.fullName) {
+      liContent = `
+        <input class="a11y-hidden" type="checkbox" id=${item.id} value=${item.title} ${isChecked} />
+        <label for=${item.id}>${item.title}</label>
+      `;
+    } else if (category === "series") {
+      isChecked = filterSeriesArr.includes(item.id) ? "checked" : "";
+
       liContent = `
         <input class="a11y-hidden" type="checkbox" id=${item.id} value=${item.title} ${isChecked} />
         <label for=${item.id}>
@@ -265,12 +309,23 @@ function createFilterItem(listElement, data, category) {
         </abbr>
         </label>
       `;
-    } else {
+    } else if (category === "weak") {
+      isChecked = filterWeakArr.includes(item.id) ? "checked" : "";
+
       liContent = `
-        <input class="a11y-hidden" type="checkbox" id=${item.id} value=${item.title} ${isChecked} />
-        <label for=${item.id}>${item.title}</label>
+        <input
+          class="a11y-hidden"
+          type="checkbox"
+          id=${item.id}
+          value=${item.id}
+          ${isChecked}
+        />
+        <label for=${item.id}>
+          <img src="./img/icon/${item.id}.webp" alt="${item.id}속성">
+        </label>
       `;
     }
+
     li.innerHTML = liContent;
     fragment.appendChild(li);
   });
@@ -286,8 +341,13 @@ function filterClickEvent() {
     ".series ul input[type='checkbox']"
   );
 
+  const weakFilter = filterWrap.querySelectorAll(
+    ".weakness ul input[type='checkbox']"
+  );
+
   handleFilter(typeFilter, "type");
   handleFilter(seriesFilter, "series");
+  handleFilter(weakFilter, "weak");
 }
 
 // 필터링 조작 기능 구현
@@ -312,6 +372,14 @@ function handleFilter(filterList, type) {
           filterSeriesArr = filterSeriesArr.filter((item) => item !== id);
         }
         filterStorage("seriesFilter", filterSeriesArr);
+      } else if (type === "weak") {
+        if (checked) {
+          filterWeakArr.push(id);
+        } else {
+          filterWeakArr = filterWeakArr.filter((item) => item !== id);
+        }
+
+        filterStorage("weakFilter", filterWeakArr);
       }
     });
   });

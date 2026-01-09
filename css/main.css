@@ -339,6 +339,11 @@
     & abbr {
       text-decoration: none;
     }
+
+    & img {
+      width: 2rem;
+      vertical-align: top;
+    }
   }
 
   & button {

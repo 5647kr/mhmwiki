@@ -327,6 +327,7 @@ function updateRoulette() {
     (a, b) => a + (parseInt(b.weight) || 0),
     0
   );
+
   let currentPercent = 0;
   let gradientStr = "";
   rouletteList.forEach((item, i) => {
@@ -338,6 +339,30 @@ function updateRoulette() {
     currentPercent = nextPercent;
   });
   rouletteBoard.style.background = `conic-gradient(${gradientStr})`;
+
+  const existingLabels = rouletteBoard.querySelectorAll(".roulette-label");
+  existingLabels.forEach((el) => el.remove());
+
+  let currentDeg = 0;
+  rouletteList.forEach((item) => {
+    const w = parseInt(item.weight) || 0;
+    const itemDeg = (w / totalWeight) * 360;
+
+    // 텍스트를 감쌀 div 생성
+    const label = document.createElement("div");
+    label.className = "roulette-label";
+
+    const rotation = currentDeg + itemDeg / 2;
+    label.style.transform = `rotate(${rotation}deg)`;
+
+    const span = document.createElement("span");
+    span.textContent = item.name;
+
+    label.appendChild(span);
+    rouletteBoard.appendChild(label);
+
+    currentDeg += itemDeg;
+  });
 }
 
 function animate() {

@@ -26201,5 +26201,27 @@
       "fullName": "Monster Hunter Wilds",
       "series": "6"
     }
+  ],
+  "weak": [
+    {
+      "id": "불",
+      "title": "불"
+    },
+    {
+      "id": "물",
+      "title": "물"
+    },
+    {
+      "id": "번개",
+      "title": "번개"
+    },
+    {
+      "id": "얼음",
+      "title": "얼음"
+    },
+    {
+      "id": "용",
+      "title": "용"
+    }
   ]
 }

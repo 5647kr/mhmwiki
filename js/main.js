@@ -18,7 +18,7 @@ let displayArr = [];
 let searchArr = [];
 
 // 무한스크롤 기능을 위한 변수
-const contentNum = 20;
+const contentNum = 30;
 let loadedCount = 0;
 let isContentLast = false;
 let isContentLoading = false;

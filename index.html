@@ -96,19 +96,19 @@
       </article>
 
       <!-- 팀뽑기 -->
-      <article id="roulette">
-        <div class="rouletteWrap">
+      <article id="action">
+        <div class="actionWrap">
           <div class="rouletteState">
             <ul>
-              <li class="active"><button>팀 생성</button></li>
-              <li><button disabled>몬스터 룰렛</button></li>
-              <li><button disabled>무기 룰렛</button></li>
-              <li><button disabled>아이템 룰렛</button></li>
+              <li class="active"><button value="teamGen">팀 생성</button></li>
+              <li><button value="rouletteGen_monster">몬스터 룰렛</button></li>
+              <li><button value="rouletteGen_weapon">무기 룰렛</button></li>
+              <li><button value="rouletteGen_item">아이템 룰렛</button></li>
             </ul>
           </div>
 
           <!-- 팀 생성Wrap -->
-          <div class="teamGen">
+          <div class="teamGen active">
             <div class="team-inputWrap">
               <p class="total">0명</p>
               <textarea placeholder="이름1&#10;이름2&#10;이름3"></textarea>
@@ -128,8 +128,27 @@
                 <h4>결과: 0팀</h4>
                 <button class="copyBtn">복사</button>
               </div>
-              <ul>
-              </ul>
+              <ul></ul>
+            </div>
+          </div>
+
+          <!-- 룰렛Wrap -->
+          <div class="rouletteGen">
+            <div class="rouletteWrap">
+              <div class="arrow"><i class="fa-solid fa-down-long"></i></div>
+              <div class="rouletteBoard"></div>
+              <div class="actionBtnWrap">
+                <button class="resetBtn">리셋</button>
+                <button class="actionBtn">시작</button>
+              </div>
+              <strong>콜라보 몬스터는 제외합니다.</strong>
+            </div>
+            <div class="control">
+              <h4>룰렛 설정</h4>
+              <select>
+              </select>
+              <ul class="rouletteList"></ul>
+              <button class="itemAddBtn">항목 추가</button>
             </div>
           </div>
 
@@ -155,6 +174,6 @@
     </footer>
 
     <script type="module" src="/js/main.js"></script>
-    <script src="./js/mainRoulette.js"></script>
+    <script type="module" src="./js/mainRoulette.js"></script>
   </body>
 </html>

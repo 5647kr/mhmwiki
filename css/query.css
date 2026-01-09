@@ -241,8 +241,8 @@
     }
   }
 
-  #roulette {
-    .rouletteWrap {
+  #action {
+    .actionWrap {
       width: 100rem;
       padding: 4rem;
     }
@@ -260,7 +260,7 @@
         }
       }
     }
-    .teamGen {
+    .teamGen.active {
       display: flex;
       gap: 4rem;
 
@@ -271,6 +271,34 @@
       & .team-result {
         margin-top: 0;
       }
+    }
+
+    .rouletteGen.active {
+      display: flex;
+      gap: 4rem;
+      align-items: flex-start;
+    }
+
+    & .rouletteWrap {
+      width: 36rem;
+      position: sticky;
+      top: 0;
+      flex-shrink: 0;
+    }
+
+    & .rouletteBoard {
+      width: 35rem;
+      height: 35rem;
+      margin: 0;
+    }
+
+    .control {
+      margin-top: 0;
+      flex-grow: 1;
+    }
+
+    & .rouletteList {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

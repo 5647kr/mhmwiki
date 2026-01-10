@@ -212,6 +212,7 @@ const itemList = [
   "덫 금지",
   "섬광, 유인, 거름탄 금지",
   "버프아이템 금지",
+  "아이루 금지",
 ];
 const rouletteBoard = rouletteGen.querySelector(".rouletteBoard");
 const actionBtn = rouletteGen.querySelector(".actionBtn");
@@ -313,7 +314,7 @@ function createInputList() {
     li.classList.add("rouletteItem");
     li.innerHTML = `
       <div style="width:15px; height:15px; background:${item.color}; border-radius:50%"></div>
-      <input type="text" value="${item.name}" onchange="updateName(${index}, this.value)" placeholder="새 항목">
+      <input type="text" value="${item.name}" oninput="updateName(${index}, this.value)" placeholder="새 항목">
       <input type="number" value="${item.weight}" min="1" max="99" oninput="updateWeight(${index}, this.value)">
       <button class="del-btn" onclick="removeItem(${index})">✕</button>
     `;
@@ -417,6 +418,7 @@ window.updateWeight = (i, v) => {
 };
 window.updateName = (i, v) => {
   rouletteList[i].name = v;
+  updateRoulette();
 };
 window.removeItem = (i) => {
   if (rouletteList.length > 2) {

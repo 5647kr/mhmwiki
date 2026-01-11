@@ -289,9 +289,8 @@
     }
 
     & .rouletteBoard {
-      width: 35rem;
-      height: 35rem;
-      margin: 0;
+      width: 32rem;
+      height: 32rem;
     }
 
     .control {

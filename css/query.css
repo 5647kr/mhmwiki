@@ -30,7 +30,9 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas:
         "type species nickname"
-        "element ailment weakEl";
+        "element ailment weakEl"
+        "flash sonic dung"
+        "shock pitfall break"
     }
   }
 

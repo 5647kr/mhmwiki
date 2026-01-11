@@ -179,6 +179,30 @@ function createContent() {
     <h3>약점 속성</h3>
     <div>${weakElIcons}</div>
   </li>
+  <li class="flash">
+    <h3>섬광탄</h3>
+    <p>${content.flash}</p>
+  </li>
+  <li class="sonic">
+    <h3>음폭탄</h3>
+    <p>${content.sonic}</p>
+  </li>
+  <li class="dung">
+    <h3>거름탄</h3>
+    <p>${content.dung}</p>
+  </li>
+  <li class="break">
+    <h3>파괴 가능 부위</h3>
+    <p>${content.break}</p>
+  </li>
+  <li class="shock">
+    <h3>마비덫</h3>
+    <p>${content.shock}</p>
+  </li>
+  <li class="pitfall">
+    <h3>구멍 함정</h3>
+    <p>${content.pitfall}</p>
+  </li>
   `;
 
   infoList.innerHTML = infoContent;

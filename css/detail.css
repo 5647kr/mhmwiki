@@ -52,7 +52,7 @@ main {
 }
 
 main > section ~ section {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 section h2 {
@@ -139,7 +139,10 @@ section h2 {
     grid-template-areas:
       "type element"
       "species ailment"
-      "nickname weakEl";
+      "nickname weakEl"
+      "flash sonic"
+      "dung break"
+      "shock pitfall";
     gap: 2rem;
   }
 
@@ -192,6 +195,24 @@ section h2 {
   }
   .weakEl {
     grid-area: weakEl;
+  }
+  .flash {
+    grid-area: flash;
+  }
+  .sonic {
+    grid-area: sonic;
+  }
+  .dung {
+    grid-area: dung;
+  }
+  .shock {
+    grid-area: shock;
+  }
+  .pitfall {
+    grid-area: pitfall;
+  }
+  .break {
+    grid-area: break;
   }
 }
 

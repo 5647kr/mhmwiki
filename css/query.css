@@ -282,20 +282,19 @@
     }
 
     & .rouletteWrap {
-      width: 36rem;
+      width: 40rem;
       position: sticky;
       top: 0;
       flex-shrink: 0;
     }
 
     & .rouletteBoard {
-      width: 32rem;
-      height: 32rem;
+      width: 30rem;
+      height: 30rem;
     }
 
     .control {
       margin-top: 0;
-      flex-grow: 1;
     }
 
     & .rouletteList {

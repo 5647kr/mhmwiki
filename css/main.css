@@ -522,9 +522,10 @@
   border-radius: 20px;
   height: 100%;
   margin-top: 4rem;
-
+  
   & .rouletteWrap {
     position: relative;
+    background-color: var(--white-color);
   }
 
   & .arrow {
@@ -613,8 +614,6 @@
 
   & .control {
     margin-top: 4rem;
-    width: 100%;
-    padding: 30px;
 
     & h4 {
       text-align: center;

@@ -189,6 +189,7 @@ copyBtn.addEventListener("click", () => {
 let rouletteList = [];
 let monsterList = [];
 let filterMonster = [];
+let customList = ["", ""];
 const weaponList = [
   "대검",
   "태도",
@@ -252,6 +253,7 @@ function manageRouletteList() {
   if (state.includes("monster")) createRouletteList(filterMonster);
   if (state.includes("weapon")) createRouletteList(weaponList);
   if (state.includes("item")) createRouletteList(itemList);
+  if (state.includes("custom")) createRouletteList(customList);
 }
 
 function createRouletteList(list) {

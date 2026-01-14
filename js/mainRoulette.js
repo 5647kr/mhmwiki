@@ -392,6 +392,22 @@ function animate() {
 actionBtn.onclick = () => {
   if (isStopping || isWaitingToStop) return;
 
+  const hasEmptyValue = rouletteList.some((item) => item.name.trim() === "");
+
+  if (hasEmptyValue) {
+    alert("항목을 작성해주세요.");
+
+    const emptyIndex = rouletteList.findIndex(
+      (item) => item.name.trim() === ""
+    );
+    const inputs = rouletteUL.querySelectorAll('input[type="text"]');
+    if (inputs[emptyIndex]) {
+      inputs[emptyIndex].focus();
+    }
+
+    return;
+  }
+
   if (!isRunning) {
     isRunning = true;
     velocity = maxVelocity;
@@ -401,16 +417,14 @@ actionBtn.onclick = () => {
     toggleControls(true);
     animate();
   } else {
-    // [정지 버튼 누름]
     isWaitingToStop = true;
     actionBtn.textContent = "멈추는 중...";
     actionBtn.classList.add("waiting");
 
-    // 3초 뒤에 감속 모드로 전환
     setTimeout(() => {
       isWaitingToStop = false;
       isStopping = true;
-    }, 2000); // 3000ms = 3초 유지
+    }, 2000);
   }
 };
 

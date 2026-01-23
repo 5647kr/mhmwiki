@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
@@ -103,6 +103,50 @@
         <ul></ul>
       </section>
 
+      <!-- 제보 -->
+      <article id="report">
+        <div class="reportWrap">
+          <h2>오류 제보 및 건의사항</h2>
+
+          <form>
+            <div>
+              <label
+                >제목<span>*</span>
+                <input
+                  type="text"
+                  class="title"
+                  placeholder="제목을 입력하세요"
+                  required
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                >내용<span>*</span>
+                <textarea
+                  class="content"
+                  placeholder="내용을 입력하세요"
+                ></textarea>
+              </label>
+            </div>
+            <div>
+              <label
+                >첨부파일<span>* 오류제보시 객관적 자료 첨부</span>
+                <input type="file" class="imageFile" accept="image/*" />
+              </label>
+            </div>
+            <button type="submit" class="submitBtn">전송하기</button>
+          </form>
+
+          <button class="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </article>
+
+      <!-- 제보버튼 -->
+      <button class="reportBtn">
+        <i class="fa-regular fa-comment-dots"></i>
+      </button>
+
       <!-- Top버튼 -->
       <button class="topBtn">
         <i class="fa-solid fa-chevron-up"></i>
@@ -113,5 +157,6 @@
     </footer>
 
     <script type="module" src="js/detail.js"></script>
+    <script src="js/report.js"></script>
   </body>
 </html>

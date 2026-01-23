@@ -260,38 +260,6 @@
   }
 }
 
-#filter,
-#action {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(160, 160, 160, 0.5);
-  top: 0;
-  left: 0;
-  z-index: 20;
-  overflow-y: hidden;
-  display: none;
-}
-
-#filter.active,
-#action.active {
-  display: block;
-}
-
-.filterWrap,
-.actionWrap {
-  width: 40rem;
-  height: auto;
-  max-height: calc(100% - 4rem);
-  background-color: var(--white-color);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 1rem;
-  overflow-y: auto;
-}
-
 .filterWrap {
   padding: 2rem;
 

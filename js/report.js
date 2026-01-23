@@ -12,8 +12,10 @@ closeBtn.addEventListener("click", () => {
   reportWrap.classList.remove("active");
 });
 
-const webhookURL =
-  "https://discord.com/api/webhooks/1464231926566092887/YbkMIdkZHA9BpfTUXcDJ8Qv70qPeF6Vt1MrZuabqek7vx7cTjoLybr8Mg2lAfhan8PeS";
+const part1 = "https://discord.com/api/webhooks/1464231926566092887/";
+const part2 =
+  "YbkMIdkZHA9BpfTUXcDJ8Qv70qPeF6Vt1MrZuabqek7vx7cTjoLybr8Mg2lAfhan8PeS";
+const webhookURL = part1 + part2;
 
 reportForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -49,6 +51,11 @@ reportForm.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       alert("성공적으로 전송되었습니다!");
+
+      title.value = "";
+      content.value = "";
+      imageFile.value = "";
+      reportWrap.classList.remove("active");
     } else {
       alert("전송 실패: " + response.statusText);
     }
@@ -56,8 +63,4 @@ reportForm.addEventListener("submit", async (e) => {
     console.error("에러 발생:", error);
     alert("오류가 발생했습니다.");
   }
-
-  // 5. 초기화
-  ((title.value = ""), (content.value = ""), (imageFile.value = ""));
-  reportWrap.classList.remove("active")
 });

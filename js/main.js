@@ -37,34 +37,18 @@ const contentList = contentWrap.querySelector("ul");
 const BASE_URL =
   "https://res.cloudinary.com/dx71aeltq/image/upload/f_auto,q_auto:eco,dpr_auto,c_scale/";
 
-const skeletonContainer = contentWrap.querySelector(".skeleton-container");
-
-function renderSkeletons(count) {
-  const fragment = document.createDocumentFragment();
-
-  for (let i = 0; i < count; i++) {
-    const item = document.createElement("div");
-    item.className = "skeleton-item";
-    fragment.appendChild(item);
-  }
-
-  skeletonContainer.innerHTML = "";
-  skeletonContainer.appendChild(fragment);
-}
-
 async function fetchInitialContent() {
-  renderSkeletons(30);
-
   skeleton.style.display = "grid";
-  contentList.style.display = "grid";
-
+  contentList.style.display = "none";
+  
   contentArr = await fetchContentData();
-
+  
   contentFilterState();
   restoreScrollState();
   manageLayoutState();
-
+  
   skeleton.style.display = "none";
+  contentList.style.display = "grid";
 
   window.addEventListener("scroll", contentInfiniteScroll);
 }

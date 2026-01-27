@@ -29,16 +29,42 @@ let filterSeriesArr = JSON.parse(localStorage.getItem("seriesFilter")) || [];
 let filterWeakArr = JSON.parse(localStorage.getItem("weakFilter")) || [];
 let layoutState = localStorage.getItem("layoutState") || "grid";
 
+// 테스트
+const skeleton = contentWrap.querySelector(".skeleton-container");
+const contentList = contentWrap.querySelector("ul");
+
 // 이미지URL
 const BASE_URL =
   "https://res.cloudinary.com/dx71aeltq/image/upload/f_auto,q_auto:eco,dpr_auto,c_scale/";
 
+const skeletonContainer = contentWrap.querySelector(".skeleton-container");
+
+function renderSkeletons(count) {
+  const fragment = document.createDocumentFragment();
+
+  for (let i = 0; i < count; i++) {
+    const item = document.createElement("div");
+    item.className = "skeleton-item";
+    fragment.appendChild(item);
+  }
+
+  skeletonContainer.innerHTML = "";
+  skeletonContainer.appendChild(fragment);
+}
+
 async function fetchInitialContent() {
+  renderSkeletons(30);
+
+  skeleton.style.display = "grid";
+  contentList.style.display = "grid";
+
   contentArr = await fetchContentData();
 
   contentFilterState();
   restoreScrollState();
   manageLayoutState();
+
+  skeleton.style.display = "none";
 
   window.addEventListener("scroll", contentInfiniteScroll);
 }
@@ -162,8 +188,8 @@ function createContentItem(content) {
           <div class="itemBg">
             ${titleHTML}
             <img src="${BASE_URL}${item.icon}" alt="${
-        item.name
-      }" loading="lazy" />
+              item.name
+            }" loading="lazy" />
           </div>
           <div class="itemContent">
             <h3>${item.name}</h3>
@@ -239,7 +265,7 @@ async function filterDataFetch() {
       filterRender(
         filterStorage.type,
         filterStorage.series,
-        filterStorage.weak
+        filterStorage.weak,
       );
       return;
     }
@@ -335,14 +361,14 @@ function createFilterItem(listElement, data, category) {
 // 필터링 기능 함수
 function filterClickEvent() {
   const typeFilter = filterWrap.querySelectorAll(
-    ".type ul input[type='checkbox']"
+    ".type ul input[type='checkbox']",
   );
   const seriesFilter = filterWrap.querySelectorAll(
-    ".series ul input[type='checkbox']"
+    ".series ul input[type='checkbox']",
   );
 
   const weakFilter = filterWrap.querySelectorAll(
-    ".weakness ul input[type='checkbox']"
+    ".weakness ul input[type='checkbox']",
   );
 
   handleFilter(typeFilter, "type");

@@ -75,7 +75,11 @@
 
       <!-- 컨텐츠 -->
       <section id="content">
-        <ul></ul>
+        <!-- 스켈레톤 -->
+        <div class="skeleton-container">
+        </div>
+        
+        <ul style="display: none"></ul>
       </section>
 
       <!-- 필터링 -->
@@ -172,13 +176,21 @@
             <div>
               <label
                 >제목<span>*</span>
-                <input type="text" class="title" placeholder="제목을 입력하세요" required />
+                <input
+                  type="text"
+                  class="title"
+                  placeholder="제목을 입력하세요"
+                  required
+                />
               </label>
             </div>
             <div>
               <label
                 >내용<span>*</span>
-                <textarea class="content" placeholder="내용을 입력하세요"></textarea>
+                <textarea
+                  class="content"
+                  placeholder="내용을 입력하세요"
+                ></textarea>
               </label>
             </div>
             <div>

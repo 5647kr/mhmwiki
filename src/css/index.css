@@ -6,4 +6,11 @@ html {
   color: #606060;
 }
 
+ol, ul li {
+  list-style: none;
+}
 
+input {
+  outline: none;
+  font-size: 16px;
+}

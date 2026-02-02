@@ -1,37 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CheckBox from "../atom/CheckBox";
-
-interface FilterType {
-  series: Series[];
-  type: Type[];
-  weak: Weak[];
-}
+import { useFilterStore } from "../store/filterStore";
 
 export default function Filter({
   handleFilterActive,
 }: {
   handleFilterActive: () => void;
 }) {
-  const [filterData, setFilterData] = useState<FilterType>({
-    series: [],
-    type: [],
-    weak: [],
-  });
+  const filterData = useFilterStore((state) => state.filterData);
+  const fetchFilterData = useFilterStore((state) => state.fetchFilterData);
 
   useEffect(() => {
-    const fetchFilterData = async () => {
-      const response = await fetch("/db.json");
-
-      if (!response.ok) {
-        throw new Error("필터링 데이터 fetch 실패");
-      }
-
-      const { series, type, weak } = await response.json();
-
-      setFilterData({ series, type, weak });
-      console.log(type, weak);
-    };
-    fetchFilterData();
+    if (filterData.series.length === 0) {
+      fetchFilterData();
+    }
   }, []);
 
   return (

@@ -12,5 +12,34 @@ interface Type {
 
 interface Weak {
   id: string;
-  title: string
+  title: string;
+}
+
+interface Content {
+  id: string;
+  img: string;
+  icon: string;
+  name: string;
+  nickname1: string | null;
+  nickname2: string | null;
+  type: string;
+  species: string;
+  seriesId: string[];
+  title: string | null;
+  title: string | null;
+  element: string[];
+  ailment: string[];
+  weakEL: string[];
+  small: string;
+  large: string;
+  flash: string;
+  sonic: string;
+  dung: string;
+  shock: string;
+  pitfall: string;
+  break: string[];
+  relate: string[];
+  color: string;
+  weak: { [key: string]: string }[];
+  eco: string;
 }

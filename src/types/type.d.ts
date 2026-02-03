@@ -26,10 +26,10 @@ interface Content {
   species: string;
   seriesId: string[];
   title: string | null;
-  title: string | null;
+  titleId: string[] | null;
   element: string[];
   ailment: string[];
-  weakEL: string[];
+  weakEl: string[];
   small: string;
   large: string;
   flash: string;

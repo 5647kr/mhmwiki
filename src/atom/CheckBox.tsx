@@ -1,15 +1,21 @@
-import type { InputHTMLAttributes } from "react";
-
 export default function CheckBox({
   children,
-  ...props
+  onChange,
+  checked,
 }: {
+  onChange: () => void;
+  checked: boolean;
   children: React.ReactNode;
-} & InputHTMLAttributes<HTMLInputElement>) {
+}) {
   return (
     <>
-      <label className="text-base py-2 px-4 bg-[#eee] rounded-sm cursor-pointer">
-        <input type="checkbox" {...props} className="hidden" />
+      <label className="w-full block text-base py-2 px-4 bg-[#eee] rounded-sm cursor-pointer has-checked:bg-[#606060] has-checked:text-white text-center">
+        <input
+          type="checkbox"
+          onChange={onChange}
+          checked={checked}
+          className="a11y-hidden"
+        />
         {children}
       </label>
     </>

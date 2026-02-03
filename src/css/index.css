@@ -6,11 +6,21 @@ html {
   color: #606060;
 }
 
-ol, ul li {
+ol,
+ul li {
   list-style: none;
 }
 
 input {
   outline: none;
   font-size: 16px;
+}
+
+.a11y-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

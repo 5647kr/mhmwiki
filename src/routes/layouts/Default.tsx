@@ -17,7 +17,7 @@ export default function Default() {
     <div className="min-h-screen flex flex-col">
       <ScrollRestoration />
       {isMainPage ? <MainHeader contentData={contentData} /> : <DetailHeader />}
-      <main className="grow mx-4 sm:mx-5 md:mx-6 grid grid-rows-[min-content] grid-cols-4 gap-x-4 sm:grid-cols-8 sm:gap-x-5 md:grid-cols-12 md:gap-x-6">
+      <main className="grow mx-4 sm:mx-5 md:mx-6 grid grid-rows-[min-content] grid-cols-4 gap-x-4 sm:grid-cols-8 sm:gap-x-5 md:grid-cols-12 md:gap-x-6 relative">
         <Outlet />
       </main>
       <Footer />

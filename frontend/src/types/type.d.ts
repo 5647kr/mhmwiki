@@ -15,17 +15,21 @@ interface Weak {
   title: string;
 }
 
-interface Content {
+interface CardContent {
   id: string;
-  img: string;
   icon: string;
+  title: string | null;
+  type: string;
   name: string;
+  color: string;
+}
+
+interface Content extends CardContent {
+  img: string;
   nickname1: string | null;
   nickname2: string | null;
-  type: string;
   species: string;
   seriesId: string[];
-  title: string | null;
   titleId: string[] | null;
   element: string[];
   ailment: string[];
@@ -39,7 +43,6 @@ interface Content {
   pitfall: string;
   break: string[];
   relate: string[];
-  color: string;
   weak: { [key: string]: string }[];
   eco: string;
 }

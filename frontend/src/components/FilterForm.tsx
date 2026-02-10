@@ -9,7 +9,7 @@ export default function FilterForm({
 }) {
   const { data } = useQuery({
     queryKey: ["filterData"],
-    queryFn: () => fetchData(`filter`),
+    queryFn: () => fetchData({ path: "filter" }),
   });
 
   const filterState = useFilterStore((state) => state.filterState);

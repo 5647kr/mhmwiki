@@ -2,19 +2,19 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 interface gridStateStore {
-  gridState: boolean;
-  toggleState: () => void;
+  cardState: boolean;
+  toggleCardState: () => void;
 }
 
-export const useGridStateStore = create<gridStateStore>()(
+export const useCardStateStore = create<gridStateStore>()(
   persist(
     (set) => ({
-      gridState: true,
+      cardState: true,
 
-      toggleState: () => set((state) => ({ gridState: !state.gridState })),
+      toggleCardState: () => set((state) => ({ cardState: !state.cardState })),
     }),
     {
-      name: "gridStateStorage",
+      name: "cardStateStorage",
       storage: createJSONStorage(() => sessionStorage),
     }
   )

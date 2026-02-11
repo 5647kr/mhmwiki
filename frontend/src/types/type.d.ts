@@ -19,6 +19,7 @@ interface CardContent {
   id: string;
   icon: string;
   title: string | null;
+  titleId: string[] | null;
   type: string;
   name: string;
   color: string;

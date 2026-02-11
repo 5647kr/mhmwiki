@@ -27,7 +27,7 @@ export default function FilterForm({
         <div className="w-full">
           <h2 className="text-lg font-bold">SERIES</h2>
           <ul className="flex gap-2.5 flex-wrap mt-2.5">
-            {data?.series.map((item: Series) => (
+            {data?.items.series.map((item: Series) => (
               <li key={item.id} className="w-30">
                 <label className="w-full block text-base font-semibold py-2 px-4 bg-white rounded-sm cursor-pointer has-checked:bg-[#606060] has-checked:text-white text-center">
                   <input
@@ -45,7 +45,7 @@ export default function FilterForm({
         <div className="w-full">
           <h2 className="text-lg font-bold">TYPE</h2>
           <ul className="flex gap-2.5 flex-wrap mt-2.5">
-            {data?.type.map((item: Type) => (
+            {data?.items.type.map((item: Type) => (
               <li key={item.id} className="w-30">
                 <label className="w-full block text-base font-semibold py-2 px-4 bg-white rounded-sm cursor-pointer has-checked:bg-[#606060] has-checked:text-white text-center">
                   <input
@@ -63,7 +63,7 @@ export default function FilterForm({
         <div className="w-full">
           <h2 className="text-lg font-bold">WEAKNESS</h2>
           <ul className="flex gap-2.5 flex-wrap mt-2.5">
-            {data?.weak.map((item: Weak) => (
+            {data?.items.weak.map((item: Weak) => (
               <li key={item.id} className="w-30">
                 <label className="w-full block text-base font-semibold py-2 px-4 bg-white rounded-sm cursor-pointer has-checked:bg-[#606060] has-checked:text-white text-center">
                   <input
@@ -83,13 +83,13 @@ export default function FilterForm({
       <div className="float-right flex gap-5">
         <button
           onClick={filterReset}
-          className="py-2.5 px-5 bg-white font-semibold"
+          className="py-2.5 px-5 font-semibold cursor-pointer"
         >
           Reset
         </button>
         <button
           onClick={handleApplyFilter}
-          className="py-2.5 px-5 bg-white font-semibold"
+          className="py-2.5 px-5 bg-[#606060] rounded-sm text-white font-semibold cursor-pointer"
         >
           Apply Filter
         </button>

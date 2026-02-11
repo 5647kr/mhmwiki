@@ -1,13 +1,21 @@
 import { Grid2x2, List, Search } from "lucide-react";
 import { useCardStateStore } from "../store/gridStateStore";
+import SearchInput from "./SearchInput";
 
 export default function SearchForm({
   activeFilterForm,
   handleActiveFilterForm,
+  applyFilter,
 }: {
   activeFilterForm: boolean;
   handleActiveFilterForm: () => void;
+  applyFilter: { series: string[]; type: string[]; weak: string[] };
 }) {
+  const filterCount = String(
+    applyFilter.series.length +
+      applyFilter.type.length +
+      applyFilter.weak.length
+  ).padStart(2, "0");
   const cardState = useCardStateStore((state) => state.cardState);
   const toggleCardState = useCardStateStore((state) => state.toggleCardState);
 
@@ -41,17 +49,8 @@ export default function SearchForm({
       </div>
 
       {/* 검색 입력창 */}
-      <div className="w-[50%]">
-        <div className="w-full rounded-sm bg-[#eee] p-2.5 flex items-center gap-2.5">
-          <input
-            type="text"
-            placeholder="몬스터의 이름, 별명을 입력해주세요."
-            className="w-full focus:outline-0"
-          />
-          <button className="p-1">
-            <Search size={18} />
-          </button>
-        </div>
+      <div className="w-[50%] relative">
+        <SearchInput />
       </div>
 
       {/* 필터 버튼 */}
@@ -71,7 +70,7 @@ export default function SearchForm({
               activeFilterForm ? "text-[#eee]" : "text-[#606060]"
             }`}
           >
-            13
+            {filterCount}
           </span>
         </button>
       </div>

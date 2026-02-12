@@ -31,7 +31,6 @@ interface Content extends CardContent {
   nickname2: string | null;
   species: string;
   seriesId: string[];
-  titleId: string[] | null;
   element: string[];
   ailment: string[];
   weakEl: string[];
@@ -43,7 +42,7 @@ interface Content extends CardContent {
   shock: string;
   pitfall: string;
   break: string[];
-  relate: string[];
+  relate: string[] | null;
   weak: { [key: string]: string }[];
   eco: string;
 }

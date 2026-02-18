@@ -25,12 +25,10 @@ interface CardContent {
   color: string;
 }
 
-interface Content extends CardContent {
-  img: string;
-  nickname1: string | null;
-  nickname2: string | null;
-  species: string;
-  seriesId: string[];
+interface SeriesInfo {
+  id: string;
+  title: string;
+  haveData: boolean;
   element: string[];
   ailment: string[];
   weakEl: string[];
@@ -42,7 +40,15 @@ interface Content extends CardContent {
   shock: string;
   pitfall: string;
   break: string[];
-  relate: string[] | null;
   weak: { [key: string]: string }[];
+}
+
+interface Content extends CardContent {
+  img: string;
+  nickname1: string | null;
+  nickname2: string | null;
+  species: string;
+  seriesId: string[];
+  relate: string[] | null;
   eco: string;
 }

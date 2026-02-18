@@ -1,15 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
-import fetchData from "../api/fetchData";
 import { useFilterStore } from "../store/filterStore";
+import { useQueryHook } from "../hook/useQueryHook";
 
 export default function FilterForm({
   handleApplyFilter,
 }: {
   handleApplyFilter: () => void;
 }) {
-  const { data } = useQuery({
-    queryKey: ["filterData"],
-    queryFn: () => fetchData({ path: "filter" }),
+  const { data } = useQueryHook({
+    key: ["filterData"],
+    path: "filter",
   });
 
   const filterState = useFilterStore((state) => state.filterState);
@@ -36,7 +35,12 @@ export default function FilterForm({
                     onChange={() => setFilterState("series", item.id)}
                     checked={filterState.series.includes(item.id)}
                   />
-                  {item.title}
+                  <abbr
+                    className="w-full block h-full no-underline"
+                    title={item.fullName}
+                  >
+                    {item.title}
+                  </abbr>
                 </label>
               </li>
             ))}

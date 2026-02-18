@@ -1,4 +1,4 @@
-import { Grid2x2, List, Search } from "lucide-react";
+import { Grid2x2, List } from "lucide-react";
 import { useCardStateStore } from "../store/gridStateStore";
 import SearchInput from "./SearchInput";
 

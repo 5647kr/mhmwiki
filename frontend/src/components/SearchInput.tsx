@@ -16,7 +16,7 @@ export default function SearchInput() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedKeyword(searchKeyword);
-    }, 1000);
+    }, 500);
     return () => clearTimeout(timer);
   }, [searchKeyword]);
 
@@ -32,7 +32,7 @@ export default function SearchInput() {
 
   const searchResults = data?.items || [];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (searchResults.length > 0) {
       navigate(`/detail/${searchResults[0].id}`);
@@ -50,7 +50,7 @@ export default function SearchInput() {
             setSearchKeyword(e.target.value);
             setIsExpanded(false);
           }}
-          placeholder="몬스터의 이름, 별명을 입력해주세요."
+          placeholder="몬스터의 이름을 입력해주세요."
           className="w-full focus:outline-0 bg-transparent"
         />
         <button type="submit" className="p-1 cursor-pointer">

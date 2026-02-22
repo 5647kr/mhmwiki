@@ -230,25 +230,25 @@ export default function Detail() {
             <>
               <div>
                 <h2 className="text-sm lg:text-base font-semibold">종</h2>
-                <p className="text-[#a0a0a0] text-xs lg:text-sm">
+                <p className="text-[#a0a0a0] text-sm lg:text-base">
                   {content.species}
                 </p>
               </div>
               <div className="mt-5">
                 <h2 className="text-sm lg:text-base font-semibold">종별</h2>
-                <p className="text-[#a0a0a0] text-xs lg:text-sm">
+                <p className="text-[#a0a0a0] text-sm lg:text-base">
                   {content.type.split("/")[0]}
                 </p>
-                <p className="text-[#a0a0a0] text-xs lg:text-sm">
+                <p className="text-[#a0a0a0] text-sm lg:text-base">
                   {content.type.split("/")[1]}
                 </p>
               </div>
               <div className="mt-5">
                 <h2 className="text-sm lg:text-base font-semibold">별명</h2>
-                <p className="text-[#a0a0a0] text-xs lg:text-sm">
+                <p className="text-[#a0a0a0] text-sm lg:text-base">
                   {content.nickname1}
                 </p>
-                <p className="text-[#a0a0a0] text-xs lg:text-sm">
+                <p className="text-[#a0a0a0] text-sm lg:text-base">
                   {content.nickname2}
                 </p>
               </div>
@@ -331,7 +331,7 @@ export default function Detail() {
                   <img
                     src="/icons/섬광탄.webp"
                     alt="섬광탄"
-                    className="w-16 aspect-square"
+                    className="w-14 aspect-square"
                   />
                 </abbr>
                 <p>
@@ -348,7 +348,7 @@ export default function Detail() {
                   <img
                     src="/icons/음폭탄.webp"
                     alt="음폭탄"
-                    className="w-16 aspect-square"
+                    className="w-14 aspect-square"
                   />
                 </abbr>
                 <p>
@@ -365,7 +365,7 @@ export default function Detail() {
                   <img
                     src="/icons/거름탄.webp"
                     alt="거름탄"
-                    className="w-16 aspect-square"
+                    className="w-14 aspect-square"
                   />
                 </abbr>
                 <p>
@@ -382,7 +382,7 @@ export default function Detail() {
                   <img
                     src="/icons/마비덫.webp"
                     alt="마비덫"
-                    className="w-16 aspect-square"
+                    className="w-14 aspect-square"
                   />
                 </abbr>
                 <p>
@@ -399,7 +399,7 @@ export default function Detail() {
                   <img
                     src="/icons/구멍함정.webp"
                     alt="구멍함정"
-                    className="w-16 aspect-square"
+                    className="w-14 aspect-square"
                   />
                 </abbr>
                 <p>
@@ -419,7 +419,7 @@ export default function Detail() {
           <InfoWrap title="기타 정보">
             <div>
               <h2 className="text-sm lg:text-base font-semibold">크기</h2>
-              <p>
+              <p className="text-sm lg:text-base text-[#a0a0a0]">
                 {currentInfo?.small} ~ {currentInfo?.large}
               </p>
             </div>
@@ -429,77 +429,79 @@ export default function Detail() {
         {/* 부위 파괴 정보 */}
         <div className="[grid-area:part]">
           <InfoWrap title="부위 파괴 정보">
-            <p>{currentInfo?.break.join(", ")}</p>
+            <p className="text-sm lg:text-base text-[#a0a0a0]">
+              {currentInfo?.break.join(", ")}
+            </p>
           </InfoWrap>
         </div>
 
         {/* 보상 정보 */}
         <div className="[grid-area:reward]">
           <InfoWrap title="보수 정보">
-            <p>여기에 이제 정보 적을것</p>
+            <p>조사관 파견 중...</p>
           </InfoWrap>
         </div>
 
         {/* 육질 정보 */}
         <div className="[grid-area:weak]">
           <InfoWrap title="육질 정보">
-            <div className="h-auto max-h-100 overflow-y-auto pr-2.5 transparent-scroll">
+            <div className="h-auto max-h-200 overflow-y-auto pr-2.5 transparent-scroll">
               <table className="w-full table-fixed relative">
                 <thead className="bg-[#eee] sticky top-0 rounded-t-[10px]">
                   <tr>
                     <th>부위</th>
                     <th>
                       <img
-                        className="w-16 block mx-auto aspect-square"
+                        className="w-10 block mx-auto aspect-square"
                         src="/icons/참격.webp"
                         alt="참격"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-16 block mx-auto aspect-square"
+                        className="w-10 block mx-auto aspect-square"
                         src="/icons/타격.webp"
                         alt="타격"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-16 block mx-auto aspect-square"
+                        className="w-10 block mx-auto aspect-square"
                         src="/icons/탄활.webp"
                         alt="탄활"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-12 block mx-auto aspect-square"
+                        className="w-8 block mx-auto aspect-square"
                         src="/icons/불.webp"
                         alt="불"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-12 block mx-auto aspect-square"
+                        className="w-8 block mx-auto aspect-square"
                         src="/icons/물.webp"
                         alt="물"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-12 block mx-auto aspect-square"
+                        className="w-8 block mx-auto aspect-square"
                         src="/icons/번개.webp"
                         alt="번개"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-12 block mx-auto aspect-square"
+                        className="w-8 block mx-auto aspect-square"
                         src="/icons/얼음.webp"
                         alt="얼음"
                       />
                     </th>
                     <th>
                       <img
-                        className="w-12 block mx-auto aspect-square"
+                        className="w-8 block mx-auto aspect-square"
                         src="/icons/용.webp"
                         alt="용"
                       />
@@ -515,7 +517,7 @@ export default function Detail() {
                       {Object.values(item).map((value, i) => (
                         <td
                           key={i}
-                          className="py-3 text-center text-sm"
+                          className="py-3 text-center text-[#a0a0a0]"
                           dangerouslySetInnerHTML={{ __html: value as string }}
                         />
                       ))}
@@ -560,6 +562,8 @@ export default function Detail() {
             </ul>
           </InfoWrap>
         </div>
+
+        {/* 관련 몬스터 정보 */}
         <div className="[grid-area:relate]">
           <InfoWrap title="관련 몬스터 정보">
             {content.relate && content.relate.length > 0 ? (
@@ -571,7 +575,7 @@ export default function Detail() {
                         <img
                           src={IMG_URL + item.icon}
                           alt={item.name}
-                          className="w-10 aspect-square block mx-auto mb-2.5"
+                          className="w-15 aspect-square block mx-auto mb-2.5"
                         />
                         <span className="text-sm lg:text-base">
                           {item.name}
@@ -590,8 +594,19 @@ export default function Detail() {
             )}
           </InfoWrap>
         </div>
+
+        {/* 생태 정보 */}
         <div className="[grid-area:eco]">
-          <InfoWrap title="생태 정보">{content.eco}</InfoWrap>
+          <InfoWrap title="생태 정보">
+            {content.eco.map((p: string, index: number) => (
+              <p
+                key={index}
+                className="text-sm lg:text-base text-[#a0a0a0] break-keep mt-2.5"
+              >
+                {p}
+              </p>
+            ))}
+          </InfoWrap>
         </div>
       </section>
     </>

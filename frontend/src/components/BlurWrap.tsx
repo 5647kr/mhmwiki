@@ -28,10 +28,10 @@ export default function BlurWrap({
   return (
     <div className="absolute pt-12.5 inset-0 z-10 flex items-center justify-center overflow-hidden rounded-sm">
       {/* 배경 블러 처리 레이어 */}
-      <div className="absolute inset-0 bg-[#1B4965]/80 backdrop-blur-md z-0" />
+      <div className="absolute inset-0 border border-[#e0e0e0] rounded-[10px] bg-white/80 backdrop-blur-md z-0" />
 
       {/* 문구 레이어 */}
-      <strong className="relative z-50 px-4 text-center text-white font-bold text-lg drop-shadow-lg leading-relaxed">
+      <strong className="relative z-50 px-4 text-center font-bold text-lg drop-shadow-lg leading-relaxed">
         {message}
       </strong>
     </div>

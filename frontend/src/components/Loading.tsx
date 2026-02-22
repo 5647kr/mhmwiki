@@ -3,7 +3,7 @@ export default function Loading() {
   const letters = text.split("");
 
   return (
-    <div className="col-span-full sm:col-[2/8] md:col-[3/11] flex justify-center items-center text-3xl py-10 font-bold">
+    <div className="col-span-full sm:col-[2/8] lg:col-[3/11] flex justify-center items-center text-3xl py-10 font-bold">
       <style>{`
         @keyframes wave-jump {
           0%, 100% { transform: translateY(0); }

@@ -4,7 +4,7 @@ import { Frown } from "lucide-react";
 export default function NotFound() {
   const navigate = useNavigate(); // navigate 함수 생성
   return (
-    <div className="col-span-full sm:col-[2/8] md:col-[3/11] h-screen flex justify-center items-center gap-10">
+    <div className="col-span-full sm:col-[2/8] lg:col-[3/11] h-screen flex justify-center items-center gap-10">
       <Frown size={100} className="text-[#E63946]" />
       <div>
         <strong className="text-center mt-5 text-2xl text-[#E63946]">

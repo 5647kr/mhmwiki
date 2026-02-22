@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Link } from "react-router";
-import { useFilterStore } from "../../store/filterStore";
-import { useCardStateStore } from "../../store/gridStateStore";
-import { useInfiniteQueryHook } from "../../hook/useQueryHook";
-import FilterForm from "../../components/FilterForm";
-import SearchForm from "../../components/SearchForm";
-import { GridContentCard, ListContentCard } from "../../components/ContentCard";
 import { Frown } from "lucide-react";
+import { useFilterStore } from "../../store/filterStore";
+import { useInfiniteQueryHook } from "../../hook/useQueryHook";
+import SearchForm from "../../components/SearchForm";
 import Loading from "../../components/Loading";
+import FilterForm from "../../components/FilterForm";
+import ContentItem from "../../components/ContentItem";
 
 export default function Home() {
-  const [activeFilterForm, setActiveFilterForm] = useState(false);
-
   const filterState = useFilterStore((state) => state.filterState);
+
+  const [activeFilterForm, setActiveFilterForm] = useState(false);
   const [applyFilter, setApplyFilter] = useState(filterState);
+  const [loadedCount, setLoadedCount] = useState(0);
 
   const handleActiveFilterForm = () => {
     setActiveFilterForm((activeFilterForm) => !activeFilterForm);
@@ -24,8 +23,6 @@ export default function Home() {
     handleActiveFilterForm();
     setApplyFilter(filterState);
   };
-
-  const cardState = useCardStateStore((state) => state.cardState);
 
   const { data, fetchNextPage, isFetchingNextPage, hasNextPage, isLoading } =
     useInfiniteQueryHook({ applyFilter });
@@ -41,15 +38,23 @@ export default function Home() {
 
   const content = data?.pages.flatMap((page) => page.items) || [];
 
+  useEffect(() => {
+    setLoadedCount(0);
+  }, [applyFilter, content]);
+
+  const handleLoadedCount = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
+
+  const allLoaded = content.length > 0 && loadedCount >= content.length;
 
   if (isLoading) {
     return (
-      <div className="col-span-full min-h-[calc(100vh-176px)] flex justify-center items-center">
+      <div className="col-span-full min-h-[calc(100vh-213px)] flex justify-center items-center">
         <Loading />
       </div>
     );
   }
-
   return (
     <>
       <SearchForm
@@ -57,47 +62,29 @@ export default function Home() {
         handleActiveFilterForm={handleActiveFilterForm}
         applyFilter={applyFilter}
       />
-      {activeFilterForm && <FilterForm handleApplyFilter={handleApplyFilter} />}
 
-      <div className="col-span-full sm:col-[2/8] md:col-[3/11] py-5">
-        <strong className="text-right block">
-          검색결과: {data?.pages[0].total}
-        </strong>
+      <FilterForm
+        handleApplyFilter={handleApplyFilter}
+        activeFilterForm={activeFilterForm}
+      />
+
+      <div className="col-span-full sm:col-[2/8] lg:col-[3/11] py-10 text-right">
+        <p>
+          검색결과: <strong>{data?.pages[0].total}</strong>
+        </p>
       </div>
 
-      <div className="col-span-full sm:col-[2/8] md:col-[3/11] min-h-[calc(100vh-347px)] pt-10">
+      <div className="col-span-full sm:col-[2/8] lg:col-[3/11] min-h-[calc(100vh-404px)]">
         {content && content.length > 0 ? (
           <ul className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5">
-            {content.map((item) =>
-              cardState ? (
-                <li
-                  key={item.id}
-                  className="border border-[#e0e0e0] shadow-[0_2px_4px_rgba(96,96,96,0.25)] w-full aspect-[1/1.3] rounded-sm overflow-hidden"
-                >
-                  <Link
-                    to={`/detail/${item.id}`}
-                    className="block h-full w-full"
-                  >
-                    <GridContentCard
-                      applyFilter={applyFilter.series}
-                      {...item}
-                    />
-                  </Link>
-                </li>
-              ) : (
-                <li
-                  key={item.id}
-                  className="border border-[#e0e0e0] shadow-[0_2px_4px_rgba(96,96,96,0.25)] w-full rounded-sm overflow-hidden"
-                >
-                  <Link
-                    to={`/detail/${item.id}`}
-                    className="block h-full w-full"
-                  >
-                    <ListContentCard {...item} />
-                  </Link>
-                </li>
-              )
-            )}
+            {content.map((item) => (
+              <ContentItem
+                key={item.id}
+                item={item}
+                applyFilter={applyFilter}
+                handleLoadedCount={handleLoadedCount}
+              />
+            ))}
           </ul>
         ) : (
           <div className="flex flex-col items-center justify-center gap-10 h-full">
@@ -110,7 +97,7 @@ export default function Home() {
 
         {hasNextPage && (
           <div ref={ref} className="h-10 w-full">
-            {isFetchingNextPage && <Loading />}
+            {isFetchingNextPage && !allLoaded && <Loading />}
           </div>
         )}
       </div>

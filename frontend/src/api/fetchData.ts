@@ -28,7 +28,20 @@ export default async function fetchData({
       url.searchParams.append("seriesId_like", series)
     );
     filter.type.forEach((type) => url.searchParams.append("type_like", type));
-    filter.weak.forEach((weak) => url.searchParams.append("weakEl_like", weak));
+
+    if (filter.weak.length > 0) {
+      if (filter.series.length > 0) {
+        filter.series.forEach((series) => {
+          filter.weak.forEach((weak) => {
+            url.searchParams.append("seriesWeak_like", `${series}:${weak}`);
+          });
+        });
+      } else {
+        filter.weak.forEach((weak) => {
+          url.searchParams.append("WeakEl_like", weak);
+        });
+      }
+    }
   }
 
   if (search) {

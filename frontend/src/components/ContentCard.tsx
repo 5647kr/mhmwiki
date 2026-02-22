@@ -2,14 +2,15 @@ const IMG_URL =
   "https://res.cloudinary.com/dx71aeltq/image/upload/f_auto,q_auto:eco,dpr_auto,c_scale/";
 
 interface GridContentCardProps extends CardContent {
-  applyFilter: string[];
+  applyFilter?: string[];
+  handleLoadedCount: () => void;
 }
 
 function GridContentCard(props: GridContentCardProps) {
   const titleContentCard = props.title && props.title.trim() !== "";
   const isTitle =
-    (titleContentCard && props.applyFilter.length === 0) ||
-    props.titleId?.some((id) => props.applyFilter.includes(id));
+    (titleContentCard && props.applyFilter?.length === 0) ||
+    props.titleId?.some((id) => props.applyFilter?.includes(id));
 
   return (
     <div
@@ -28,14 +29,15 @@ function GridContentCard(props: GridContentCardProps) {
         <img
           src={`${IMG_URL + props.icon}`}
           alt={props.name}
+          onLoad={props.handleLoadedCount}
           className="w-full aspect-square scale-100 group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_20px_#b794f4]"
         />
       </div>
       <div className="h-[50%] flex flex-col items-center justify-end pb-5 gap-2.5">
-        <h2 className="text-lg md:text-xl font-bold text-[#606060]">
+        <h2 className="text-lg lg:text-xl font-bold text-[#606060]">
           {props.name}
         </h2>
-        <p className="text-sm md:text-base text-[#a0a0a0]">
+        <p className="text-sm lg:text-base text-[#a0a0a0]">
           {props.type.split("/")[0]}
         </p>
       </div>
@@ -43,12 +45,13 @@ function GridContentCard(props: GridContentCardProps) {
   );
 }
 
-function ListContentCard(props: CardContent) {
+function ListContentCard(props: GridContentCardProps) {
   return (
     <div className="p-2.5 flex gap-2.5 items-center">
       <img
         src={`${IMG_URL + props.icon}`}
         alt={props.name}
+        onLoad={props.handleLoadedCount}
         className="w-10 aspect-square"
       />
       <div className="flex items-center flex-row-reverse gap-2.5">

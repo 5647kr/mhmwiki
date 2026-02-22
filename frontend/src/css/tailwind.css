@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+.header {
+  @apply px-4 sm:px-5 md:px-6 py-5;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .transparent-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .transparent-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .transparent-scroll::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 10px;
+  }
+}

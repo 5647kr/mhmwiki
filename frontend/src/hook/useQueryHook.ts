@@ -8,14 +8,19 @@ import fetchData from "../api/fetchData";
 function useQueryHook<T extends QueryKey>({
   key,
   path,
+  search,
+  enabled,
 }: {
   key: T;
   path: string;
+  search?: string;
+  enabled?: boolean;
 }) {
   return useQuery({
     queryKey: key,
-    queryFn: () => fetchData({ path }),
+    queryFn: () => fetchData({ path: path, search: search }),
     staleTime: 1000 * 60 * 5,
+    enabled,
   });
 }
 
@@ -41,7 +46,6 @@ function useInfiniteQueryHook({
         : undefined;
     },
     staleTime: 1000 * 60 * 5,
-    gcTime: 1000 * 60 * 10,
     select: (data) => ({
       pages: data.pages.map((page) => ({
         total: page.totalCount,

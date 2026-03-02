@@ -1,0 +1,16 @@
+@import "./tailwind.css";
+@import "./font.css";
+
+html {
+  font-family: "Noto Sans KR";
+  color: #606060;
+}
+
+.a11y-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

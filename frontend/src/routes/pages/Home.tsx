@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Frown } from "lucide-react";
+import { Frown, Gamepad2, Megaphone } from "lucide-react";
 import { useFilterStore } from "../../store/filterStore";
 import { useInfiniteQueryHook } from "../../hook/useQueryHook";
 import SearchForm from "../../components/SearchForm";
 import Loading from "../../components/Loading";
 import FilterForm from "../../components/FilterForm";
 import ContentItem from "../../components/ContentItem";
+import QuickMenu from "../../components/QuickMenu";
+import { Link } from "react-router";
 
 export default function Home() {
   const filterState = useFilterStore((state) => state.filterState);
@@ -47,6 +49,10 @@ export default function Home() {
   };
 
   const allLoaded = content.length > 0 && loadedCount >= content.length;
+
+  const handleMoveTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   if (isLoading) {
     return (
@@ -101,6 +107,54 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      <ul className="fixed bottom-5 right-5 flex flex-col gap-2.5">
+        <li className="relative">
+          <QuickMenu>
+            <div className="w-full h-full flex justify-center items-center flex-col gap-1">
+              <img src="/icons/charm.webp" alt="호석" className="w-6.5" />
+              <span className="text-xs lg:text-sm">호석</span>
+            </div>
+          </QuickMenu>
+
+          <div className="absolute top-[50%] -left-15 text-xs p-2 transform translate-y-[-50%] border border-[#e0e0e0] rounded-[10px] bg-white">
+            개발 중
+          </div>
+        </li>
+        <li>
+          <QuickMenu>
+            <Link
+              to={"/report"}
+              className="w-full h-full flex justify-center items-center flex-col gap-1"
+            >
+              <Megaphone size={26} />
+              <span className="text-xs lg:text-sm">제보</span>
+            </Link>
+          </QuickMenu>
+        </li>
+        <li className="relative">
+          <QuickMenu>
+            <div className="w-full h-full flex justify-center items-center flex-col gap-1">
+              <Gamepad2 size={26} />
+              <span className="text-xs lg:text-sm">룰렛</span>
+            </div>
+          </QuickMenu>
+
+          <div className="absolute top-[50%] -left-15 text-xs p-2 transform translate-y-[-50%] border border-[#e0e0e0] rounded-[10px] bg-white">
+            개발 중
+          </div>
+        </li>
+        <li>
+          <QuickMenu>
+            <button
+              onClick={handleMoveTop}
+              className="w-full h-full cursor-pointer text-lg lg:text-xl font-bold"
+            >
+              Top
+            </button>
+          </QuickMenu>
+        </li>
+      </ul>
     </>
   );
 }

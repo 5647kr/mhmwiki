@@ -5,11 +5,14 @@ import {
   ChevronRight,
   CircleCheck,
   CirclePlus,
+  Gamepad2,
+  Megaphone,
 } from "lucide-react";
 import { useQueryHook } from "../../hook/useQueryHook";
 import Loading from "../../components/Loading";
 import InfoWrap from "../../components/InfoWrap";
 import BlurWrap from "../../components/BlurWrap";
+import QuickMenu from "../../components/QuickMenu";
 
 const IMG_URL =
   "https://res.cloudinary.com/dx71aeltq/image/upload/f_auto,q_auto:eco,dpr_auto,c_scale/";
@@ -136,6 +139,10 @@ export default function Detail() {
 
   const showLoading = !contentData || !imgLoaded || !isTimeout;
 
+  const handleMoveTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   if (!contentData) {
     return (
       <div className="fixed inset-0 z-100 bg-white flex justify-center items-center overflow-hidden">
@@ -220,7 +227,7 @@ export default function Detail() {
         </button>
       </div>
 
-      <section className="col-span-full sm:col-[2/8] lg:col-[3/11] grid grid-cols-1 gap-y-5 [grid-template-areas:'base'_'element'_'item'_'etc'_'part'_'reward'_'weak'_'series'_'relate'_'eco'] lg:grid-cols-3 lg:gap-6 lg:[grid-template-areas:'base_element_item'_'etc_part_reward'_'eco_weak_weak'_'eco_series_series'_'eco_relate_relate'] relative">
+      <section className="col-span-full sm:col-[2/8] lg:col-[3/11] grid grid-cols-1 gap-y-5 [grid-template-areas:'base'_'element'_'item'_'etc'_'part'_'reward'_'weak'_'series'_'relate'_'eco'] lg:grid-cols-3 lg:gap-6 lg:[grid-template-areas:'base_element_reward'_'etc_part_item'_'eco_weak_weak'_'eco_series_series'_'eco_relate_relate'] relative">
         {/* 시리즈 블러 처리 */}
         {!currentInfo?.haveData && <BlurWrap activeSeriesId={activeSeriesId} />}
 
@@ -438,7 +445,9 @@ export default function Detail() {
         {/* 보상 정보 */}
         <div className="[grid-area:reward]">
           <InfoWrap title="보수 정보">
-            <p>조사관 파견 중...</p>
+            <p className="text-sm lg:text-base text-[#a0a0a0]">
+              몬스터 소재 분석 중...
+            </p>
           </InfoWrap>
         </div>
 
@@ -609,6 +618,42 @@ export default function Detail() {
           </InfoWrap>
         </div>
       </section>
+
+      <ul className="fixed bottom-5 right-5 flex flex-col gap-2.5">
+        <li>
+          <QuickMenu>
+            <Link
+              to={"/report"}
+              className="w-full h-full flex justify-center items-center flex-col gap-1"
+            >
+              <Megaphone size={26} />
+              <span className="text-xs lg:text-sm">제보</span>
+            </Link>
+          </QuickMenu>
+        </li>
+        <li className="relative">
+          <QuickMenu>
+            <div className="w-full h-full flex justify-center items-center flex-col gap-1">
+              <Gamepad2 size={26} />
+              <span className="text-xs lg:text-sm">룰렛</span>
+            </div>
+          </QuickMenu>
+
+          <div className="absolute top-[50%] -left-15 text-xs p-2 transform translate-y-[-50%] border border-[#e0e0e0] rounded-[10px] bg-white">
+            개발 중
+          </div>
+        </li>
+        <li>
+          <QuickMenu>
+            <button
+              onClick={handleMoveTop}
+              className="w-full h-full cursor-pointer text-lg lg:text-xl font-bold"
+            >
+              Top
+            </button>
+          </QuickMenu>
+        </li>
+      </ul>
     </>
   );
 }

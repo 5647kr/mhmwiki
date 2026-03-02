@@ -4,6 +4,8 @@ import Home from "./routes/pages/Home";
 import Detail from "./routes/pages/Detail";
 import Report from "./routes/pages/Report";
 import NotFound from "./components/NotFound";
+import Roulette from "./routes/pages/Roulette";
+import Charm from "./routes/pages/Charm";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        Component: Home
+        Component: Home,
       },
       {
         path: "/detail/:id",
@@ -24,13 +26,17 @@ const router = createBrowserRouter([
         Component: Report,
       },
       {
-        path: "/minigame",
-        Component: Detail,
+        path: "/roulette",
+        Component: Roulette,
+      },
+      {
+        path: "/charm",
+        Component: Charm,
       },
       {
         path: "*",
-        Component: NotFound
-      }
+        Component: NotFound,
+      },
     ],
   },
 ]);

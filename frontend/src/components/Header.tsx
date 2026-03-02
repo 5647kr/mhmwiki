@@ -25,18 +25,6 @@ function MainHeader() {
           <strong className="text-xl lg:text-2xl">2026.03.01</strong>
         </div>
       </div>
-
-      {/* 제보, 미니게임 링크 */}
-      <div className="absolute top-0 right-4 sm:right-5 lg:right-6 flex gap-2.5">
-        <Link to={"/report"} className="flex items-center gap-2.5 px-1">
-          <Megaphone className="w-3.5 lg:w-4" />
-          <span className="text-sm lg:text-base">제보 & 건의</span>
-        </Link>
-        <Link to={"/report"} className="flex items-center gap-2.5 px-1">
-          <Gamepad2 className="w-3.5 lg:w-4" />
-          <span className="text-sm lg:text-base">미니게임</span>
-        </Link>
-      </div>
     </header>
   );
 }
@@ -86,17 +74,6 @@ function DetailHeader() {
             <ChevronRight className="w-3 lg:w-4" />
           </Link>
         )}
-      </div>
-
-      <div className="absolute top-0 right-4 sm:right-5 lg:right-6 flex gap-2.5">
-        <Link to={"/report"} className="flex items-center">
-          <Megaphone className="w-3.5 lg:w-4" />
-          <span className="text-sm lg:text-base">제보하기</span>
-        </Link>
-        <Link to={"/minigame"} className="flex items-center">
-          <Gamepad2 className="w-3.5 lg:w-4" />
-          <span className="text-sm lg:text-base">미니게임</span>
-        </Link>
       </div>
     </header>
   );

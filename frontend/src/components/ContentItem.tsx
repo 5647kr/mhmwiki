@@ -23,7 +23,7 @@ export default function ContentItem({
     <li
       ref={ref}
       key={item.id}
-      className={`border border-[#e0e0e0] shadow-[0_2px_4px_rgba(96,96,96,0.25)] w-full  rounded-[10px] overflow-hidden transition-all duration-600 ease-in-out ${
+      className={`border border-[#e0e0e0] shadow-[0_2px_4px_rgba(96,96,96,0.25)] w-full rounded-[10px] overflow-hidden transition-all duration-600 ease-in-out ${
         inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-y-7.5"
       } ${cardState ? "aspect-[1/1.3]" : ""}`}
     >

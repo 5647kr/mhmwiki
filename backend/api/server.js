@@ -1,23 +1,43 @@
-const jsonServer = require('json-server');
-const path = require('path'); // 경로 설정을 위해 추가
+const jsonServer = require("json-server");
 const server = jsonServer.create();
-
-// 1. 절대 경로로 db.json을 지정해야 Vercel이 인식합니다.
-const router = jsonServer.router(path.join(__dirname, '..', 'db.json'));
-
+const path = require("path");
+const router = jsonServer.router(path.join(__dirname, "../db.json")); // 경로 확인 필요
 const middlewares = jsonServer.defaults();
 
+// 1. CORS 패키지 불러오기
+const cors = require("cors");
+
+// 2. CORS 설정: 로컬 개발 주소와 실제 배포 주소를 모두 적어주세요.
+const allowedOrigins = [
+  "http://localhost:5173", // npm run dev 환경
+  "http://localhost:4173", // npm run preview 환경
+  "https://mhmwiki.vercel.app", // 실제 프론트엔드 배포 완료 후 주소
+];
+
+server.use(
+  cors({
+    origin: (origin, callback) => {
+      // origin이 없거나(직접 호출 등) 목록에 있으면 허용
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS 정책에 의해 차단되었습니다."));
+      }
+    },
+    credentials: true, // 필요한 경우 인증 정보 허용
+  })
+);
+
 server.use(middlewares);
-
-// 2. 리라이터는 필요한 경우에만 쓰세요. 
-// 일단 404 해결을 위해 기본값으로 두거나 주석 처리하는 것이 안전합니다.
-server.use(jsonServer.rewriter({
-    '/api/*': '/$1'
-}));
-
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  })
+);
 server.use(router);
 
-// 3. [중요] server.listen은 삭제해야 합니다. 
-// Vercel은 module.exports된 서버를 직접 실행합니다.
+server.listen(3000, () => {
+  console.log("JSON Server is running");
+});
 
 module.exports = server;

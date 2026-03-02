@@ -1,31 +1,23 @@
-// See https://github.com/typicode/json-server#module
-const jsonServer = require('json-server')
+const jsonServer = require('json-server');
+const path = require('path'); // 경로 설정을 위해 추가
+const server = jsonServer.create();
 
-const server = jsonServer.create()
+// 1. 절대 경로로 db.json을 지정해야 Vercel이 인식합니다.
+const router = jsonServer.router(path.join(__dirname, '..', 'db.json'));
 
-// Uncomment to allow write operations
-// const fs = require('fs')
-// const path = require('path')
-// const filePath = path.join('db.json')
-// const data = fs.readFileSync(filePath, "utf-8");
-// const db = JSON.parse(data);
-// const router = jsonServer.router(db)
+const middlewares = jsonServer.defaults();
 
-// Comment out to allow write operations
-const router = jsonServer.router('db.json')
+server.use(middlewares);
 
-const middlewares = jsonServer.defaults()
-
-server.use(middlewares)
-// Add this before server.use(router)
+// 2. 리라이터는 필요한 경우에만 쓰세요. 
+// 일단 404 해결을 위해 기본값으로 두거나 주석 처리하는 것이 안전합니다.
 server.use(jsonServer.rewriter({
-    '/api/*': '/$1',
-    '/blog/:resource/:id/show': '/:resource/:id'
-}))
-server.use(router)
-server.listen(3000, () => {
-    console.log('JSON Server is running')
-})
+    '/api/*': '/$1'
+}));
 
-// Export the Server API
-module.exports = server
+server.use(router);
+
+// 3. [중요] server.listen은 삭제해야 합니다. 
+// Vercel은 module.exports된 서버를 직접 실행합니다.
+
+module.exports = server;

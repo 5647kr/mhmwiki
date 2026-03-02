@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Gamepad2, Megaphone } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link, useParams } from "react-router";
 import { useQueryHook } from "../hook/useQueryHook";
 import SearchInput from "./SearchInput";
@@ -22,7 +22,7 @@ function MainHeader() {
           <h2 className="text-2xl lg:text-[26px] font-semibold mb-2.5">
             마지막 업데이트
           </h2>
-          <strong className="text-xl lg:text-2xl">2026.03.01</strong>
+          <strong className="text-xl lg:text-2xl">2026.03.02</strong>
         </div>
       </div>
     </header>

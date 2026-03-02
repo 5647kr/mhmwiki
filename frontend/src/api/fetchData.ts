@@ -15,7 +15,7 @@ export default async function fetchData({
   search,
   filter,
 }: FetchDataProps) {
-  const baseUrl = `http://localhost:3000/${path}`;
+  const baseUrl = `https://mhmwiki-backend.vercel.app/${path}`;
   const url = new URL(baseUrl);
 
   if (page) {

@@ -127,7 +127,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="col-span-full sm:col-[2/8] lg:col-[3/11] min-h-[calc(100vh-404px)] pt-5 pb-10">
+      <div className="col-span-full sm:col-[2/8] lg:col-[3/11] min-h-[calc(100vh-430px)] pt-5 pb-10">
         {content && content.length > 0 ? (
           <ul className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5">
             {content.map((item) => (

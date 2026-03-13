@@ -17,9 +17,8 @@ export default async function fetchData({
   filter,
   selectSeriesId,
 }: FetchDataProps) {
-  const baseUrl = `http://localhost:3000/${path}`; // 개발서버
-  // const baseUrl = `"http://localhost:4173"/${path}`; // 배포전 테스트 서버
-  // const baseUrl = `https://mhmwiki-backend.vercel.app/${path}`; // 배포 서버
+  // const baseUrl = `http://localhost:3000/${path}`; // 개발서버
+  const baseUrl = `https://mhmwiki-backend.vercel.app/${path}`; // 배포 서버
   const url = new URL(baseUrl);
 
   if (page) {

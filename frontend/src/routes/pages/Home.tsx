@@ -173,7 +173,7 @@ export default function Home() {
               <div className="flex flex-col relative w-full">
                 <p className="text-sm lg:text-base font-bold">호석</p>
                 <span className="text-xs lg:text-sm">호석 등급 & 검증</span>
-                <span className="absolute top-0 right-0 text-xs p-1 border border-[#e0e0e0] rounded-[10px] bg-white">
+                <span className="absolute -top-1 right-0 text-xs p-1 border border-[#e0e0e0] rounded-[10px] bg-white">
                   개발 중
                 </span>
               </div>

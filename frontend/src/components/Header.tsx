@@ -48,7 +48,11 @@ function DetailHeader() {
         <SearchInput />
       </div>
 
-      <div className="flex w-full gap-5 mt-2.5 justify-between lg:justify-end lg:w-fit">
+      <div
+        className={`flex w-full gap-5 mt-2.5 justify-between lg:justify-end lg:w-fit ${
+          currentIndex === 0 ? "flex-row-reverse" : "flex-row"
+        }`}
+      >
         {prevContent && (
           <Link
             to={`detail/${prevContent?.id}`}

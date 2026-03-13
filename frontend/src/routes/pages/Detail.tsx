@@ -37,8 +37,6 @@ export default function Detail() {
 
   const content = contentData?.items ? contentData.items[0] : contentData;
 
-  console.log(content);
-
   // 버튼생성을 위한 시리즈 찾기
   const contentSeries = filterData?.items.series.filter((item: Series) =>
     content?.infoSeriesId.includes(item.id)
@@ -148,8 +146,6 @@ export default function Detail() {
       </div>
     );
   }
-
-  console.log(currentInfo?.weak);
 
   return (
     <>

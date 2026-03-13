@@ -444,7 +444,7 @@ function RouletteComponents() {
   return (
     <>
       <div className="fullScreen">
-        <ul className="flex gap-2.5">
+        <ul className="flex gap-5">
           <li className="flex gap-2.5 items-center">
             <input
               type="radio"

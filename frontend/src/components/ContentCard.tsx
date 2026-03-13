@@ -37,7 +37,7 @@ function GridContentCard(props: GridContentCardProps) {
         <h2 className="text-lg lg:text-xl font-bold text-[#606060]">
           {props.name}
         </h2>
-        <p className="text-sm lg:text-base text-[#a0a0a0]">
+        <p className="text-sm text-[#a0a0a0]">
           {props.type.split("/")[0]}
         </p>
       </div>
@@ -55,7 +55,7 @@ function ListContentCard(props: GridContentCardProps) {
         className="w-10 aspect-square"
       />
       <div className="flex items-center flex-row-reverse gap-2.5">
-        <h2 className="text-sm font-bold text-[#606060]">{props.name}</h2>
+        <h2 className="text-sm text-[#606060]">{props.name}</h2>
         <p className="text-xs text-[#a0a0a0]">{props.type.split("/")[0]}</p>
       </div>
     </div>

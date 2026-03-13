@@ -7,6 +7,7 @@ interface FetchDataProps {
     type: string[];
     weak: string[];
   };
+  selectSeriesId?: string;
 }
 
 export default async function fetchData({
@@ -14,8 +15,10 @@ export default async function fetchData({
   page,
   search,
   filter,
+  selectSeriesId,
 }: FetchDataProps) {
-  const baseUrl = `https://mhmwiki-backend.vercel.app/${path}`;
+  // const baseUrl = `http://localhost:3000/${path}`; // 개발서버
+  const baseUrl = `https://mhmwiki-backend.vercel.app/${path}`; // 배포 서버
   const url = new URL(baseUrl);
 
   if (page) {
@@ -46,6 +49,10 @@ export default async function fetchData({
 
   if (search) {
     url.searchParams.append("name_like", search);
+  }
+
+  if (selectSeriesId) {
+    url.searchParams.append("infoSeriesId_like", selectSeriesId);
   }
 
   const response = await fetch(url.toString());

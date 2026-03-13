@@ -1,49 +1,34 @@
 import { Search } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useQueryHook } from "../hook/useQueryHook";
 import { Link, useNavigate } from "react-router";
 
 export default function SearchInput() {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");
-  const [keyword, setKeyword] = useState("");
   const [isExpand, setIsExpand] = useState(false);
 
   const IMG_URL =
     "https://res.cloudinary.com/dx71aeltq/image/upload/f_auto,q_auto:eco,dpr_auto,c_scale/";
 
-  useEffect(() => {
-    setIsExpand(false);
-
-    const delayTimer = setTimeout(() => {
-      setKeyword(inputValue);
-    }, 100);
-
-    return () => clearTimeout(delayTimer);
-  }, [inputValue]);
-
   const { data } = useQueryHook({
-    key: ["searchContent", keyword],
+    key: ["searchContent", inputValue],
     path: "monster",
-    search: keyword,
-    enabled: keyword.length > 0,
+    search: inputValue,
   });
 
   const searchResult = data?.items || [];
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setKeyword(inputValue);
-    if (searchResult.length > 0) {
-      navigate(`/detail/${searchResult[0].id}`);
-    }
+    navigate(`/detail/${searchResult[0].id}`);
     setInputValue("");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative">
+    <form onSubmit={handleSubmit} className="relative w-full">
       {/* 입력폼 */}
-      <div className="flex justify-between gap-2.5 p-2.5 rounded-[10px] border border-[#a0a0a0] bg-[#eee] relative z-10">
+      <div className="w-full flex justify-between items-center gap-2.5 p-2.5 rounded-[10px] border border-[#e0e0e0] bg-white relative z-50">
         <input
           type="text"
           className="focus:outline-0 w-full text-sm lg:text-base"
@@ -51,19 +36,21 @@ export default function SearchInput() {
           onChange={(e) => {
             setInputValue(e.target.value);
           }}
-          placeholder="몬스터의 이름을 입력해주세요."
+          placeholder="몬스터 이름을 입력해주세요."
         />
-        <button type="submit" className="cursor-pointer w-4 lg:w-5">
-          <Search className="w-4 lg:w-5" />
+        <button type="submit" className="cursor-pointer w-5 lg:w-6 h-5 lg:h-6">
+          <Search className="w-5 lg:w-6 h-5 lg:h-6" />
         </button>
       </div>
 
       {/* 검색결과목록 */}
-      {keyword && searchResult.length > 0 && (
-        <div className="absolute w-full border border-[#eee] -mt-3 bg-white pt-4 rounded-[10px] min-h-23.5 ">
+      {inputValue && searchResult.length > 0 && (
+        <div className="absolute w-full border border-[#eee] -mt-4 bg-white pt-4 rounded-[10px] min-h-24 z-40">
           <ul
             className={`${
-              isExpand ? "max-h-96 overflow-y-auto" : "max-h-23.5 overflow-hidden"
+              isExpand
+                ? "max-h-96 overflow-y-auto"
+                : "max-h-23.5 overflow-hidden"
             } transparent-scroll flex flex-col transition-[max-height] duration-1000 ease-in-out px-1.5 pb-1.5 mr-1.5 mb-1.5`}
           >
             <li className="hover:bg-[#eee] p-3 rounded-[10px] cursor-pointer">

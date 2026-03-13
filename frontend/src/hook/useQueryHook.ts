@@ -10,16 +10,19 @@ function useQueryHook<T extends QueryKey>({
   path,
   search,
   enabled,
+  selectSeriesId,
 }: {
   key: T;
   path: string;
   search?: string;
   enabled?: boolean;
+  selectSeriesId?: string;
 }) {
   return useQuery({
     queryKey: key,
-    queryFn: () => fetchData({ path: path, search: search }),
-    staleTime: 1000 * 60 * 5,
+    queryFn: () =>
+      fetchData({ path: path, search: search, selectSeriesId: selectSeriesId }),
+    // staleTime: 1000 * 60 * 5,
     enabled,
   });
 }

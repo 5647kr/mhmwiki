@@ -4,6 +4,26 @@
   @apply px-4 sm:px-5 md:px-6 py-5;
 }
 
+.headingTitle {
+  @apply font-black text-xl md:text-[22px] lg:text-2xl xl:text-[26px] 2xl:text-[28px];
+}
+
+.subHeadingTitle {
+  @apply font-bold text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl;
+}
+
+.paragraph {
+  @apply text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px];
+}
+
+.subParagraph {
+  @apply text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl;
+}
+
+.fullScreen {
+  @apply col-span-full sm:col-[2/8] lg:col-[3/11];
+}
+
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;

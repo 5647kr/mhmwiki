@@ -5,24 +5,17 @@ import SearchInput from "./SearchInput";
 
 function MainHeader() {
   return (
-    <header className="header">
-      <h1 className="text-[28px] lg:text-3xl text-center font-bold mb-10">
-        MHMWIKI
-      </h1>
+    <header className="py-10 text-center">
+      <h1 className="headingTitle">MHMWIKI</h1>
 
-      {/* 간단 정보: 컨텐츠 수, 업데이트 일자 */}
-      <div className="flex text-[#a0a0a0]">
-        <div className="w-full text-center">
-          <h2 className="text-2xl lg:text-[26px] font-semibold mb-2.5">
-            등록된 몬스터
-          </h2>
-          <strong className="text-xl lg:text-2xl">247마리</strong>
+      <div className="flex px-4 sm:px-5 lg:px-6 gap-4 sm:gap-5 lg:gap-6 mt-10">
+        <div className="flex-1 flex flex-col gap-2.5">
+          <h2 className="subHeadingTitle text-[#A0A0A0]">등록된 몬스터</h2>
+          <strong className="subHeadingTitle font-black">247종</strong>
         </div>
-        <div className="w-full text-center">
-          <h2 className="text-2xl lg:text-[26px] font-semibold mb-2.5">
-            마지막 업데이트
-          </h2>
-          <strong className="text-xl lg:text-2xl">2026.03.02</strong>
+        <div className="flex-1 flex flex-col gap-2.5">
+          <h2 className="subHeadingTitle text-[#A0A0A0]">마지막 업데이트</h2>
+          <strong className="subHeadingTitle font-black">2026.03.02</strong>
         </div>
       </div>
     </header>
@@ -79,4 +72,16 @@ function DetailHeader() {
   );
 }
 
-export { MainHeader, DetailHeader };
+function SubHeader() {
+  return (
+    <header className="py-10 border-b border-[#eee] sticky top-0 z-40 bg-white flex flex-col lg:gap-0 lg:flex-row items-center justify-around">
+      <h1>
+        <Link to={"/"} className="headingTitle">
+          MHMWIKI
+        </Link>
+      </h1>
+    </header>
+  );
+}
+
+export { MainHeader, DetailHeader, SubHeader };

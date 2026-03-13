@@ -109,7 +109,7 @@ export default function Report() {
               id="paragraph"
               value={paragraph}
               onChange={(e) => setParagraph(e.target.value)}
-              className="p-2.5 rounded-[10px] border border-[#a0a0a0] bg-white focus:outline-none resize-none h-100"
+              className="p-2.5 rounded-[10px] border border-[#a0a0a0] bg-white focus:outline-none resize-none h-80"
             ></textarea>
           </div>
           <div className="flex flex-col gap-2.5">

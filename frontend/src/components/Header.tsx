@@ -44,27 +44,27 @@ function DetailHeader() {
         </Link>
       </h1>
 
-      <div className="w-[40%] mt-5 lg:mt-0">
+      <div className="w-[50%] mt-5 lg:mt-0">
         <SearchInput />
       </div>
 
-      <div className="flex gap-5">
+      <div className="flex w-full gap-5 mt-2.5 justify-between lg:justify-end lg:w-fit">
         {prevContent && (
           <Link
             to={`detail/${prevContent?.id}`}
-            className="flex gap-2.5 items-center absolute bottom-7.5 left-5 lg:static"
+            className="flex gap-2.5 items-center"
           >
-            <ChevronLeft className="w-3 lg:w-4" />
-            <span className="text-xs lg:text-base">{prevContent?.name}</span>
+            <ChevronLeft className="w-5 lg:w-6 h-5 lg:h-6" />
+            <span className="text-sm lg:text-base">{prevContent?.name}</span>
           </Link>
         )}
         {nextContent && (
           <Link
             to={`detail/${nextContent?.id}`}
-            className="flex gap-2.5 items-center absolute bottom-7.5 right-5 lg:static"
+            className="flex gap-2.5 items-center"
           >
-            <span className="text-xs lg:text-base">{nextContent?.name}</span>
-            <ChevronRight className="w-3 lg:w-4" />
+            <span className="text-sm lg:text-base">{nextContent?.name}</span>
+            <ChevronRight className="w-5 lg:w-6 h-5 lg:h-6" />
           </Link>
         )}
       </div>

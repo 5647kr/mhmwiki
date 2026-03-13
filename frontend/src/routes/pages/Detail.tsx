@@ -37,7 +37,7 @@ export default function Detail() {
 
   const content = contentData?.items ? contentData.items[0] : contentData;
 
-  console.log(content)
+  console.log(content);
 
   // 버튼생성을 위한 시리즈 찾기
   const contentSeries = filterData?.items.series.filter((item: Series) =>
@@ -531,11 +531,23 @@ export default function Detail() {
                           className={`py-3 px-1 text-center text-sm ${
                             i === 0
                               ? "text-[#606060] font-bold"
-                              : "text-[#a0a0a0]"
+                              : "text-[#a0a0a0] font-normal"
                           }`}
                         >
-                          {(value as string).split("/")[0]}
-                          <span>{(value as string).split("/")[1]}</span>
+                          {(value as string).split("br").map((line, index) => {
+                            const parts = line.split("/");
+
+                            return (
+                              <div key={index}>
+                                <span className="text-sm text-[#606060]">{parts[0]}</span>
+                                {parts[1] && (
+                                  <span className="text-xs ml-1 text-[#a0a0a0]">
+                                    {parts[1]}
+                                  </span>
+                                )}
+                              </div>
+                            );
+                          })}
                         </td>
                       ))}
                     </tr>

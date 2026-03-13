@@ -535,7 +535,9 @@ export default function Detail() {
 
                             return (
                               <div key={index}>
-                                <span className="text-sm text-[#606060]">{parts[0]}</span>
+                                <span className="text-sm text-[#606060]">
+                                  {parts[0]}
+                                </span>
                                 {parts[1] && (
                                   <span className="text-xs ml-1 text-[#a0a0a0]">
                                     {parts[1]}
@@ -638,7 +640,7 @@ export default function Detail() {
       {/* 허브메뉴 */}
       <article
         className={`rounded-[10px] border border-[#e0e0e0] bg-white shadow-[0_2px_4px_rgba(96,96,96,0.25)] fixed right-5 bottom-36.5 transition-[translate,opacity] duration-500 ease-in-out p-5
-    ${hubMenu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"}`}
+    ${hubMenu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-100"}`}
       >
         <h3 className="subHeadingTitle font-bold border-b border-[#e0e0e0] mb-2.5">
           MENU
@@ -654,7 +656,7 @@ export default function Detail() {
               <div className="flex flex-col relative w-full">
                 <p className="text-sm lg:text-base font-bold">호석</p>
                 <span className="text-xs lg:text-sm">호석 등급 & 검증</span>
-                <span className="absolute top-0 right-0 text-xs p-1 border border-[#e0e0e0] rounded-[10px] bg-white">
+                <span className="absolute -top-1 right-0 text-xs p-1 border border-[#e0e0e0] rounded-[10px] bg-white">
                   개발 중
                 </span>
               </div>

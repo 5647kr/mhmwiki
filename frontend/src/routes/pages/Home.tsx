@@ -157,7 +157,7 @@ export default function Home() {
 
       <article
         className={`rounded-[10px] border border-[#e0e0e0] bg-white shadow-[0_2px_4px_rgba(96,96,96,0.25)] fixed right-5 bottom-36.5 transition-[translate,opacity] duration-500 ease-in-out p-5
-    ${hubMenu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"}`}
+    ${hubMenu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-100"}`}
       >
         <h3 className="subHeadingTitle font-bold border-b border-[#e0e0e0] mb-2.5">
           MENU

@@ -43305,7 +43305,7 @@
       "title": "MH",
       "fullName": "Monster Hunter",
       "series": "1",
-      "open": "2004년 03월 11일",
+      "open": "2004-03-11",
       "platform": "PS2"
     },
     {
@@ -43313,7 +43313,7 @@
       "title": "MHG",
       "fullName": "Monster Hunter G",
       "series": "1",
-      "open": "2005년 01월 20일",
+      "open": "2005-01-20",
       "platform": "PS2, Wii"
     },
     {
@@ -43321,7 +43321,7 @@
       "title": "MHP",
       "fullName": "Monster Hunter Portable",
       "series": "1",
-      "open": "2005년 12월 01일",
+      "open": "2005-12-01",
       "platform": "PSP"
     },
     {
@@ -43329,7 +43329,7 @@
       "title": "MH2",
       "fullName": "Monster Hunter Dos",
       "series": "2",
-      "open": "2006년 02월 16일",
+      "open": "2006-02-16",
       "platform": "PS2"
     },
     {
@@ -43337,7 +43337,7 @@
       "title": "MHP2",
       "fullName": "Monster Hunter Portable 2",
       "series": "2",
-      "open": "2007년 02월 22일",
+      "open": "2007-02-22",
       "platform": "PSP"
     },
     {
@@ -43345,7 +43345,7 @@
       "title": "MHP2G",
       "fullName": "Monster Hunter Portable 2G",
       "series": "2",
-      "open": "2008년 03월 27일",
+      "open": "2008-03-27",
       "platform": "PSP"
     },
     {
@@ -43353,7 +43353,7 @@
       "title": "MH3",
       "fullName": "Monster Hunter Tri",
       "series": "3",
-      "open": "2009년 08월 01일",
+      "open": "2009-08-01",
       "platform": "Wii"
     },
     {
@@ -43361,7 +43361,7 @@
       "title": "MH3G",
       "fullName": "Monster Hunter Tri G",
       "series": "3",
-      "open": "2011년 12월 10일",
+      "open": "2011-12-10",
       "platform": "3DS, Wii"
     },
     {
@@ -43369,7 +43369,7 @@
       "title": "MHP3",
       "fullName": "Monster Hunter Portable 3rd",
       "series": "3",
-      "open": "2010년 12월 01일",
+      "open": "2010-12-01",
       "platform": "PSP, PS3"
     },
     {
@@ -43377,7 +43377,7 @@
       "title": "MH4",
       "fullName": "Monster Hunter 4",
       "series": "4",
-      "open": "2013년 09월 14일",
+      "open": "2013-09-14",
       "platform": "3DS"
     },
     {
@@ -43385,7 +43385,7 @@
       "title": "MH4G",
       "fullName": "Monster Hunter 4G",
       "series": "4",
-      "open": "2014년 10월 11일",
+      "open": "2014-10-11",
       "platform": "3DS"
     },
     {
@@ -43393,7 +43393,7 @@
       "title": "MHX",
       "fullName": "Monster Hunter Cross",
       "series": "4",
-      "open": "2015년 11월 28일",
+      "open": "2015년 11월 28일", 
       "platform": "3DS"
     },
     {
@@ -43401,7 +43401,7 @@
       "title": "MHXX",
       "fullName": "Monster Hunter Double Cross",
       "series": "4",
-      "open": "2017년 03월 18일",
+      "open": "2017-03-18",
       "platform": "3DS, Switch"
     },
     {
@@ -43409,7 +43409,7 @@
       "title": "MHW",
       "fullName": "Monster Hunter World",
       "series": "5",
-      "open": "2018년 01월 26일",
+      "open": "2018-01-26",
       "platform": "PS4, Xbox1, Steam"
     },
     {
@@ -43417,7 +43417,7 @@
       "title": "MHW:IB",
       "fullName": "Monster Hunter World IceBorne",
       "series": "5",
-      "open": "2019년 09월 06일",
+      "open": "2019-09-06",
       "platform": "PS4, Xbox1, Steam"
     },
     {
@@ -43425,7 +43425,7 @@
       "title": "MHR",
       "fullName": "Monster Hunter Rise",
       "series": "5",
-      "open": "2021년 03월 26일",
+      "open": "2021-03-26",
       "platform": "PS4, Xbox1, Steam, Switch"
     },
     {
@@ -43433,7 +43433,7 @@
       "title": "MHR:SB",
       "fullName": "Monster Hunter Rise: SunBreak",
       "series": "5",
-      "open": "2022년 06월 30일",
+      "open": "2022-06-30",
       "platform": "PS4, Xbox1, Steam, Switch"
     },
     {
@@ -43441,7 +43441,7 @@
       "title": "MHWs",
       "fullName": "Monster Hunter Wilds",
       "series": "6",
-      "open": "2025년 02월 28일",
+      "open": "2025-02-28",
       "platform": "PS5, XboxX, Steam, Switch2"
     },
     {
@@ -43449,7 +43449,7 @@
       "title": "MHWsA",
       "fullName": "Monster Hunter Wilds Ascendance",
       "series": "6",
-      "open": "2027년",
+      "open": "2027-00-00",
       "platform": "PS5, XboxX, Steam, Switch2"
     }
   ],

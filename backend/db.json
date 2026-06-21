@@ -588,7 +588,6 @@
       "nickname2": null,
       "type": "갑각종/십각목-단미하목-겸해상과-기자미과",
       "species": "이명 특수개체",
-      "series": "MHXX",
       "seriesId": ["m"],
       "infoSeriesId": ["m"],
       "title": null,
@@ -30230,7 +30229,6 @@
       "nickname2": null,
       "type": "고룡종/고룡목-봉룡아목-지엔과",
       "species": "아종",
-      "series": "MH3G",
       "seriesId": ["h"],
       "infoSeriesId": ["h"],
       "title": null,
@@ -31051,7 +31049,6 @@
       "nickname2": null,
       "type": "고룡종/고룡목-염룡아목-테스카토과",
       "species": "괴이 극복",
-      "series": "MHRSB",
       "seriesId": ["q"],
       "infoSeriesId": ["q"],
       "title": null,
@@ -31246,6 +31243,7 @@
       "id": "a",
       "title": "MH",
       "fullName": "Monster Hunter",
+      "koTitle": "몬스터 헌터",
       "series": "1",
       "open": "2004-03-11",
       "platform": "PS2"
@@ -31254,6 +31252,7 @@
       "id": "b",
       "title": "MHG",
       "fullName": "Monster Hunter G",
+      "koTitle": "몬스터 헌터 G",
       "series": "1",
       "open": "2005-01-20",
       "platform": "PS2, Wii"
@@ -31262,6 +31261,7 @@
       "id": "c",
       "title": "MHP",
       "fullName": "Monster Hunter Portable",
+      "koTitle": "몬스터 헌터 포터블",
       "series": "1",
       "open": "2005-12-01",
       "platform": "PSP"
@@ -31270,6 +31270,7 @@
       "id": "d",
       "title": "MH2",
       "fullName": "Monster Hunter Dos",
+      "koTitle": "몬스터 헌터 2(도스)",
       "series": "2",
       "open": "2006-02-16",
       "platform": "PS2"
@@ -31278,6 +31279,7 @@
       "id": "e",
       "title": "MHP2",
       "fullName": "Monster Hunter Portable 2",
+      "koTitle": "몬스터 헌터 포터블 2",
       "series": "2",
       "open": "2007-02-22",
       "platform": "PSP"
@@ -31286,6 +31288,7 @@
       "id": "f",
       "title": "MHP2G",
       "fullName": "Monster Hunter Portable 2G",
+      "koTitle": "몬스터 헌터 포터블 2G",
       "series": "2",
       "open": "2008-03-27",
       "platform": "PSP"
@@ -31294,6 +31297,7 @@
       "id": "g",
       "title": "MH3",
       "fullName": "Monster Hunter Tri",
+      "koTitle": "몬스터 헌터 3(트라이)",
       "series": "3",
       "open": "2009-08-01",
       "platform": "Wii"
@@ -31302,6 +31306,7 @@
       "id": "h",
       "title": "MH3G",
       "fullName": "Monster Hunter Tri G",
+      "koTitle": "몬스터 헌터 3(트라이)G",
       "series": "3",
       "open": "2011-12-10",
       "platform": "3DS, Wii"
@@ -31310,6 +31315,7 @@
       "id": "i",
       "title": "MHP3",
       "fullName": "Monster Hunter Portable 3rd",
+      "koTitle": "몬스터 헌터 포터블 서드",
       "series": "3",
       "open": "2010-12-01",
       "platform": "PSP, PS3"
@@ -31318,6 +31324,7 @@
       "id": "j",
       "title": "MH4",
       "fullName": "Monster Hunter 4",
+      "koTitle": "몬스터 헌터 4",
       "series": "4",
       "open": "2013-09-14",
       "platform": "3DS"
@@ -31326,6 +31333,7 @@
       "id": "k",
       "title": "MH4G",
       "fullName": "Monster Hunter 4G",
+      "koTitle": "몬스터 헌터 4G",
       "series": "4",
       "open": "2014-10-11",
       "platform": "3DS"
@@ -31334,6 +31342,7 @@
       "id": "l",
       "title": "MHX",
       "fullName": "Monster Hunter Cross",
+      "koTitle": "몬스터 헌터 크로스",
       "series": "4",
       "open": "2015년 11월 28일",
       "platform": "3DS"
@@ -31342,6 +31351,7 @@
       "id": "m",
       "title": "MHXX",
       "fullName": "Monster Hunter Double Cross",
+      "koTitle": "몬스터 헌터 더블 크로스",
       "series": "4",
       "open": "2017-03-18",
       "platform": "3DS, Switch"
@@ -31350,6 +31360,7 @@
       "id": "n",
       "title": "MHW",
       "fullName": "Monster Hunter World",
+      "koTitle": "몬스터 헌터 월드",
       "series": "5",
       "open": "2018-01-26",
       "platform": "PS4, Xbox1, Steam"
@@ -31358,6 +31369,7 @@
       "id": "o",
       "title": "MHW:IB",
       "fullName": "Monster Hunter World IceBorne",
+      "koTitle": "몬스터 헌터 월드 아이스본",
       "series": "5",
       "open": "2019-09-06",
       "platform": "PS4, Xbox1, Steam"
@@ -31366,6 +31378,7 @@
       "id": "p",
       "title": "MHR",
       "fullName": "Monster Hunter Rise",
+      "koTitle": "몬스터 헌터 라이즈",
       "series": "5",
       "open": "2021-03-26",
       "platform": "PS4, Xbox1, Steam, Switch"
@@ -31374,6 +31387,7 @@
       "id": "q",
       "title": "MHR:SB",
       "fullName": "Monster Hunter Rise: SunBreak",
+      "koTitle": "몬스터 헌터 라이즈 선브레이크",
       "series": "5",
       "open": "2022-06-30",
       "platform": "PS4, Xbox1, Steam, Switch"
@@ -31382,6 +31396,7 @@
       "id": "r",
       "title": "MHWs",
       "fullName": "Monster Hunter Wilds",
+      "koTitle": "몬스터 헌터 와일즈",
       "series": "6",
       "open": "2025-02-28",
       "platform": "PS5, XboxX, Steam, Switch2"
@@ -31390,6 +31405,7 @@
       "id": "s",
       "title": "MHWsA",
       "fullName": "Monster Hunter Wilds Ascendance",
+      "koTitle": "몬스터 헌터 와일즈 어센던스",
       "series": "6",
       "open": "2027-00-00",
       "platform": "PS5, XboxX, Steam, Switch2"

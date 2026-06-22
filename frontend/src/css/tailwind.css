@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.title {
+  @apply font-black text-[30px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[38px];
+}
+
 .headingTitle {
   @apply font-black text-xl md:text-[22px] lg:text-2xl xl:text-[26px] 2xl:text-[28px];
 }

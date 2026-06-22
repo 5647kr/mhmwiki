@@ -1,7 +1,42 @@
 import { ArrowRight, RotateCw } from "lucide-react";
 import { Link } from "react-router";
+import FilterForm from "../../components/FilterForm";
+import { useFetchStore } from "../../store/fetchStore";
+import { useInfiniteQueryHook, useQueryHook } from "../../hook/useQueryHook";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import Item from "../../components/Item";
+import { useFilterStore } from "../../store/filterStore";
+import Skeleton from "../../components/Skeleton";
 
 export default function Home() {
+  const series = useFetchStore((state) => state.series);
+  const type = useFetchStore((state) => state.type);
+  const filterState = useFilterStore((state) => state.filterState);
+
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
+    useInfiniteQueryHook(filterState);
+
+  const content = data?.pages.flatMap((page) => page.data || []) || [];
+  const contentLength = data?.pages.flatMap((page) => page.totalCount);
+
+  const { data: randomItem, refetch } = useQueryHook({
+    contentLength: contentLength?.[0],
+    enabled: !!contentLength,
+  });
+
+  const todayItem = randomItem?.[0];
+
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (!inView) return;
+    if (!hasNextPage) return;
+    if (isFetchingNextPage) return;
+
+    fetchNextPage();
+  }, [inView]);
+
   return (
     <>
       <section className="px-4 md:px-5 lg:px-6 py-10 bg-(--black) flex flex-col lg:flex-row gap-10">
@@ -17,7 +52,7 @@ export default function Home() {
           <span className="text-[#444] small">2004 - 2026 ALL SERIES</span>
 
           <div className="pt-5 pb-7.5">
-            <h3 className="syne font-black text-(--red) text-[80px] leading-13">
+            <h3 className="syne font-black text-(--red) title leading-7">
               MON
               <br />
               <span className="syne font-black text-(--grey)">STER</span>
@@ -35,32 +70,33 @@ export default function Home() {
             <ul className="flex gap-2 border border-(--dgrey)">
               <li className="w-full px-2.5 py-5 border-r border-(--dgrey)">
                 <div>
-                  <h4 className="syne font-black text-(--white) text-[32px]">
-                    200
+                  <h4 className="syne font-black text-(--white) headingTitle">
+                    247
                   </h4>
                   <p className="text-[#444] small">MONSTER</p>
                 </div>
               </li>
               <li className="w-full px-2.5 py-5 border-r border-(--dgrey)">
                 <div>
-                  <h4 className="syne font-black text-(--white) text-[32px]">
-                    20
+                  <h4 className="syne font-black text-(--white) headingTitle">
+                    {series.length}
                   </h4>
                   <p className="text-[#444] small">TITLES</p>
                 </div>
               </li>
               <li className="w-full px-2.5 py-5 border-r border-(--dgrey)">
                 <div>
-                  <h4 className="syne font-black text-(--white) text-[32px]">
-                    21<span className="text-(--red) font-bold text-xl">YR</span>
+                  <h4 className="syne font-black text-(--white) headingTitle">
+                    {2026 - 2004}
+                    <span className="text-(--red) font-bold text-xl">YR</span>
                   </h4>
                   <p className="text-[#444] small">HISTORY</p>
                 </div>
               </li>
               <li className="w-full px-2.5 py-5">
                 <div>
-                  <h4 className="syne font-black text-(--white) text-[32px]">
-                    20
+                  <h4 className="syne font-black text-(--white) headingTitle">
+                    {type.length}
                   </h4>
                   <p className="text-[#444] small">TYPE</p>
                 </div>
@@ -76,10 +112,20 @@ export default function Home() {
             <button
               type="button"
               className="bg-[#1a1a1a] border border-[#0f0f0f] p-2.5 absolute left-0 top-0"
+              onClick={() => refetch()}
             >
               <RotateCw size={20} stroke="#444" />
             </button>
-            <img src="https://picsum.photos/200" alt="" />
+            {!todayItem ? (
+              <>이미지 불러오는 중</>
+            ) : (
+              <img
+                src={`https://res.cloudinary.com/dx71aeltq/image/upload/${todayItem?.icon}`}
+                alt={`${todayItem?.name}`}
+                className="w-50"
+              />
+            )}
+
             <div className="flex gap-2.5 items-center bg-(--red) text-(--white) small p-2.5 w-fit absolute right-0 top-0">
               <span className="w-2.5 h-2.5 rounded-full bg-(--white) animate-bounce" />
               오늘의 몬스터
@@ -88,25 +134,43 @@ export default function Home() {
 
           <div className="text-(--red) flex items-center gap-2.5 py-10">
             <hr className="w-full" />
-            <h2 className="whitespace-nowrap small w-fit">수룡종</h2>
+            {!todayItem ? (
+              <h2 className="whitespace-nowrap small w-fit">종별 확인 중...</h2>
+            ) : (
+              <h2 className="whitespace-nowrap small w-fit">
+                {todayItem?.type.split("/")[0]}
+              </h2>
+            )}
+
             <hr className="w-full" />
           </div>
 
           {/* content Info */}
           <div>
-            <h3 className="text-[40px] text-(--white)">안쟈나프</h3>
+            {!todayItem ? (
+              <h3 className="title text-(--white)">이름 확인 중...</h3>
+            ) : (
+              <h3 className="title text-(--white)">{todayItem?.name}</h3>
+            )}
 
             <div className="py-5">
-              <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
-                화속성
-              </span>
+              {!todayItem ? (
+                <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
+                  약점 확인 중...
+                </span>
+              ) : (
+                <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
+                  {todayItem?.weakEl}
+                </span>
+              )}
+
               <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5 ml-2.5">
                 위험도 6/10
               </span>
             </div>
 
             <Link
-              to="#"
+              to={`/monster/${todayItem?.id}`}
               className="group w-full border border-[#1a1a1a] p-2.5 bg-[#0f0f0f] text-[#444] flex justify-between items-center hover:border-[#444] hover:bg-[#1a1a1a] hover:text-(--white)"
             >
               <span className="small">상세 정보 보기</span>
@@ -117,10 +181,47 @@ export default function Home() {
       </section>
 
       {/* filter section */}
-      <section>filter</section>
+      <section className="bg-(--cream) sticky top-0 z-20">
+        <FilterForm />
+      </section>
 
       {/* content section */}
-      <section></section>
+      <section className="bg-(--white) py-5">
+        <div className="flex gap-2.5 items-center px-4 md:px-5 lg:px-6 pb-5">
+          <h4 className="headingTitle text-(--black) min-w-fit">대형 몬스터</h4>
+          <span className="border border-(--lgrey) bg-(--cream) py-1.25 px-2.5 text-small text-(--grey) min-w-fit">
+            {status === "pending" ? 0 : contentLength?.[0]}종
+          </span>
+          <hr className="flex-1 border-(--lgrey)" />
+        </div>
+
+        <div>
+          {status === "pending" && (
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-(--lgrey)">
+              {Array.from({ length: 20 }).map((_, index) => (
+                <li key={`skeleton-${index}`}>
+                  <Skeleton />
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {status === "success" && content.length > 0 && (
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-(--lgrey)">
+              {content.map((item: Item, index) => (
+                <li
+                  key={item.id}
+                  ref={index === content.length - 1 ? ref : null}
+                >
+                  <Link to={`/monster/${item.id}`}>
+                    <Item {...item} />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </section>
     </>
   );
 }

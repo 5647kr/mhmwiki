@@ -1,10 +1,10 @@
-import { ArrowRight, RotateCw } from "lucide-react";
+import { ArrowRight, Image, RotateCw } from "lucide-react";
 import { Link } from "react-router";
 import FilterForm from "../../components/FilterForm";
 import { useFetchStore } from "../../store/fetchStore";
 import { useInfiniteQueryHook, useQueryHook } from "../../hook/useQueryHook";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Item from "../../components/Item";
 import { useFilterStore } from "../../store/filterStore";
 import Skeleton from "../../components/Skeleton";
@@ -13,6 +13,7 @@ export default function Home() {
   const series = useFetchStore((state) => state.series);
   const type = useFetchStore((state) => state.type);
   const filterState = useFilterStore((state) => state.filterState);
+  const [isRotating, setIsRotating] = useState(false);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQueryHook(filterState);
@@ -20,10 +21,22 @@ export default function Home() {
   const content = data?.pages.flatMap((page) => page.data || []) || [];
   const contentLength = data?.pages.flatMap((page) => page.totalCount);
 
-  const { data: randomItem, refetch } = useQueryHook({
+  const {
+    data: randomItem,
+    refetch,
+    isFetching,
+  } = useQueryHook({
+    key: ["content", "random"],
     contentLength: contentLength?.[0],
     enabled: !!contentLength,
   });
+
+  const handleRefresh = () => {
+    setIsRotating(true);
+    refetch();
+    // 0.5초(500ms) 후에 회전 상태를 꺼서 애니메이션 초기화
+    setTimeout(() => setIsRotating(false), 500);
+  };
 
   const todayItem = randomItem?.[0];
 
@@ -52,7 +65,7 @@ export default function Home() {
           <span className="text-[#444] small">2004 - 2026 ALL SERIES</span>
 
           <div className="pt-5 pb-7.5">
-            <h3 className="syne font-black text-(--red) title leading-7">
+            <h3 className="syne font-black text-(--red) text-[80px] leading-13">
               MON
               <br />
               <span className="syne font-black text-(--grey)">STER</span>
@@ -63,7 +76,7 @@ export default function Home() {
 
           <span className="small text-(--grey) leading-4 block">
             초대 몬스터 헌터부터 와일즈까지 역대 시리즈에 등장한
-            <br /> 모든 대형 몬스터의 완전한 데이터베이스
+            <br /> 모든 대형 몬스터의 데이터베이스
           </span>
 
           <div className="mt-10">
@@ -112,12 +125,17 @@ export default function Home() {
             <button
               type="button"
               className="bg-[#1a1a1a] border border-[#0f0f0f] p-2.5 absolute left-0 top-0"
-              onClick={() => refetch()}
+              onClick={handleRefresh}
+              disabled={isFetching}
             >
-              <RotateCw size={20} stroke="#444" />
+              <RotateCw
+                size={20}
+                stroke="#444"
+                className={`${isRotating ? "animate-[spin_0.5s_ease-in-out]" : ""}`}
+              />
             </button>
             {!todayItem ? (
-              <>이미지 불러오는 중</>
+              <Image size={200} stroke="var(--grey)" />
             ) : (
               <img
                 src={`https://res.cloudinary.com/dx71aeltq/image/upload/${todayItem?.icon}`}
@@ -133,16 +151,17 @@ export default function Home() {
           </div>
 
           <div className="text-(--red) flex items-center gap-2.5 py-10">
-            <hr className="w-full" />
             {!todayItem ? (
-              <h2 className="whitespace-nowrap small w-fit">종별 확인 중...</h2>
+              <hr className="w-full py-10" />
             ) : (
-              <h2 className="whitespace-nowrap small w-fit">
-                {todayItem?.type.split("/")[0]}
-              </h2>
+              <>
+                <hr className="w-full" />
+                <h2 className="whitespace-nowrap small w-fit">
+                  {todayItem?.type.split("/")[0]}
+                </h2>
+                <hr className="w-full" />
+              </>
             )}
-
-            <hr className="w-full" />
           </div>
 
           {/* content Info */}
@@ -155,18 +174,24 @@ export default function Home() {
 
             <div className="py-5">
               {!todayItem ? (
-                <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
-                  약점 확인 중...
-                </span>
+                <div className="border border-(--dgrey) bg-[#0c0c0c]  w-full h-8" />
               ) : (
-                <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
-                  {todayItem?.weakEl}
-                </span>
+                <>
+                  <ul className="flex gap-2.5">
+                    {todayItem?.weakEl.map((weak: string, index: number) => (
+                      <li
+                        key={index}
+                        className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5"
+                      >
+                        {weak}속성
+                      </li>
+                    ))}
+                    <li className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
+                      위험도 6/10
+                    </li>
+                  </ul>
+                </>
               )}
-
-              <span className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5 ml-2.5">
-                위험도 6/10
-              </span>
             </div>
 
             <Link

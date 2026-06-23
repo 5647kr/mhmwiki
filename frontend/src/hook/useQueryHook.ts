@@ -1,4 +1,8 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import {
+  useInfiniteQuery,
+  useQuery,
+  type QueryKey,
+} from "@tanstack/react-query";
 import { fetchContent, fetchContentItem } from "../api/fetchContent";
 
 export function useInfiniteQueryHook(filterState: {
@@ -21,21 +25,26 @@ export function useInfiniteQueryHook(filterState: {
   });
 }
 
-export function useQueryHook({
+export function useQueryHook<T extends QueryKey>({
+  key,
   id,
   contentLength,
   enabled,
+  search,
 }: {
+  key: T;
   id?: string;
   contentLength?: number;
   enabled?: boolean;
+  search?: string;
 }) {
   return useQuery({
-    queryKey: ["content", "random"],
+    queryKey: key,
     queryFn: () => {
       return fetchContentItem({
         id: id,
         contentLength: contentLength,
+        search: search,
       });
     },
     enabled: enabled,

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useFetchStore } from "../store/fetchStore";
 import { useFilterStore } from "../store/filterStore";
 
@@ -105,11 +105,11 @@ export default function FilterForm() {
           {weak.map((weak) => (
             <li className="min-w-15 text-center" key={weak.id}>
               <label className="text-[#aaa] hover:cursor-pointer hover:text-(--grey) has-checked:text-(--red)">
-                {weak.char}속성
+                {weak.id}속성
                 <input
                   type="checkbox"
-                  onChange={() => setFilterState("weak", weak.title)}
-                  checked={filterState.weak.includes(weak.title)}
+                  onChange={() => setFilterState("weak", weak.id)}
+                  checked={filterState.weak.includes(weak.id)}
                   className="hidden"
                 />
               </label>
@@ -162,25 +162,20 @@ export default function FilterForm() {
               </li>
             ))}
 
-            {filterState.weak.map((selectedId) => {
-              const targetSeries = weak.find((item) => item.id === selectedId);
-              const displayName = targetSeries ? targetSeries.char : selectedId;
-
-              return (
-                <li className="min-w-15 text-center" key={selectedId}>
-                  <label className="text-[#aaa] hover:cursor-pointer hover:text-(--grey) has-checked:text-(--red)">
-                    {displayName}속성
-                    <input
-                      type="checkbox"
-                      onChange={() => setFilterState("weak", selectedId)}
-                      checked={filterState.weak.includes(selectedId)}
-                      className="hidden"
-                    />
-                  </label>
-                </li>
-              );
-            })}
-{/* 
+            {filterState.weak.map((item, index) => (
+              <li className="min-w-15 text-center" key={index}>
+                <label className="text-[#aaa] hover:cursor-pointer hover:text-(--grey) has-checked:text-(--red)">
+                  {item}속성
+                  <input
+                    type="checkbox"
+                    onChange={() => setFilterState("weak", item)}
+                    checked={filterState.weak.includes(item)}
+                    className="hidden"
+                  />
+                </label>
+              </li>
+            ))}
+            {/* 
             {filterState.weak.map((item, index) => (
               <li className="min-w-15 text-center" key={index}>
                 <label className="text-[#aaa] hover:cursor-pointer hover:text-(--grey) has-checked:text-(--red)">

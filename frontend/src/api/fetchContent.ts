@@ -7,7 +7,6 @@ export async function fetchContent({
   pageNum: number;
   filterState: { series: string[]; type: string[]; weak: string[] };
 }) {
-  console.log(filterState);
   try {
     const baseUrl = "http://localhost:3000/monster"; // 개발서버
     //const baseUrl = "https://mhmwiki-backend.vercel.app/monster"; // 배포 서버
@@ -29,8 +28,6 @@ export async function fetchContent({
         url.searchParams.append("weakEl_like", weak),
       );
     }
-
-    console.log(url.toString());
 
     const response = await fetch(url.toString());
 
@@ -58,9 +55,11 @@ export async function fetchContent({
 export async function fetchContentItem({
   id,
   contentLength,
+  search,
 }: {
   id?: string;
   contentLength?: number;
+  search?: string;
 }) {
   try {
     let baseUrl = "http://localhost:3000/monster"; // 개발서버
@@ -73,6 +72,10 @@ export async function fetchContentItem({
     if (contentLength) {
       const randomNum = Math.floor(Math.random() * contentLength) + 1;
       baseUrl = `${baseUrl}?_page=${randomNum}&_limit=1`;
+    }
+
+    if (search) {
+      baseUrl = `${baseUrl}?name_like=${search}`;
     }
 
     const response = await fetch(baseUrl);

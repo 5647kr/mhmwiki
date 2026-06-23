@@ -48,13 +48,12 @@ interface Item {
     참격: string;
     타격: string;
     "탄/활": string;
-    불: string;
-    물: string;
-    번개: string;
-    얼음: string;
+    화: string;
+    수: string;
+    뇌: string;
+    빙: string;
     용: string;
   }[];
-
   relate: {
     id: string;
     icon: string[];

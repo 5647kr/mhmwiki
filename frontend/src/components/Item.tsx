@@ -1,11 +1,11 @@
 export default function Item(item: any) {
   return (
-    <div className="border-r border-b border-(--lgrey) bg-(--white)">
+    <div className="group border-r border-b border-(--lgrey) bg-(--white)">
       <div className="p-10">
         <img
           src={`https://res.cloudinary.com/dx71aeltq/image/upload/${item.icon}`}
           alt=""
-          className="w-full aspect-square"
+          className="w-full aspect-square group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_8px_#b794f4]"
         />
       </div>
       <div className="bg-(--cream) p-2.5 border-t border-(--lgrey) flex flex-col gap-2.5">

@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration } from "react-router";
 import Header from "../../components/Header";
-import SearcForm from "../../components/SearcForm";
+import SearchForm from "../../components/SearchForm";
 import { useState } from "react";
 
 export default function Default() {
@@ -12,12 +12,12 @@ export default function Default() {
   return (
     <>
       <ScrollRestoration />
-      
+
       <Header
         showSearchForm={showSearchForm}
         handleSearchForm={handleSearchForm}
       />
-      {showSearchForm && <SearcForm />}
+      {showSearchForm && <SearchForm setShowSearchForm={setShowSearchForm} />}
 
       <main>
         <Outlet />

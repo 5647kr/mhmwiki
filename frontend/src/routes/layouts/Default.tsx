@@ -1,9 +1,7 @@
-import { Outlet } from "react-router";
+import { Outlet, ScrollRestoration } from "react-router";
 import Header from "../../components/Header";
-import SearcForm from "../../components/SearcForm";
+import SearchForm from "../../components/SearchForm";
 import { useState } from "react";
-import Item from "../../components/Item";
-import Skeleton from "../../components/Skeleton";
 
 export default function Default() {
   const [showSearchForm, setShowSearchForm] = useState(false);
@@ -13,11 +11,13 @@ export default function Default() {
 
   return (
     <>
+      <ScrollRestoration />
+
       <Header
         showSearchForm={showSearchForm}
         handleSearchForm={handleSearchForm}
       />
-      {showSearchForm && <SearcForm />}
+      {showSearchForm && <SearchForm setShowSearchForm={setShowSearchForm} />}
 
       <main>
         <Outlet />

@@ -4,6 +4,7 @@ import Home from "./routes/pages/Home";
 import Detail from "./routes/pages/Detail";
 import NotFound from "./routes/pages/NotFound";
 import History from "./routes/pages/History";
+import Report from "./routes/pages/Report";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       },
       { path: "/:id", Component: Detail },
       { path: "/history", Component: History },
+      { path: "/report", Component: Report },
       { path: "*", Component: NotFound },
     ],
   },

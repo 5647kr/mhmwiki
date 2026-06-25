@@ -132,7 +132,7 @@ export default function Detail() {
             기본 정보
           </h3>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 py-5">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
             <li>
               <h4 className="small text-(--grey)">이름</h4>
               <p className="paragraph font-semibold text-(--dgrey)">
@@ -215,7 +215,7 @@ export default function Detail() {
             속성 정보
           </h3>
 
-          <ul className="flex flex-col md:flex-row gap-5 py-10">
+          <ul className="flex flex-col md:flex-row gap-5 mt-10">
             {data.weakEl.length > 0 && (
               <li className="w-full">
                 <h3>약점 속성</h3>
@@ -274,6 +274,93 @@ export default function Detail() {
           <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
             아이템 효과 여부
           </h3>
+
+          <table className="w-full table-fixed mt-10 border border-(--lgrey)">
+            <thead className="bg-(--cream)">
+              <tr>
+                <th className="text-(--black)  py-5">아이템</th>
+                <th className="text-(--black)  py-5">효과</th>
+                <th className="text-(--black)  py-5">비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                <td>
+                  <img
+                    className="w-14 block mx-auto"
+                    src="../../../public/icons/섬광탄.png"
+                    alt="섬광탄"
+                  />
+                </td>
+                <td
+                  className={`text-center small ${data.flash ? "text-(--cyan)" : "text-(--red)"}`}
+                >
+                  {data.flash ? "효과있음" : "효과 없음"}
+                </td>
+                <td className="text-center small">내용</td>
+              </tr>
+              <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                <td>
+                  <img
+                    className="w-14 block mx-auto"
+                    src="../../../public/icons/거름탄.png"
+                    alt="거름탄"
+                  />
+                </td>
+                <td
+                  className={`text-center small ${data.dung ? "text-(--cyan)" : "text-(--red)"}`}
+                >
+                  {data.dung ? "효과 있음" : "효과 없음"}
+                </td>
+                <td className="text-center small">내용</td>
+              </tr>
+              <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                <td>
+                  <img
+                    className="w-14 block mx-auto"
+                    src="../../../public/icons/음폭탄.png"
+                    alt="음폭탄"
+                  />
+                </td>
+                <td
+                  className={`text-center small ${data.sonic ? "text-(--cyan)" : "text-(--red)"}`}
+                >
+                  {data.sonic ? "효과 있음" : "효과 없음"}
+                </td>
+                <td className="text-center small">내용</td>
+              </tr>
+              <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                <td>
+                  <img
+                    className="w-14 block mx-auto"
+                    src="../../../public/icons/마비덫.png"
+                    alt="마비덫"
+                  />
+                </td>
+                <td
+                  className={`text-center small ${data.shock ? "text-(--cyan)" : "text-(--red)"}`}
+                >
+                  {data.shock ? "효과 있음" : "효과 없음"}
+                </td>
+                <td className="text-center small">내용</td>
+              </tr>
+              <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                <td>
+                  <img
+                    className="w-14 block mx-auto"
+                    src="../../../public/icons/구멍함정.png"
+                    alt="구멍함정"
+                  />
+                </td>
+                <td
+                  className={`text-center small ${data.pitfall ? "text-(--cyan)" : "text-(--red)"}`}
+                >
+                  {data.pitfall ? "효과 있음" : "효과 없음"}
+                </td>
+                <td className="text-center small">내용</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         {/* 약점표 섹션 -> 이미지 처리 */}
@@ -282,62 +369,62 @@ export default function Detail() {
             약점표
           </h3>
 
-          <table className="w-full border border-(--lgrey)">
-            <thead className="bg-(--cream) table-fixed">
+          <table className="w-full table-fixed border border-(--lgrey) mt-10">
+            <thead className="bg-(--cream)">
               <tr>
-                <th className="subParagraph">부위</th>
-                <th>
+                <th className="py-5 subParagraph">부위</th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-10 block mx-auto"
                     src="../../../public/icons/참격.png"
                     alt="참격"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-10 block mx-auto"
                     src="../../../public/icons/타격.png"
                     alt="타격"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-10 block mx-auto"
                     src="../../../public/icons/탄활.png"
                     alt="탄활"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-8 block mx-auto"
                     src="../../../public/icons/화.png"
                     alt="화속성"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-8 block mx-auto"
                     src="../../../public/icons/수.png"
                     alt="수속성"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-8 block mx-auto"
                     src="../../../public/icons/뇌.png"
                     alt="뇌속성"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-8 block mx-auto"
                     src="../../../public/icons/빙.png"
                     alt="빙속성"
                   />
                 </th>
-                <th>
+                <th className="py-5">
                   <img
-                    className="w-10 aspect-square block mx-auto"
+                    className="w-8 block mx-auto"
                     src="../../../public/icons/용.png"
                     alt="용속성"
                   />
@@ -345,46 +432,31 @@ export default function Detail() {
               </tr>
             </thead>
             <tbody>
-              {data.weak.map((item: any, index: number) => {
-                const columns = [
-                  "부위",
-                  "참격",
-                  "타격",
-                  "탄/활",
-                  "화",
-                  "수",
-                  "뇌",
-                  "빙",
-                  "용",
-                ];
-
-                return (
-                  <tr
-                    key={index}
-                    className="border-b border-(--lgrey) hover:bg-(--white)"
-                  >
-                    {columns.map((key, i) => {
-                      const rawValue = item[key] || "0";
-                      const parts = rawValue.split("/");
-
-                      return (
-                        <td
-                          key={i}
-                          className={`w-[calc(100%/9)]text-center py-3 px-2`}
-                        >
-                          <div className="flex flex-col sm:flex-row items-center justify-center gap-0.5">
-                            <span className="small">{parts[0]}</span>
-
-                            {parts[1] && (
-                              <span className="small">{parts[1]}</span>
-                            )}
-                          </div>
-                        </td>
-                      );
-                    })}
+              {data.weak.map(
+                (
+                  item: {
+                    부위: string;
+                    참격: string;
+                    타격: string;
+                    "탄/활": string;
+                    화: string;
+                    수: string;
+                    뇌: string;
+                    빙: string;
+                    용: string;
+                  },
+                  index: number,
+                ) => (
+                  <tr key={index} className="border-b border-(--lgrey) hover:bg-(--cream)">
+                    {Object.values(item).map((wk) => (
+                      <td className="text-center py-2.5">
+                        {wk.split("/")[0]}
+                        {wk.split("/")[1] && <span className="text-(--grey) small block">{wk.split("/")[1]}</span>}
+                      </td>
+                    ))}
                   </tr>
-                );
-              })}
+                ),
+              )}
             </tbody>
           </table>
         </div>
@@ -394,7 +466,7 @@ export default function Detail() {
           <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
             부위 파괴
           </h3>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
             {data.break.map((item: string, index: number) => (
               <li key={index} className="border border-(--lgrey) p-5">
                 <p>{item}</p>
@@ -409,7 +481,7 @@ export default function Detail() {
             크기 정보
           </h3>
 
-          <div className="flex py-10">
+          <div className="flex mt-10">
             <div className="w-full border border-(--lgrey) border-r-0 p-5">
               <h4 className="small text-(--grey) pb-2.5">최소 크기</h4>
               <strong className="syne paragraph font-black text-(--black)">
@@ -418,6 +490,13 @@ export default function Detail() {
               </strong>
             </div>
             {/* 크기표 */}
+            <div className="w-full border border-(--lgrey) border-r-0 p-5">
+              <h4 className="small text-(--grey) pb-2.5">평균 크기</h4>
+              <strong className="syne paragraph font-black text-(--black)">
+                {(parseInt(data.small) + parseInt(data.large)) / 2}
+                <span className="text-(--grey) small">cm</span>
+              </strong>
+            </div>
             <div className="w-full border border-(--lgrey) p-5">
               <h4 className="small text-(--grey) pb-2.5">최대 크기</h4>
               <strong className="syne paragraph font-black text-(--black)">
@@ -428,16 +507,19 @@ export default function Detail() {
           </div>
 
           {/* 그래프 */}
-          <div>
+          <div className="mt-5">
             <h5 className="small text-(--grey)">
               크기 분포 ({data.small} ~ {data.large})
             </h5>
 
-            <div className="w-full h-2 bg-(--red) mt-2.5" />
+            <div className="w-full h-2 bg-linear-to-r from-(--yellow) to-(--darkred) mt-2.5" />
 
             <div className="flex justify-between">
-              <span className="text-(--grey) text-[12px]">{data.small}</span>
-              <span className="text-(--grey) text-[12px]">{data.large}</span>
+              <span className="text-(--grey) text-[12px]">{data.small}cm</span>
+              <span className="text-(--grey) text-[12px]">
+                {(parseInt(data.small) + parseInt(data.large)) / 2}cm
+              </span>
+              <span className="text-(--grey) text-[12px]">{data.large}cm</span>
             </div>
           </div>
         </div>
@@ -449,12 +531,31 @@ export default function Detail() {
               연관 몬스터
             </h3>
 
-            <ul>
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] mt-10">
               {data.relate.map(
-                (item: { id: string; icon: string; name: string }) => (
-                  <li key={item.id}>
+                (
+                  item: { id: string; icon: string; name: string },
+                  index: number,
+                ) => (
+                  <li
+                    key={item.id}
+                    className={`border border-(--lgrey) ${index === 0 ? "border-r-0" : ""}`}
+                  >
                     <Link to={`/monster/${item.id}`}>
-                      <p>{item.name}</p>
+                      <div>
+                        <div className="p-5">
+                          <img
+                            className="w-full "
+                            src={imgURL + item.icon}
+                            alt={item.name}
+                          />
+                        </div>
+                        <div className="bg-(--cream) p-2.5 border-t border-(--lgrey) flex flex-col gap-2.5">
+                          <h2 className="subParagraph text-[#606060]">
+                            {item.name}
+                          </h2>
+                        </div>
+                      </div>
                     </Link>
                   </li>
                 ),
@@ -464,12 +565,12 @@ export default function Detail() {
         )}
 
         {/* 생태 섹션 */}
-        <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
+        <div className="pb-5 px-4 md:px-5 lg:px-6">
           <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
             생태 정보
           </h3>
 
-          <div className="py-10 flex flex-col gap-5">
+          <div className="mt-10 flex flex-col gap-5">
             {data.eco.map((item: string, index: number) => (
               <p key={index} className="subParagraph text-(--dgrey)">
                 {item}

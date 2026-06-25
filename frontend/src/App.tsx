@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       { path: "monster/:id", Component: Detail },
       { path: "/history", Component: History },
       { path: "/report", Component: Report },
-      { path: "*", Component: NotFound },
+      // { path: "*", Component: NotFound },
     ],
   },
 ]);

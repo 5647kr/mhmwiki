@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.title {
+  @apply font-black text-[30px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[38px];
+}
+
+.headingTitle {
+  @apply font-black text-xl md:text-[22px] lg:text-2xl xl:text-[26px] 2xl:text-[28px];
+}
+
+.subHeadingTitle {
+  @apply font-bold text-base md:text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl;
+}
+
+.paragraph {
+  @apply text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[22px];
+}
+
+.subParagraph {
+  @apply text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl;
+}
+
+.small {
+  @apply text-xs lg:text-sm 2xl:text-base;
+}

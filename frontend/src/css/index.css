@@ -1,0 +1,28 @@
+@import "./tailwind.css";
+
+:root {
+  --red: #e8001c;
+  --darkred: #ff1a35;
+  --black: #0c0c0c;
+  --white: #f2f0eb;
+  --cream: #ede9e0;
+  --grey: #888;
+  --lgrey: #dedad3;
+  --dgrey: #1e1e1e;
+  --yellow: #ffd600;
+  --cyan: #00c8e8;
+  --purple: #7b00ff;
+}
+
+html {
+  font-family: "Noto Sans KR";
+}
+
+.syne {
+  font-family: "Syne";
+}
+
+a,
+button {
+  cursor: pointer;
+}

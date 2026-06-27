@@ -50,7 +50,7 @@ export default function SearchForm({
   return (
     <form
       onSubmit={handleSearchForm}
-      className="bg-(--black) border border-(--dgrey) py-2.5 px-5 absolute top-20 right-5 flex items-center gap-2.5 w-60 z-10"
+      className="bg-(--black) border border-(--dgrey) py-2.5 px-5 fixed top-20 right-5 flex items-center gap-2.5 w-60 z-99"
     >
       <Search size={14} stroke="var(--grey)" />
       <input

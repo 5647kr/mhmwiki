@@ -9,7 +9,7 @@ export default function Header({
   handleSearchForm: () => void;
 }) {
   return (
-    <header className="bg-(--black) flex border-b-2 border-(--red)">
+    <header className="sticky top-0 left-0 w-full bg-(--black) flex border-b-2 border-(--red) z-99">
       <h1 className="flex justify-center items-center syne font-black headingTitle bg-(--red) text-(--white) py-2.5 px-5">
         MHMWIKI
       </h1>
@@ -19,7 +19,7 @@ export default function Header({
           <li className="w-full h-full">
             <NavLink
               className={({ isActive }) =>
-                `w-full h-full flex justify-center items-center small ${
+                `w-full h-full flex justify-center items-center small hover:text-(--red) ${
                   isActive
                     ? "text-(--red) bg-[#1a1a1a]"
                     : "text-(--grey) bg-(--black)"
@@ -33,7 +33,7 @@ export default function Header({
           <li className="w-full h-full">
             <NavLink
               className={({ isActive }) =>
-                `w-full h-full flex justify-center items-center small ${
+                `w-full h-full flex justify-center items-center small hover:text-(--red) ${
                   isActive
                     ? "text-(--red) bg-[#1a1a1a]"
                     : "text-(--grey) bg-(--black)"
@@ -47,7 +47,7 @@ export default function Header({
           <li className="w-full h-full">
             <NavLink
               className={({ isActive }) =>
-                `w-full h-full flex justify-center items-center small ${
+                `w-full h-full flex justify-center items-center small hover:text-(--red) ${
                   isActive
                     ? "text-(--red) bg-[#1a1a1a]"
                     : "text-(--grey) bg-(--black)"
@@ -61,7 +61,7 @@ export default function Header({
           <li className="w-full h-full">
             <NavLink
               className={({ isActive }) =>
-                `w-full h-full flex justify-center items-center small ${
+                `w-full h-full flex justify-center items-center small hover:text-(--red) ${
                   isActive
                     ? "text-(--red) bg-[#1a1a1a]"
                     : "text-(--grey) bg-(--black)"
@@ -75,7 +75,7 @@ export default function Header({
           <li className="w-full h-full">
             <NavLink
               className={({ isActive }) =>
-                `w-full h-full flex justify-center items-center small ${
+                `w-full h-full flex justify-center items-center small hover:text-(--red) ${
                   isActive
                     ? "text-(--red) bg-[#1a1a1a]"
                     : "text-(--grey) bg-(--black)"

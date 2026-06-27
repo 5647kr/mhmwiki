@@ -9,10 +9,9 @@
       "nickname2": "방패게",
       "type": "갑각종/십각목-단미하목-순해상과-자자미과",
       "species": "원종",
-      "seriesId": ["d", "e", "k", "l", "q"],
-      "infoSeriesId": ["d", "e", "f", "k", "l", "m", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "k", "l", "q"],
+      "allSeriesIds": ["d", "e", "f", "k", "l", "m", "q"],
+      "title": [],
       "weakEl": ["뇌"],
       "element": ["수"],
       "ailment": ["수"],
@@ -23,7 +22,6 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
       "break": ["집게발", "껍데기"],
       "weak": [
         {
@@ -119,10 +117,9 @@
       "nickname2": "보라방패게",
       "type": "갑각종/십각목-단미하목-순해상과-자자미과",
       "species": "아종",
-      "seriesId": ["f", "k"],
-      "infoSeriesId": ["f", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f", "k"],
+      "allSeriesIds": ["f", "k"],
+      "title": [],
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["빙"],
@@ -133,7 +130,6 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
       "break": ["집게발", "껍데기"],
       "weak": [
         {
@@ -229,10 +225,9 @@
       "nickname2": null,
       "type": "갑각종/십각목-단미하목-순해상과-자자미과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["뇌"],
@@ -242,8 +237,7 @@
       "sonic": true,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(분노)",
-      "danger": 4,
+      "pitfall": true,
       "break": ["집게발", "껍데기"],
       "weak": [
         {
@@ -361,10 +355,9 @@
       "nickname2": "낫게",
       "type": "갑각종/십각목-단미하목-겸해상과-기자미과",
       "species": "원종",
-      "seriesId": ["d", "e", "l", "q"],
-      "infoSeriesId": ["d", "e", "f", "l", "m", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "l", "q"],
+      "allSeriesIds": ["d", "e", "f", "l", "m", "q"],
+      "title": [],
       "element": ["수"],
       "ailment": ["수", "열상"],
       "weakEl": ["뇌"],
@@ -375,7 +368,6 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
       "break": ["집게발", "껍데기"],
       "weak": [
         {
@@ -484,12 +476,12 @@
       "nickname2": "낫게",
       "type": "갑각종/십각목-단미하목-겸해상과-기자미과",
       "species": "아종",
-      "seriesId": ["f"],
-      "infoSeriesId": ["f"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f"],
+      "allSeriesIds": ["f"],
+      "title": [],
+
       "element": ["수"],
-      "ailment": [""],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "742.2",
       "large": "1294.5",
@@ -498,7 +490,7 @@
       "dung": false,
       "shock": true,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["집게발", "껍데기"],
       "weak": [
         {
@@ -593,10 +585,10 @@
       "nickname2": null,
       "type": "갑각종/십각목-단미하목-겸해상과-기자미과",
       "species": "이명 특수개체",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "열상", "방어력감소"],
       "weakEl": ["뇌"],
@@ -607,7 +599,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["집게발", "껍데기"],
       "weak": [
         {
@@ -735,12 +727,12 @@
       "nickname2": "성채게",
       "type": "갑각종/십각목-(하목 불명)-가오렌과",
       "species": "원종",
-      "seriesId": ["d", "e"],
-      "infoSeriesId": ["d", "e", "f"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["d", "e"],
+      "allSeriesIds": ["d", "e", "f"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["용"],
       "small": "3388",
       "large": "3388",
@@ -749,7 +741,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["다리", "껍데기"],
       "weak": [
         {
@@ -845,10 +837,10 @@
       "nickname2": null,
       "type": "갑충종/딱정벌레목(갑충목)-식육아목-셀타스과",
       "species": "원종",
-      "seriesId": ["j", "l"],
-      "infoSeriesId": ["j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["j", "l"],
+      "allSeriesIds": ["j", "k", "l", "m"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "아이템사용금지", "기절"],
       "weakEl": ["화"],
@@ -859,7 +851,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "발톱", "다리 갑각", "꼬리"],
       "weak": [
         {
@@ -953,10 +945,10 @@
       "nickname2": null,
       "type": "갑충종/딱정벌레목(갑충목)-식육아목-셀타스과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "아이템사용금지", "기절"],
       "weakEl": ["빙"],
@@ -967,7 +959,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "발톱", "다리 갑각", "껍데기"],
       "weak": [
         {
@@ -1060,11 +1052,11 @@
       "nickname2": null,
       "type": "갑충종/딱정벌레목(갑충목)-식육아목-셀타스과",
       "species": "원종",
-      "seriesId": ["j", "l"],
-      "infoSeriesId": ["j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j", "l"],
+      "allSeriesIds": ["j", "k", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["방어력감소", "피로"],
       "weakEl": ["뇌"],
       "small": "541.99",
@@ -1074,7 +1066,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔"],
       "weak": [
         {
@@ -1166,11 +1158,11 @@
       "nickname2": null,
       "type": "갑충종/딱정벌레목(갑충목)-식육아목-셀타스과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비"],
       "weakEl": ["빙"],
       "small": "541.99",
@@ -1180,7 +1172,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔"],
       "weak": [
         {
@@ -1269,11 +1261,11 @@
       "nickname2": null,
       "type": "갑충종/딱정벌레목(갑충목)-각당랑아목-아트랄과",
       "species": "원종",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["방어력감소", "실속박"],
       "weakEl": ["뇌"],
       "small": "1504.11",
@@ -1283,7 +1275,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "낫", "등", "꼬리", "다리"],
       "weak": [
         {
@@ -1481,11 +1473,11 @@
       "nickname2": null,
       "type": "갑충종/각충목-침미아목-랑고스타과",
       "species": "원종",
-      "seriesId": ["f"],
-      "infoSeriesId": ["f"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["f"],
+      "allSeriesIds": ["f"],
+      "title": [],
+
+      "element": [],
       "ailment": ["방어력감소", "마비"],
       "weakEl": ["화"],
       "small": "691",
@@ -1495,7 +1487,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": [],
       "weak": [
         {
@@ -1527,10 +1519,10 @@
       "nickname2": null,
       "type": "두족종/",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -1541,7 +1533,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리(절단〇)"],
       "weak": [
         {
@@ -1630,12 +1622,12 @@
       "nickname2": null,
       "type": "두족종/",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["빙"],
       "small": "1242.70",
       "large": "1745.37",
@@ -1644,7 +1636,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "입", "다리(절단〇)"],
       "weak": [
         {
@@ -1733,10 +1725,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-개룡상과-그라비모스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "m", "r"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "m", "r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "m", "r"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "m", "r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "수면", "독"],
       "weakEl": ["수"],
@@ -1747,7 +1739,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "복부", "다리", "날개", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -1861,10 +1853,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-개룡상과-그라비모스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "j"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "j", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "j"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "j", "k"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "수면"],
       "weakEl": ["수"],
@@ -1875,7 +1867,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "복부", "날개", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -1978,11 +1970,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-기괴룡하목-독괴룡상과-네블라과",
       "species": "원종",
-      "seriesId": ["g", "i"],
-      "infoSeriesId": ["g", "h", "i"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["g", "i"],
+      "allSeriesIds": ["g", "h", "i"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "맹독"],
       "weakEl": ["화"],
       "small": "982.8",
@@ -1992,7 +1984,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "복부", "꼬리"],
       "weak": [
         {
@@ -2107,10 +2099,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-기괴룡하목-독괴룡상과-네블라과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "마비"],
       "weakEl": ["수"],
@@ -2121,7 +2113,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "복부", "꼬리"],
       "weak": [
         {
@@ -2236,11 +2228,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-나르가과",
       "species": "원종",
-      "seriesId": ["f", "h", "i", "l", "o", "p"],
-      "infoSeriesId": ["f", "h", "i", "l", "m", "o", "p", "q"],
-      "title": "MHP2G",
-      "titleId": ["f"],
-      "element": [""],
+      "baseSeriesIds": ["f", "h", "i", "l", "o", "p"],
+      "allSeriesIds": ["f", "h", "i", "l", "m", "o", "p", "q"],
+      "title": ["MHP2G"],
+      "element": [],
       "ailment": ["열상"],
       "weakEl": ["뇌"],
       "small": "1602.19",
@@ -2249,8 +2240,8 @@
       "sonic": true,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "칼날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -2378,11 +2369,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-나르가과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["뇌"],
       "small": "1410.02",
@@ -2392,7 +2383,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "칼날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -2516,11 +2507,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-나르가과",
       "species": "희소종",
-      "seriesId": ["h", "q"],
-      "infoSeriesId": ["h", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h", "q"],
+      "allSeriesIds": ["h", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "기절"],
       "weakEl": ["빙"],
       "small": "2503.8",
@@ -2529,8 +2520,8 @@
       "sonic": true,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "칼날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -2656,11 +2647,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-나르가과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["열상"],
       "weakEl": ["뇌"],
       "small": "1617.21",
@@ -2669,8 +2660,8 @@
       "sonic": true,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "칼날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -2794,8 +2785,8 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-각룡상과-블로스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "g", "i", "k", "m", "n", "p"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["a", "c", "d", "e", "g", "i", "k", "m", "n", "p"],
+      "allSeriesIds": [
         "a",
         "b",
         "c",
@@ -2812,19 +2803,19 @@
         "p",
         "q"
       ],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["빙"],
       "small": "1796.26",
       "large": "3030.0",
       "flash": true,
-      "sonic": "〇(잠복)",
+      "sonic": true,
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -2973,11 +2964,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-각룡상과-블로스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "h", "i", "k", "n"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "h", "i", "k", "n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "h", "i", "k", "n"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "h", "i", "k", "n", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["빙"],
       "small": "1865.66",
@@ -2987,7 +2978,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -3167,12 +3158,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-각룡상과-블로스과",
       "species": "이명 특수개체",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["빙"],
       "small": "2288.88",
       "large": "2770.75",
@@ -3181,7 +3172,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -3317,12 +3308,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-각룡상과-블로스과",
       "species": "주인",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["빙"],
       "small": "2157.39",
       "large": "2838.67",
@@ -3331,7 +3322,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -3478,10 +3469,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익룡하목-전룡상과-젝스과",
       "species": "원종",
-      "seriesId": ["l", "q"],
-      "infoSeriesId": ["l", "m", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l", "q"],
+      "allSeriesIds": ["l", "m", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "마비", "기절"],
       "weakEl": ["빙"],
@@ -3492,7 +3483,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개막", "꼬리(절단〇)"],
       "weak": [
         {
@@ -3610,10 +3601,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익룡하목-전룡상과-젝스과",
       "species": "이명 특수개체",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "마비"],
       "weakEl": ["빙"],
@@ -3624,7 +3615,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개막", "꼬리(?)"],
       "weak": [
         {
@@ -3729,10 +3720,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["빙"],
@@ -3743,7 +3734,7 @@
       "dung": true,
       "shock": false,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -3825,10 +3816,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-확익룡상과-레이기에나과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙"],
       "weakEl": ["뇌"],
@@ -3839,7 +3830,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리"],
       "weak": [
         {
@@ -3978,10 +3969,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-확익룡상과-레이기에나과",
       "species": "특수 개체",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙"],
       "weakEl": ["화"],
@@ -3992,7 +3983,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리"],
       "weak": [
         {
@@ -4096,8 +4087,8 @@
       "nickname2": "웅화룡/수컷 웅(雄), 불 화(火), 용 룡(竜)",
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "g", "i", "j", "l", "n", "p", "r"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["a", "c", "d", "e", "g", "i", "j", "l", "n", "p", "r"],
+      "allSeriesIds": [
         "a",
         "b",
         "c",
@@ -4117,7 +4108,7 @@
         "q",
         "r"
       ],
-      "title": "MH MHP",
+      "title": ["MH", "MHP"],
       "titleId": ["a", "c"],
       "element": ["화"],
       "ailment": ["화", "기절", "독"],
@@ -4129,7 +4120,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -4270,9 +4261,9 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "h", "j", "n"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "h", "j", "k", "n", "o"],
-      "title": "MHG",
+      "baseSeriesIds": ["b", "c", "d", "e", "h", "j", "n"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "h", "j", "k", "n", "o"],
+      "title": ["MHG"],
       "titleId": ["b"],
       "element": ["화"],
       "ailment": ["화", "기절", "독"],
@@ -4284,7 +4275,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -4479,8 +4470,8 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "희소종",
-      "seriesId": ["b", "c", "d", "e", "h", "i", "j", "l", "o", "q"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["b", "c", "d", "e", "h", "i", "j", "l", "o", "q"],
+      "allSeriesIds": [
         "b",
         "c",
         "d",
@@ -4495,8 +4486,8 @@
         "o",
         "q"
       ],
-      "title": "",
-      "titleId": [""],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "기절", "독"],
       "weakEl": ["수", "뇌"],
@@ -4507,7 +4498,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -4667,10 +4658,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "맹독"],
       "weakEl": ["용"],
@@ -4681,7 +4672,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -4840,10 +4831,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "주인",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독"],
       "weakEl": ["용"],
@@ -4854,7 +4845,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -5003,8 +4994,8 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "g", "i", "j", "l", "n", "p", "r"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["a", "c", "d", "e", "g", "i", "j", "l", "n", "p", "r"],
+      "allSeriesIds": [
         "a",
         "b",
         "c",
@@ -5024,8 +5015,8 @@
         "q",
         "r"
       ],
-      "title": "",
-      "titleId": [""],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독"],
       "weakEl": ["용"],
@@ -5036,7 +5027,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -5164,10 +5155,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "h", "j", "n"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "h", "j", "k", "n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "h", "j", "n"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "h", "j", "k", "n", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독"],
       "weakEl": ["용"],
@@ -5178,7 +5169,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -5383,8 +5374,8 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "희소종",
-      "seriesId": ["b", "c", "d", "e", "h", "i", "j", "l", "o", "q"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["b", "c", "d", "e", "h", "i", "j", "l", "o", "q"],
+      "allSeriesIds": [
         "b",
         "c",
         "d",
@@ -5399,8 +5390,8 @@
         "o",
         "q"
       ],
-      "title": "",
-      "titleId": [""],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독"],
       "weakEl": ["뇌"],
@@ -5411,7 +5402,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -5571,10 +5562,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독"],
       "weakEl": ["용"],
@@ -5585,7 +5576,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -5744,10 +5735,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-갑각룡하목-비룡상과-리오스과",
       "species": "주인",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독"],
       "weakEl": ["용"],
@@ -5758,7 +5749,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리, 등, 날개, 꼬리(절단〇)"],
       "weak": [
         {
@@ -5908,12 +5899,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-각룡상과-블로스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "k"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "k"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "k"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "1683.5",
       "large": "2918.8",
@@ -5922,7 +5913,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6059,12 +6050,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-각룡상과-블로스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "k"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "k"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "k"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "1849.2",
       "large": "2810.7",
@@ -6073,7 +6064,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6207,10 +6198,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-개룡상과-그라비모스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "m", "p"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "m", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "m", "p"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "m", "p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독", "수면"],
       "weakEl": ["용"],
@@ -6221,7 +6212,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "가슴", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6346,10 +6337,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-중각룡하목-개룡상과-그라비모스과",
       "species": "아종",
-      "seriesId": ["j"],
-      "infoSeriesId": ["j", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["j"],
+      "allSeriesIds": ["j", "k"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독", "수면", "기절"],
       "weakEl": ["빙"],
@@ -6360,7 +6351,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["복부", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6485,10 +6476,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-폭린룡상과-바젤과",
       "species": "원종",
-      "seriesId": ["n", "p"],
-      "infoSeriesId": ["n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n", "p"],
+      "allSeriesIds": ["n", "o", "p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "폭파"],
       "weakEl": ["뇌"],
@@ -6499,7 +6490,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "날개", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6595,10 +6586,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-폭린룡상과-바젤과",
       "species": "특수 개체",
-      "seriesId": ["o", "q"],
-      "infoSeriesId": ["o", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o", "q"],
+      "allSeriesIds": ["o", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "폭파"],
       "weakEl": ["빙"],
@@ -6609,7 +6600,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "날개", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6702,10 +6693,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-벨리오과",
       "species": "원종",
-      "seriesId": ["g", "i", "m", "o", "p"],
-      "infoSeriesId": ["g", "h", "i", "m", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i", "m", "o", "p"],
+      "allSeriesIds": ["g", "h", "i", "m", "o", "p", "q"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["화"],
@@ -6716,7 +6707,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개 가시", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6847,12 +6838,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-벨리오과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["빙"],
       "small": "1730.62",
       "large": "2277.13",
@@ -6861,7 +6852,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개 가시", "꼬리(절단〇)"],
       "weak": [
         {
@@ -6968,10 +6959,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-전익각룡상과-벨리오과",
       "species": "특수 개체",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙"],
       "weakEl": ["화"],
@@ -6982,7 +6973,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개 가시", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7123,11 +7114,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-인린룡하목-레기오스과",
       "species": "원종",
-      "seriesId": ["k", "l", "q", "r"],
-      "infoSeriesId": ["k", "l", "m", "q", "r"],
-      "title": "MH4G",
-      "titleId": ["k"],
-      "element": [""],
+      "baseSeriesIds": ["k", "l", "q", "r"],
+      "allSeriesIds": ["k", "l", "m", "q", "r"],
+      "title": ["MH4G"],
+      "element": [],
       "ailment": ["열상"],
       "weakEl": ["뇌"],
       "small": "1520.73",
@@ -7137,7 +7127,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7225,10 +7215,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-아캄과",
       "species": "원종",
-      "seriesId": ["e", "i", "j", "l"],
-      "infoSeriesId": ["e", "f", "i", "j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["e", "i", "j", "l"],
+      "allSeriesIds": ["e", "f", "i", "j", "k", "l", "m"],
+      "title": [],
+
       "element": ["화", "용"],
       "ailment": ["화", "용", "방어력감소"],
       "weakEl": ["용"],
@@ -7239,7 +7229,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["송곳니", "앞다리", "등", "복부", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7335,10 +7325,9 @@
       "nickname2": "하얀 그림자",
       "type": "비룡종/용반목-용각아목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "MHWs",
-      "titleId": ["r"],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": ["MHWs"],
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["용"],
@@ -7349,7 +7338,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "사슬날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7454,10 +7443,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-극룡상과-에스피나스과",
       "species": "원종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "마비"],
       "weakEl": ["빙"],
@@ -7468,7 +7457,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7563,10 +7552,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-극룡상과-에스피나스과",
       "species": "아종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "방어력감소"],
       "weakEl": ["수"],
@@ -7577,7 +7566,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7669,10 +7658,10 @@
       "nickname2": null,
       "type": "비룡종/용반목-우캄과",
       "species": "원종",
-      "seriesId": ["f", "i", "k", "l"],
-      "infoSeriesId": ["f", "i", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f", "i", "k", "l"],
+      "allSeriesIds": ["f", "i", "k", "l", "m"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["화"],
@@ -7683,7 +7672,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["턱", "복부", "등", "앞다리", "꼬리(절단 )"],
       "weak": [
         {
@@ -7779,12 +7768,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-렉스과",
       "species": "원종",
-      "seriesId": ["e", "i", "j", "l", "o", "p"],
-      "infoSeriesId": ["e", "f", "i", "j", "k", "l", "m", "o", "p", "q"],
-      "title": "MHP2",
-      "titleId": ["e"],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["e", "i", "j", "l", "o", "p"],
+      "allSeriesIds": ["e", "f", "i", "j", "k", "l", "m", "o", "p", "q"],
+      "title": ["MHP2"],
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "1388.2",
       "large": "2914.8",
@@ -7793,7 +7781,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -7907,12 +7895,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-렉스과",
       "species": "아종",
-      "seriesId": ["i", "j", "o"],
-      "infoSeriesId": ["i", "j", "k", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["i", "j", "o"],
+      "allSeriesIds": ["i", "j", "k", "o"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["수"],
       "small": "1579.21",
       "large": "2169.38",
@@ -7921,7 +7909,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -8033,11 +8021,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-렉스과",
       "species": "희소종",
-      "seriesId": ["j"],
-      "infoSeriesId": ["j", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j"],
+      "allSeriesIds": ["j", "k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["폭파"],
       "weakEl": ["수"],
       "small": "2313.9",
@@ -8047,7 +8035,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -8171,11 +8159,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-렉스과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수", "빙"],
       "weakEl": ["뇌"],
       "small": "2036.26",
@@ -8185,7 +8173,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -8296,12 +8284,12 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-팽경룡상과-파오우르무과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "1006.16",
       "large": "1429.2",
@@ -8310,7 +8298,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["공기주머니", "등", "날개", "꼬리"],
       "weak": [
         {
@@ -8434,11 +8422,11 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-팽경룡상과-파오우르무과",
       "species": "아종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수면"],
       "weakEl": ["수"],
       "small": "1006.16",
@@ -8448,7 +8436,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["공기주머니", "등", "날개", "꼬리"],
       "weak": [
         {
@@ -8550,8 +8538,8 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-기괴룡하목-희백룡상과-푸루푸루과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l", "p"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l", "p"],
+      "allSeriesIds": [
         "a",
         "b",
         "c",
@@ -8565,8 +8553,8 @@
         "p",
         "q"
       ],
-      "title": "",
-      "titleId": [""],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "마비", "기절"],
       "weakEl": ["화"],
@@ -8577,7 +8565,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리"],
       "weak": [
         {
@@ -8669,10 +8657,10 @@
       "nickname2": "염괴룡",
       "type": "비룡종/용반목-용각아목-기괴룡하목-희백룡상과-푸루푸루과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "j"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "j", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "j"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "j", "k"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "마비"],
       "weakEl": ["수"],
@@ -8683,7 +8671,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통"],
       "weak": [
         {
@@ -8773,11 +8761,11 @@
       "nickname2": null,
       "type": "사룡종/사룡목-사룡아목-가라라아자라과",
       "species": "원종",
-      "seriesId": ["j", "l"],
-      "infoSeriesId": ["j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j", "l"],
+      "allSeriesIds": ["j", "k", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비", "기절"],
       "weakEl": ["빙"],
       "small": "3568.4",
@@ -8787,7 +8775,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "뒷다리", "꼬리(절단?)"],
       "weak": [
         {
@@ -8891,10 +8879,10 @@
       "nickname2": null,
       "type": "사룡종/사룡목-사룡아목-가라라아자라과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "마비"],
       "weakEl": ["화"],
@@ -8905,7 +8893,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "뒷다리", "꼬리(절단?)"],
       "weak": [
         {
@@ -9007,11 +8995,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-미추룡상과-도볼베르크과",
       "species": "원종",
-      "seriesId": ["h", "i", "l"],
-      "infoSeriesId": ["h", "i", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h", "i", "l"],
+      "allSeriesIds": ["h", "i", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["화"],
       "small": "1317.84",
@@ -9021,7 +9009,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "꼬리(절단?)"],
       "weak": [
         {
@@ -9139,11 +9127,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-미추룡상과-도볼베르크과",
       "species": "아종",
-      "seriesId": ["h"],
-      "infoSeriesId": ["h"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h"],
+      "allSeriesIds": ["h"],
+      "title": [],
+
+      "element": [],
       "ailment": ["진흙상태", "기절"],
       "weakEl": ["수", "빙"],
       "small": "2116.045",
@@ -9153,7 +9141,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "꼬리(절단?)"],
       "weak": [
         {
@@ -9267,10 +9255,9 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-미검룡상과-디노발드과",
       "species": "원종",
-      "seriesId": ["l", "o"],
-      "infoSeriesId": ["l", "m", "o"],
-      "title": "MHX",
-      "titleId": ["l"],
+      "baseSeriesIds": ["l", "o"],
+      "allSeriesIds": ["l", "m", "o"],
+      "title": ["MHX"],
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -9281,7 +9268,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -9432,11 +9419,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-미검룡상과-디노발드과",
       "species": "아종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["방어력감소"],
       "weakEl": ["화"],
       "small": "2135.2",
@@ -9446,7 +9433,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -9597,10 +9584,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-미검룡상과-디노발드과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "폭파"],
       "weakEl": ["수", "빙"],
@@ -9611,7 +9598,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -9730,11 +9717,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-추룡하목-발킨과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수면"],
       "weakEl": ["용"],
       "small": "1587.05",
@@ -9744,7 +9731,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -9864,12 +9851,12 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-판각룡상과-버프바로과",
       "species": "원종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["용"],
       "small": "2164.36",
       "large": "2957.95",
@@ -9878,7 +9865,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["뿔", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -9985,11 +9972,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-관두룡상과-볼보로스과",
       "species": "원종",
-      "seriesId": ["g", "i", "m", "n", "p"],
-      "infoSeriesId": ["g", "h", "i", "m", "n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["g", "i", "m", "n", "p"],
+      "allSeriesIds": ["g", "h", "i", "m", "n", "o", "p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수", "진흙상태"],
       "weakEl": ["화", "수"],
       "small": "1217.1",
@@ -9999,7 +9986,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "진흙", "꼬리(절단〇)"],
       "weak": [
         {
@@ -10079,10 +10066,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-관두룡상과-볼보로스과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["뇌", "화"],
@@ -10093,7 +10080,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["앞다리", "꼬리(절단?)"],
       "weak": [
         {
@@ -10173,10 +10160,9 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-전각권룡상과-브라키과",
       "species": "원종",
-      "seriesId": ["h", "j", "l", "o"],
-      "infoSeriesId": ["h", "j", "k", "l", "m", "o"],
-      "title": "MH3G",
-      "titleId": ["h"],
+      "baseSeriesIds": ["h", "j", "l", "o"],
+      "allSeriesIds": ["h", "j", "k", "l", "m", "o"],
+      "title": ["MH3G"],
       "haveData": true,
       "element": ["화"],
       "ailment": ["폭파", "점균폭파"],
@@ -10188,7 +10174,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -10291,11 +10277,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-전각권룡상과-브라키과",
       "species": "특수 개체",
-      "seriesId": ["k", "m", "o"],
-      "infoSeriesId": ["k", "m", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["k", "m", "o"],
+      "allSeriesIds": ["k", "m", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["화", "폭파", "점균폭파"],
       "weakEl": ["빙", "수"],
       "small": "2130.5",
@@ -10305,7 +10291,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -10452,10 +10438,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-안쟈나프과",
       "species": "원종",
-      "seriesId": ["n", "p"],
-      "infoSeriesId": ["n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n", "p"],
+      "allSeriesIds": ["n", "o", "p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -10466,7 +10452,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -10574,10 +10560,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-안쟈나프과",
       "species": "아종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["빙"],
@@ -10588,7 +10574,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -10805,10 +10791,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-추룡하목-추악룡상과-간킨과",
       "species": "원종",
-      "seriesId": ["g", "i", "l", "n"],
-      "infoSeriesId": ["g", "h", "i", "l", "m", "n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i", "l", "n"],
+      "allSeriesIds": ["g", "h", "i", "l", "m", "n", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "수면"],
       "weakEl": ["수"],
@@ -10819,7 +10805,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "꼬리(절단〇)"],
       "weak": [
         {
@@ -11036,10 +11022,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-추룡하목-추악룡상과-간킨과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "아이템사용금지"],
       "weakEl": ["수"],
@@ -11050,7 +11036,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -11167,10 +11153,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-추룡하목-추악룡상과-간킨과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "수면", "기절"],
       "weakEl": ["수"],
@@ -11181,7 +11167,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -11296,10 +11282,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-폭룡상과-이블과",
       "species": "원종",
-      "seriesId": ["g", "i", "j", "l", "n"],
-      "infoSeriesId": ["g", "h", "i", "j", "k", "l", "m", "n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i", "j", "l", "n"],
+      "allSeriesIds": ["g", "h", "i", "j", "k", "l", "m", "n", "o"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용", "방어력감소"],
       "weakEl": ["뇌", "용"],
@@ -11310,7 +11296,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "꼬리(절단〇)"],
       "weak": [
         {
@@ -11493,10 +11479,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목-폭룡상과-이블과",
       "species": "특수 개체",
-      "seriesId": ["h", "j", "l", "o"],
-      "infoSeriesId": ["h", "j", "k", "l", "m", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "j", "l", "o"],
+      "allSeriesIds": ["h", "j", "k", "l", "m", "o"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용", "방어력감소"],
       "weakEl": ["뇌", "용"],
@@ -11507,7 +11493,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "꼬리(절단〇)"],
       "weak": [
         {
@@ -11643,10 +11629,10 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -11657,7 +11643,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -11732,11 +11718,11 @@
       "nickname2": null,
       "type": "수룡종/용반목-수각아목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독"],
       "weakEl": ["수"],
       "small": "1066.05",
@@ -11746,7 +11732,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리"],
       "weak": [
         {
@@ -11836,10 +11822,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-적룡상과-도도가마루과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["폭파"],
       "weakEl": ["뇌"],
@@ -11850,7 +11836,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -12046,11 +12032,11 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-적룡상과-쟈그라스과-기르오스속",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비"],
       "weakEl": ["수"],
       "small": "937.3",
@@ -12060,7 +12046,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -12178,12 +12164,12 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-적룡상과-쟈그라스과-쟈그라스속",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "277.42",
       "large": "1997.39",
@@ -12192,7 +12178,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "앞다리"],
       "weak": [
         {
@@ -12344,10 +12330,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-처조룡상과-루나가론과",
       "species": "원종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "기절"],
       "weakEl": ["화"],
@@ -12358,7 +12344,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -12455,11 +12441,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-원호룡상과-마가이마가도과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "MHR",
-      "titleId": ["p"],
-      "element": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": ["MHR"],
+      "element": [],
       "ailment": ["귀화"],
       "weakEl": ["수", "뇌"],
       "small": "1602.38",
@@ -12469,7 +12454,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "칼날발톱", "등", "뒷다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -12572,11 +12557,11 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-원호룡상과-마가이마가도과",
       "species": "특수 개체",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["용", "귀화"],
       "weakEl": ["수", "뇌"],
       "small": "1762.61",
@@ -12586,7 +12571,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "칼날발톱", "등", "뒷다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -12678,11 +12663,11 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-처조룡상과-오도가론과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["열상"],
       "weakEl": ["빙"],
       "small": "541.61",
@@ -12692,7 +12677,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -12844,10 +12829,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-처조룡상과-오도가론과",
       "species": "아종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용", "열상"],
       "weakEl": ["수"],
@@ -12858,7 +12843,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -13022,10 +13007,9 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-뇌랑룡상과-진오우거과",
       "species": "원종",
-      "seriesId": ["h", "i", "j", "l", "o", "p"],
-      "infoSeriesId": ["h", "i", "j", "k", "l", "m", "o", "p", "q"],
-      "title": "MHP3",
-      "titleId": ["i"],
+      "baseSeriesIds": ["h", "i", "j", "l", "o", "p"],
+      "allSeriesIds": ["h", "i", "j", "k", "l", "m", "o", "p", "q"],
+      "title": ["MHP3"],
       "element": ["뇌"],
       "ailment": ["뇌", "마비"],
       "weakEl": ["빙"],
@@ -13036,7 +13020,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -13160,10 +13144,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-뇌랑룡상과-진오우거과",
       "species": "아종",
-      "seriesId": ["h", "j", "o"],
-      "infoSeriesId": ["h", "j", "k", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "j", "o"],
+      "allSeriesIds": ["h", "j", "k", "o"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["뇌"],
@@ -13174,7 +13158,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -13362,10 +13346,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-뇌랑룡상과-진오우거과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "기절"],
       "weakEl": ["빙"],
@@ -13376,7 +13360,7 @@
       "dung": true,
       "shock": false,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -13499,10 +13483,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-뇌랑룡상과-진오우거과",
       "species": "주인",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["빙"],
@@ -13513,7 +13497,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -13637,10 +13621,10 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-처조룡상과-토비카가치과",
       "species": "원종",
-      "seriesId": ["n", "p"],
-      "infoSeriesId": ["n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n", "p"],
+      "allSeriesIds": ["n", "o", "p", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["수"],
@@ -13651,7 +13635,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리"],
       "weak": [
         {
@@ -13753,11 +13737,11 @@
       "nickname2": null,
       "type": "아룡종/용반목-사각아목-처조룡상과-토비카가치과",
       "species": "아종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "맹독", "마비"],
       "weakEl": ["뇌"],
       "small": "1170.47",
@@ -13767,7 +13751,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "등", "꼬리"],
       "weak": [
         {
@@ -13869,11 +13853,10 @@
       "nickname2": null,
       "type": "아성룡종/고룡목-회룡아목-마가라과",
       "species": "원종",
-      "seriesId": ["j", "l", "q", "r"],
-      "infoSeriesId": ["j", "k", "l", "m", "q", "r"],
-      "title": "MH4",
-      "titleId": ["j"],
-      "element": [""],
+      "baseSeriesIds": ["j", "l", "q", "r"],
+      "allSeriesIds": ["j", "k", "l", "m", "q", "r"],
+      "title": ["MH4"],
+      "element": [],
       "ailment": ["광룡증"],
       "weakEl": ["화"],
       "small": "1549.59",
@@ -13883,7 +13866,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["촉각", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -14020,10 +14003,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목-강아상과-가란고르무과",
       "species": "원종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화", "수"],
       "ailment": ["화", "수", "폭파"],
       "weakEl": ["뇌", "화", "수", "빙"],
@@ -14034,7 +14017,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -14120,10 +14103,10 @@
       "nickname2": null,
       "type": "아수종/장비목-두각아목-가무토과",
       "species": "원종",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["뇌", "화"],
@@ -14134,7 +14117,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "코", "다리"],
       "weak": [
         {
@@ -14214,10 +14197,10 @@
       "nickname2": null,
       "type": "아수종/장비목-두각아목-가무토과",
       "species": "이명 특수개체",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["뇌", "화"],
@@ -14228,7 +14211,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "코", "다리"],
       "weak": [
         {
@@ -14319,10 +14302,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-귀수하목-고샤하기과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "기절"],
       "weakEl": ["화"],
@@ -14333,7 +14316,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "얼음칼", "등"],
       "weak": [
         {
@@ -14419,10 +14402,10 @@
       "nickname2": "눈사자",
       "type": "아수종/첨조목-견치아목-예아상과-블랑고과",
       "species": "원종",
-      "seriesId": ["d", "e", "l", "r"],
-      "infoSeriesId": ["d", "e", "f", "l", "m", "r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "l", "r"],
+      "allSeriesIds": ["d", "e", "f", "l", "m", "r"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["화"],
@@ -14433,7 +14416,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리"],
       "weak": [
         {
@@ -14514,11 +14497,11 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목-예아상과-블랑고과",
       "species": "아종",
-      "seriesId": ["f"],
-      "infoSeriesId": ["f"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["f"],
+      "allSeriesIds": ["f"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["빙"],
       "small": "799.8",
@@ -14527,8 +14510,8 @@
       "sonic": false,
       "dung": false,
       "shock": true,
-      "pitfall": "〇(비분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "꼬리"],
       "weak": [
         {
@@ -14609,12 +14592,12 @@
       "nickname2": null,
       "type": "아수종/첨조목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "1237.51",
       "large": "1807.61",
@@ -14623,7 +14606,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["앞다리", "꼬리"],
       "weak": [
         {
@@ -14704,12 +14687,12 @@
       "nickname2": null,
       "type": "아수종/우제목-불팽고과",
       "species": "원종",
-      "seriesId": ["d", "e", "i", "l"],
-      "infoSeriesId": ["d", "e", "f", "i", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["d", "e", "i", "l"],
+      "allSeriesIds": ["d", "e", "f", "i", "l", "m"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "509.26",
       "large": "1188.6",
@@ -14718,7 +14701,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": [""],
       "weak": [
         {
@@ -14758,10 +14741,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목-라잔과",
       "species": "원종",
-      "seriesId": ["d", "e", "j", "l", "o", "p"],
-      "infoSeriesId": ["d", "e", "f", "j", "k", "l", "m", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "j", "l", "o", "p"],
+      "allSeriesIds": ["d", "e", "f", "j", "k", "l", "m", "o", "p", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["빙"],
@@ -14770,9 +14753,9 @@
       "flash": true,
       "sonic": false,
       "dung": true,
-      "shock": "〇(일반)",
-      "pitfall": "〇(투기 경화)",
-      "danger": 4,
+      "shock": true,
+      "pitfall": true,
+
       "break": ["뿔", "앞다리", "꼬리"],
       "weak": [
         {
@@ -14856,10 +14839,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목-라잔과",
       "species": "특수 개체",
-      "seriesId": ["f", "j", "l", "o", "q"],
-      "infoSeriesId": ["f", "j", "k", "l", "m", "o", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f", "j", "l", "o", "q"],
+      "allSeriesIds": ["f", "j", "k", "l", "m", "o", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["빙"],
@@ -14868,9 +14851,9 @@
       "flash": true,
       "sonic": false,
       "dung": true,
-      "shock": "〇(일반)",
-      "pitfall": "〇(투기 경화)",
-      "danger": 4,
+      "shock": true,
+      "pitfall": true,
+
       "break": ["뿔", "앞다리"],
       "weak": [
         {
@@ -14952,11 +14935,11 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-갑수하목-랑그로토라과",
       "species": "원종",
-      "seriesId": ["h", "i", "l", "p"],
-      "infoSeriesId": ["h", "i", "l", "m", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h", "i", "l", "p"],
+      "allSeriesIds": ["h", "i", "l", "m", "p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비", "아이템사용금지"],
       "weakEl": ["수"],
       "small": "613.08",
@@ -14966,7 +14949,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["등"],
       "weak": [
         {
@@ -15062,10 +15045,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목-둔아상과-콩가과",
       "species": "원종",
-      "seriesId": ["d", "e", "j", "m", "r"],
-      "infoSeriesId": ["d", "e", "f", "j", "k", "m", "r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "j", "m", "r"],
+      "allSeriesIds": ["d", "e", "f", "j", "k", "m", "r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "수면", "아이템사용금지", "독", "마비", "폭파"],
       "weakEl": ["화"],
@@ -15076,7 +15059,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리"],
       "weak": [
         {
@@ -15156,10 +15139,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목-둔아상과-콩가과",
       "species": "아종",
-      "seriesId": ["f", "j"],
-      "infoSeriesId": ["f", "j", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f", "j"],
+      "allSeriesIds": ["f", "j", "k"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "수면", "아이템사용금지", "독", "마비", "폭파"],
       "weakEl": ["빙"],
@@ -15170,7 +15153,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "발톱", "꼬리"],
       "weak": [
         {
@@ -15250,11 +15233,11 @@
       "nickname2": null,
       "type": "아수종/첨조목-비막수아목-천구수하목-비슈텐고과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "마비", "기절"],
       "weakEl": ["빙"],
       "small": "832.3",
@@ -15264,7 +15247,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리"],
       "weak": [
         {
@@ -15357,10 +15340,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-비막수아목-천구수하목-비슈텐고과",
       "species": "아종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -15371,7 +15354,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리"],
       "weak": [
         {
@@ -15462,12 +15445,12 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-웅수하목-아시라과",
       "species": "원종",
-      "seriesId": ["h", "i", "l", "p"],
-      "infoSeriesId": ["h", "i", "l", "m", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["h", "i", "l", "p"],
+      "allSeriesIds": ["h", "i", "l", "m", "p", "q"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "501.34",
       "large": "854.55",
@@ -15476,7 +15459,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["앞다리"],
       "weak": [
         {
@@ -15560,11 +15543,11 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-웅수하목-아시라과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["화"],
       "small": "781.22",
@@ -15574,7 +15557,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리"],
       "weak": [
         {
@@ -15658,11 +15641,11 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-웅수하목-아시라과",
       "species": "주인",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["화"],
       "small": "674.78",
@@ -15672,7 +15655,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["앞다리"],
       "weak": [
         {
@@ -15757,11 +15740,11 @@
       "nickname2": null,
       "type": "아수종/첨조목-견치아목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
       "ailment": ["폭파"],
       "weakEl": ["수"],
       "small": "1047.92",
@@ -15771,7 +15754,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -15866,10 +15849,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-토수하목-크스스과",
       "species": "원종",
-      "seriesId": ["h", "i", "j", "l", "p"],
-      "infoSeriesId": ["h", "i", "j", "k", "l", "m", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i", "j", "l", "p"],
+      "allSeriesIds": ["h", "i", "j", "k", "l", "m", "p", "q"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["화"],
@@ -15880,7 +15863,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -15961,10 +15944,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-견조아목-토수하목-크스스과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람", "기절"],
       "weakEl": ["화"],
@@ -15975,7 +15958,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -16054,10 +16037,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-비막수아목-케차와차과",
       "species": "원종",
-      "seriesId": ["j", "l"],
-      "infoSeriesId": ["j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["j", "l"],
+      "allSeriesIds": ["j", "k", "l", "m"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["화"],
@@ -16068,7 +16051,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "손톱", "꼬리"],
       "weak": [
         {
@@ -16160,10 +16143,10 @@
       "nickname2": null,
       "type": "아수종/첨조목-비막수아목-케차와차과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -16174,7 +16157,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "손톱", "꼬리"],
       "weak": [
         {
@@ -16266,10 +16249,10 @@
       "nickname2": null,
       "type": "양서종/유미목-하동와아목-요츠미와두과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "기절"],
       "weakEl": ["뇌"],
@@ -16280,7 +16263,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["부리", "몸통", "등껍질", "앞다리"],
       "weak": [
         {
@@ -16377,10 +16360,10 @@
       "nickname2": null,
       "type": "양서종/유미목-화교아목-자보아자길과",
       "species": "원종",
-      "seriesId": ["j", "l"],
-      "infoSeriesId": ["j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["j", "l"],
+      "allSeriesIds": ["j", "k", "l", "m"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["뇌", "화"],
@@ -16391,7 +16374,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "앞다리", "꼬리"],
       "weak": [
         {
@@ -16495,10 +16478,10 @@
       "nickname2": "호상어",
       "type": "양서종/유미목-화교아목-자보아자길과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "마비"],
       "weakEl": ["빙"],
@@ -16509,7 +16492,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "앞다리", "꼬리"],
       "weak": [
         {
@@ -16610,12 +16593,12 @@
       "nickname2": null,
       "type": "양서종/",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "448.47",
       "large": "612.91",
@@ -16624,7 +16607,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["앞다리"],
       "weak": [
         {
@@ -16714,11 +16697,11 @@
       "nickname2": null,
       "type": "양서종/유미목-귀와아목-카브라과",
       "species": "원종",
-      "seriesId": ["j", "l"],
-      "infoSeriesId": ["j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j", "l"],
+      "allSeriesIds": ["j", "k", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["피로"],
       "weakEl": ["수"],
       "small": "632.9",
@@ -16728,7 +16711,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["턱", "등", "뒷다리"],
       "weak": [
         {
@@ -16825,11 +16808,11 @@
       "nickname2": null,
       "type": "양서종/유미목-귀와아목-카브라과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["피로"],
       "weakEl": ["빙"],
       "small": "632.9",
@@ -16839,7 +16822,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["턱", "등", "뒷다리"],
       "weak": [
         {
@@ -16935,11 +16918,11 @@
       "nickname2": null,
       "type": "양서종/유미목-귀와아목-카브라과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절", "피로"],
       "weakEl": ["수"],
       "small": "1437.26",
@@ -16949,7 +16932,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["턱", "등", "뒷다리"],
       "weak": [
         {
@@ -17045,10 +17028,10 @@
       "nickname2": null,
       "type": "어룡종/어룡목-유각어룡아목-수룡상과-토토스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "h", "l"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "h", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "h", "l"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "h", "l", "m"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "수면"],
       "weakEl": ["뇌"],
@@ -17059,7 +17042,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등 지느러미", "날개"],
       "weak": [
         {
@@ -17163,10 +17146,10 @@
       "nickname2": null,
       "type": "어룡종/어룡목-유각어룡아목-수룡상과-토토스과",
       "species": "아종",
-      "seriesId": ["b", "d", "e", "h", "k"],
-      "infoSeriesId": ["b", "d", "e", "f", "h", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "d", "e", "h", "k"],
+      "allSeriesIds": ["b", "d", "e", "f", "h", "k"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "수면"],
       "weakEl": ["뇌"],
@@ -17177,7 +17160,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등 지느러미", "날개"],
       "weak": [
         {
@@ -17278,10 +17261,10 @@
       "nickname2": "사토룡",
       "type": "어룡종/어룡목-유각어룡아목-사룡상과-가레오스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "k", "l"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "k", "l"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "k", "l", "m"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "마비"],
       "weakEl": ["빙"],
@@ -17292,7 +17275,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등 지느러미", "꼬리"],
       "weak": [
         {
@@ -17389,10 +17372,10 @@
       "nickname2": null,
       "type": "어룡종/어룡목-유각어룡아목-용암룡상과-볼가노스과",
       "species": "원종",
-      "seriesId": ["f", "l", "n"],
-      "infoSeriesId": ["f", "l", "m", "n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f", "l", "n"],
+      "allSeriesIds": ["f", "l", "m", "n", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수", "화"],
@@ -17403,7 +17386,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "다리", "꼬리"],
       "weak": [
         {
@@ -17632,10 +17615,10 @@
       "nickname2": null,
       "type": "어룡종/어룡목-유각어룡아목-동어룡상과-브란토도스과",
       "species": "원종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙"],
       "weakEl": ["화"],
@@ -17646,7 +17629,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "다리", "꼬리"],
       "weak": [
         {
@@ -17742,10 +17725,10 @@
       "nickname2": null,
       "type": "어룡종/어룡목-유각어룡아목-이어룡상과-쥬라토도스과",
       "species": "원종",
-      "seriesId": ["n", "p"],
-      "infoSeriesId": ["n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n", "p"],
+      "allSeriesIds": ["n", "o", "p", "q"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "진흙상태"],
       "weakEl": ["뇌", "수"],
@@ -17756,7 +17739,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "몸통", "다리", "꼬리", "진흙"],
       "weak": [
         {
@@ -17853,11 +17836,11 @@
       "nickname2": null,
       "type": "인조룡종/",
       "species": null,
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
       "ailment": ["방어력감소"],
       "weakEl": ["화"],
       "small": "1251.42",
@@ -17867,7 +17850,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리"],
       "weak": [
         {
@@ -17947,10 +17930,10 @@
       "nickname2": null,
       "type": "인조룡종/",
       "species": null,
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독"],
       "weakEl": ["용"],
@@ -17961,7 +17944,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -18072,10 +18055,10 @@
       "nickname2": null,
       "type": "인조룡종/",
       "species": null,
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["빙"],
@@ -18086,7 +18069,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -18193,10 +18176,10 @@
       "nickname2": null,
       "type": "인조룡종/",
       "species": null,
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["용"],
@@ -18207,7 +18190,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "사슬날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -18298,10 +18281,10 @@
       "nickname2": null,
       "type": "인조룡종/",
       "species": null,
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용", "열상"],
       "weakEl": ["수"],
@@ -18312,7 +18295,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -18430,10 +18413,10 @@
       "nickname2": null,
       "type": "인조룡종/",
       "species": null,
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["화", "뇌"],
       "ailment": ["화", "뇌"],
       "weakEl": ["용"],
@@ -18444,7 +18427,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -18567,11 +18550,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-게리오스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l", "r"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m", "r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l", "r"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m", "r"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "맹독", "기절"],
       "weakEl": ["화"],
       "small": "811",
@@ -18581,7 +18564,7 @@
       "dung": true,
       "shock": false,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -18674,11 +18657,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-게리오스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "j"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "j", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "j"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "j", "k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "맹독", "기절"],
       "weakEl": ["화"],
       "small": "912.3",
@@ -18688,7 +18671,7 @@
       "dung": true,
       "shock": false,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -18791,11 +18774,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-게네포스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비", "기절"],
       "weakEl": ["빙"],
       "small": "615",
@@ -18805,7 +18788,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -18845,10 +18828,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-람포스과",
       "species": "원종",
-      "seriesId": ["e", "m"],
-      "infoSeriesId": ["e", "f", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["e", "m"],
+      "allSeriesIds": ["e", "f", "m"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["화"],
@@ -18859,7 +18842,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -18900,11 +18883,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-람포스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["아이템사용금지", "방어력감소"],
       "weakEl": ["빙"],
       "small": "590.7",
@@ -18914,7 +18897,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -18954,12 +18937,12 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-구룡상과-마카오과",
       "species": "원종",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "701.63",
       "large": "1275.7",
@@ -18968,7 +18951,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리"],
       "weak": [
         {
@@ -19021,11 +19004,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-구룡상과-바기과",
       "species": "원종",
-      "seriesId": ["g", "i", "p"],
-      "infoSeriesId": ["g", "h", "i", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["g", "i", "p"],
+      "allSeriesIds": ["g", "h", "i", "p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수면"],
       "weakEl": ["화"],
       "small": "839.12",
@@ -19035,7 +19018,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -19078,11 +19061,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-이오스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독"],
       "weakEl": ["화", "뇌"],
       "small": "619.7",
@@ -19092,7 +19075,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -19130,12 +19113,12 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-구룡상과-재기과",
       "species": "원종",
-      "seriesId": ["g", "i", "j"],
-      "infoSeriesId": ["g", "h", "i", "j", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["g", "i", "j"],
+      "allSeriesIds": ["g", "h", "i", "j", "k"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "822.27",
       "large": "1261.31",
@@ -19144,7 +19127,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -19184,11 +19167,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-구룡상과-프로기과",
       "species": "원종",
-      "seriesId": ["h", "i", "p"],
-      "infoSeriesId": ["h", "i", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h", "i", "p"],
+      "allSeriesIds": ["h", "i", "p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독"],
       "weakEl": ["빙"],
       "small": "831.7",
@@ -19198,7 +19181,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -19240,10 +19223,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-아케노시름과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -19254,7 +19237,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["무리", "볏", "날개", "꼬리"],
       "weak": [
         {
@@ -19362,10 +19345,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-이조룡상과-가루루가과",
       "species": "원종",
-      "seriesId": ["c", "d", "e", "j", "l", "o"],
-      "infoSeriesId": ["c", "d", "e", "f", "j", "k", "l", "m", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["c", "d", "e", "j", "l", "o"],
+      "allSeriesIds": ["c", "d", "e", "f", "j", "k", "l", "m", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독"],
       "weakEl": ["수"],
@@ -19375,8 +19358,8 @@
       "sonic": false,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(비분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "몸통", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -19496,10 +19479,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-이조룡상과-가루루가과",
       "species": "특수 개체",
-      "seriesId": ["f", "o"],
-      "infoSeriesId": ["f", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["f", "o"],
+      "allSeriesIds": ["f", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독"],
       "weakEl": ["수"],
@@ -19509,8 +19492,8 @@
       "sonic": false,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(비분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "몸통", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -19628,10 +19611,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-이조룡상과-가루루가과",
       "species": "이명 특수개체",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "독", "맹독", "극독"],
       "weakEl": ["수"],
@@ -19641,8 +19624,8 @@
       "sonic": false,
       "dung": true,
       "shock": true,
-      "pitfall": "〇(비분노)",
-      "danger": 4,
+      "pitfall": true,
+
       "break": ["머리", "몸통", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -19749,10 +19732,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-이조룡상과-쿡크과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l", "r"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m", "r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l", "r"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "l", "m", "r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["빙"],
@@ -19763,7 +19746,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -19854,10 +19837,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-이조룡상과-쿡크과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "j"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "j", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "j"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "j", "k"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -19868,7 +19851,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리"],
       "weak": [
         {
@@ -19970,12 +19953,12 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-구룡상과-이즈치과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "946.08",
       "large": "1343.87",
@@ -19984,7 +19967,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리"],
       "weak": [
         {
@@ -20059,11 +20042,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-야크과-치치속",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["뇌", "빙"],
       "small": "786.76",
@@ -20073,7 +20056,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "촉각", "앞다리", "꼬리"],
       "weak": [
         {
@@ -20169,11 +20152,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-주룡하목-야크과-쿠루루속",
       "species": "원종",
-      "seriesId": ["n", "p"],
-      "infoSeriesId": ["n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n", "p"],
+      "allSeriesIds": ["n", "o", "p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["수"],
       "small": "802.1",
@@ -20183,7 +20166,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "항아리", "바위"],
       "weak": [
         {
@@ -20270,10 +20253,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-성조룡상과-페코과",
       "species": "원종",
-      "seriesId": ["g", "i"],
-      "infoSeriesId": ["g", "h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i"],
+      "allSeriesIds": ["g", "h", "i"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "방어력감소", "수면"],
       "weakEl": ["빙"],
@@ -20284,7 +20267,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개"],
       "weak": [
         {
@@ -20397,10 +20380,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-성조룡상과-페코과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "기절", "수면"],
       "weakEl": ["빙"],
@@ -20411,7 +20394,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개"],
       "weak": [
         {
@@ -20524,11 +20507,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-푸케푸케과",
       "species": "원종",
-      "seriesId": ["n", "p"],
-      "infoSeriesId": ["n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n", "p"],
+      "allSeriesIds": ["n", "o", "p", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "기절"],
       "weakEl": ["뇌"],
       "small": "970.16",
@@ -20538,7 +20521,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -20641,10 +20624,10 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-푸케푸케과",
       "species": "아종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["빙"],
@@ -20655,7 +20638,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -20736,11 +20719,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-호로로호루루과",
       "species": "원종",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수면", "혼란"],
       "weakEl": ["수"],
       "small": "305.83",
@@ -20750,7 +20733,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리"],
       "weak": [
         {
@@ -20840,11 +20823,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-호로로호루루과",
       "species": "이명 특수개체",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수면", "혼란"],
       "weakEl": ["수"],
       "small": "711.03",
@@ -20854,7 +20837,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리"],
       "weak": [
         {
@@ -20946,11 +20929,11 @@
       "nickname2": null,
       "type": "조룡종/용반목-조각아목-조룡하목-히프노크과",
       "species": "원종",
-      "seriesId": ["f"],
-      "infoSeriesId": ["f"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["f"],
+      "allSeriesIds": ["f"],
+      "title": [],
+
+      "element": [],
       "ailment": ["수면"],
       "weakEl": ["화"],
       "small": "751.4",
@@ -20960,7 +20943,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["부리"],
       "weak": [
         {
@@ -21055,10 +21038,9 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-전각룡하목-라기아크루스과",
       "species": "원종",
-      "seriesId": ["g", "l", "r"],
-      "infoSeriesId": ["g", "h", "l", "m", "r"],
-      "title": "MH3",
-      "titleId": ["g"],
+      "baseSeriesIds": ["g", "l", "r"],
+      "allSeriesIds": ["g", "h", "l", "m", "r"],
+      "title": ["MH3"],
       "element": ["뇌"],
       "ailment": ["수", "뇌"],
       "weakEl": ["화"],
@@ -21069,7 +21051,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -21189,10 +21171,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-전각룡하목-라기아크루스과",
       "species": "아종",
-      "seriesId": ["h"],
-      "infoSeriesId": ["h"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h"],
+      "allSeriesIds": ["h"],
+      "title": [],
+
       "element": ["수", "뇌"],
       "ailment": ["수", "뇌"],
       "weakEl": ["화", "용"],
@@ -21203,7 +21185,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -21312,10 +21294,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-전각룡하목-라기아크루스과",
       "species": "희소종",
-      "seriesId": ["h"],
-      "infoSeriesId": ["h"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h"],
+      "allSeriesIds": ["h"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["수", "뇌"],
       "weakEl": ["용"],
@@ -21326,7 +21308,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "등", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -21422,10 +21404,10 @@
       "nickname2": "수괴수",
       "type": "해룡종/해룡목-해룡아목-면모룡하목-로아루과",
       "species": "원종",
-      "seriesId": ["g", "i", "l", "p"],
-      "infoSeriesId": ["g", "h", "i", "l", "m", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i", "l", "p"],
+      "allSeriesIds": ["g", "h", "i", "l", "m", "p", "q"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["화"],
@@ -21436,7 +21418,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "갈기", "꼬리(절단〇)"],
       "weak": [
         {
@@ -21539,11 +21521,11 @@
       "nickname2": "자수괴수",
       "type": "해룡종/해룡목-해룡아목-면모룡하목-로아루과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "맹독"],
       "weakEl": ["화"],
       "small": "1467.94",
@@ -21553,7 +21535,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "갈기", "꼬리(절단〇)"],
       "weak": [
         {
@@ -21656,10 +21638,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["뇌"],
@@ -21670,7 +21652,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -21757,10 +21739,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-염룡하목-아그나코트르과",
       "species": "원종",
-      "seriesId": ["g", "i", "l"],
-      "infoSeriesId": ["g", "h", "i", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i", "l"],
+      "allSeriesIds": ["g", "h", "i", "l", "m"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수", "용"],
@@ -21771,7 +21753,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등 지느러미", "가슴", "다리"],
       "weak": [
         {
@@ -21888,10 +21870,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-염룡하목-아그나코트르과",
       "species": "아종",
-      "seriesId": ["h", "i"],
-      "infoSeriesId": ["h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i"],
+      "allSeriesIds": ["h", "i"],
+      "title": [],
+
       "element": ["수", "빙"],
       "ailment": ["수", "빙"],
       "weakEl": ["화", "용"],
@@ -21902,7 +21884,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등 지느러미", "가슴", "다리"],
       "weak": [
         {
@@ -22015,10 +21997,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해수룡아목-이옹룡하목-오로미도로과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "진흙상태"],
       "weakEl": ["화"],
@@ -22029,7 +22011,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "몸통", "꼬리(절단〇)"],
       "weak": [
         {
@@ -22145,10 +22127,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해수룡아목-이옹룡하목-오로미도로과",
       "species": "아종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["수"],
@@ -22159,7 +22141,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "몸통", "꼬리(절단〇)"],
       "weak": [
         {
@@ -22273,10 +22255,10 @@
       "nickname2": null,
       "type": "해룡종/",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["뇌"],
@@ -22287,7 +22269,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리"],
       "weak": [
         {
@@ -22406,10 +22388,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-인어룡하목-이소네미쿠니과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "수면", "기절", "폭파"],
       "weakEl": ["뇌"],
@@ -22420,7 +22402,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리"],
       "weak": [
         {
@@ -22534,10 +22516,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해룡아목-인어룡하목-이소네미쿠니과",
       "species": "아종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙"],
       "weakEl": ["화"],
@@ -22548,7 +22530,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "꼬리"],
       "weak": [
         {
@@ -22662,10 +22644,10 @@
       "nickname2": null,
       "type": "해룡종/",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["동결"],
       "weakEl": ["화"],
@@ -22676,7 +22658,7 @@
       "dung": false,
       "shock": true,
       "pitfall": false,
-      "danger": 4,
+
       "break": [
         "머리",
         "앞다리",
@@ -22803,10 +22785,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-저족룡아목-등어룡하목-차나과",
       "species": "원종",
-      "seriesId": ["g"],
-      "infoSeriesId": ["g", "h"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g"],
+      "allSeriesIds": ["g", "h"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "마비", "기절"],
       "weakEl": ["뇌"],
@@ -22817,7 +22799,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["등불"],
       "weak": [
         {
@@ -22925,10 +22907,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해수룡아목-포호룡하목-타마미츠네과",
       "species": "원종",
-      "seriesId": ["l", "p", "r"],
-      "infoSeriesId": ["l", "m", "p", "q", "r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l", "p", "r"],
+      "allSeriesIds": ["l", "m", "p", "q", "r"],
+      "title": [],
+
       "element": ["화", "수"],
       "ailment": ["화", "수", "거품상태"],
       "weakEl": ["뇌"],
@@ -22939,7 +22921,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "발톱", "꼬리(절단〇)"],
       "weak": [
         {
@@ -23052,10 +23034,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해수룡아목-포호룡하목-타마미츠네과",
       "species": "희소종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "속성내성"],
       "weakEl": ["빙"],
@@ -23066,7 +23048,7 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "발톱", "꼬리(절단〇)"],
       "weak": [
         {
@@ -23191,10 +23173,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해수룡아목-포호룡하목-타마미츠네과",
       "species": "이명 특수개체",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": [],
+
       "element": ["화", "수"],
       "ailment": ["화", "수", "거품상태"],
       "weakEl": ["뇌"],
@@ -23205,7 +23187,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "등", "발톱", "꼬리(절단〇)"],
       "weak": [
         {
@@ -23318,10 +23300,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-해수룡아목-포호룡하목-타마미츠네과",
       "species": "주인",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수", "귀화", "폭파"],
       "weakEl": ["뇌"],
@@ -23332,7 +23314,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "등", "발톱", "꼬리(절단〇)"],
       "weak": [
         {
@@ -23456,10 +23438,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목-저족룡아목-잠구룡하목-하플보카과",
       "species": "원종",
-      "seriesId": ["h", "i", "l"],
-      "infoSeriesId": ["h", "i", "l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h", "i", "l"],
+      "allSeriesIds": ["h", "i", "l", "m"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["빙"],
@@ -23470,7 +23452,7 @@
       "dung": true,
       "shock": true,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["아가미", "앞다리", "입"],
       "weak": [
         {
@@ -23576,10 +23558,10 @@
       "nickname2": null,
       "type": "해룡종/해룡목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["동결"],
       "weakEl": ["화", "뇌"],
@@ -23590,7 +23572,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "꼬리"],
       "weak": [
         {
@@ -23668,11 +23650,11 @@
       "nickname2": null,
       "type": "협각종/협각목-스큐라과",
       "species": "원종",
-      "seriesId": ["j", "m", "r"],
-      "infoSeriesId": ["j", "k", "m", "r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j", "m", "r"],
+      "allSeriesIds": ["j", "k", "m", "r"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독", "맹독", "수면", "실속박"],
       "weakEl": ["화", "뇌"],
       "small": "833.1",
@@ -23682,7 +23664,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["외피", "독가시", "집게발"],
       "weak": [
         {
@@ -23801,11 +23783,11 @@
       "nickname2": null,
       "type": "협각종/협각목-스큐라과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비", "독", "맹독", "실속박"],
       "weakEl": ["화", "빙"],
       "small": "389.57",
@@ -23815,7 +23797,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["외피", "마비가시", "집게발"],
       "weak": [
         {
@@ -23918,11 +23900,11 @@
       "nickname2": null,
       "type": "협각종/협각목",
       "species": "원종",
-      "seriesId": ["r"],
-      "infoSeriesId": ["r"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["r"],
+      "allSeriesIds": ["r"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비"],
       "weakEl": ["화"],
       "small": "621.88",
@@ -23932,7 +23914,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["집게발", "꽃잎"],
       "weak": [
         {
@@ -24021,10 +24003,10 @@
       "nickname2": null,
       "type": "협각종/협각목-야츠카다키과",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "실속박"],
       "weakEl": ["빙"],
@@ -24035,7 +24017,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "복부", "집게발", "다리 실"],
       "weak": [
         {
@@ -24127,10 +24109,10 @@
       "nickname2": null,
       "type": "협각종/협각목-야츠카다키과",
       "species": "아종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "폭파", "실속박"],
       "weakEl": ["수"],
@@ -24141,7 +24123,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "복부", "집게발", "다리 실"],
       "weak": [
         {
@@ -24234,11 +24216,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-명연룡아목-가이아델름과",
       "species": "원종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["폭파", "겁혈"],
       "weakEl": ["용"],
       "small": "4807.54",
@@ -24248,7 +24230,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개팔", "꼬리(절단〇)"],
       "weak": [
         {
@@ -24369,10 +24351,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-극룡아목-고그마과",
       "species": "원종",
-      "seriesId": ["k", "r"],
-      "infoSeriesId": ["k", "r"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["k", "r"],
+      "allSeriesIds": ["k", "r"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "중유속박"],
       "weakEl": ["화", "용"],
@@ -24383,7 +24365,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개팔", "등", "가슴", "꼬리(절단〇)"],
       "weak": [
         {
@@ -24580,11 +24562,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-회룡아목-마가라과",
       "species": "특수 개체",
-      "seriesId": ["k", "m", "q"],
-      "infoSeriesId": ["k", "m", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["k", "m", "q"],
+      "allSeriesIds": ["k", "m", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["광룡증"],
       "weakEl": ["용"],
       "small": "1584.8",
@@ -24594,7 +24576,7 @@
       "dung": true,
       "shock": true,
       "pitfall": true,
-      "danger": 4,
+
       "break": ["머리", "날개", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -24740,10 +24722,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-원룡아목-밀라오스과",
       "species": "원종",
-      "seriesId": ["h"],
-      "infoSeriesId": ["h"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h"],
+      "allSeriesIds": ["h"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["용"],
@@ -24754,7 +24736,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "가슴", "어깨", "꼬리"],
       "weak": [
         {
@@ -24875,10 +24857,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-염룡아목-테스카토과",
       "species": "원종",
-      "seriesId": ["d", "e", "n"],
-      "infoSeriesId": ["d", "e", "f", "n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "n"],
+      "allSeriesIds": ["d", "e", "f", "n", "o"],
+      "title": [],
+
       "element": ["화", "용"],
       "ailment": ["화"],
       "weakEl": ["빙"],
@@ -24889,7 +24871,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -25098,10 +25080,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-신룡아목-(과 불명)",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "기절"],
       "weakEl": ["용"],
@@ -25112,7 +25094,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "팔", "복부", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -25262,10 +25244,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-신룡아목-(과 불명)",
       "species": "특수 개체",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌"],
       "weakEl": ["용"],
@@ -25276,7 +25258,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "팔", "복부", "등", "꼬리(절단〇)"],
       "weak": [
         {
@@ -25427,10 +25409,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-심룡아목-나발데우스과",
       "species": "원종",
-      "seriesId": ["g"],
-      "infoSeriesId": ["g", "h"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g"],
+      "allSeriesIds": ["g", "h"],
+      "title": [],
+
       "element": ["수", "용"],
       "ailment": ["수", "용"],
       "weakEl": ["용"],
@@ -25441,7 +25423,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["수염", "등", "꼬리"],
       "weak": [
         {
@@ -25556,10 +25538,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-심룡아목-나발데우스과",
       "species": "아종",
-      "seriesId": ["h"],
-      "infoSeriesId": ["h"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["h"],
+      "allSeriesIds": ["h"],
+      "title": [],
+
       "element": ["수"],
       "ailment": ["수"],
       "weakEl": ["용"],
@@ -25570,7 +25552,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["수염", "등", "꼬리"],
       "weak": [
         {
@@ -25683,10 +25665,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-(아목 불명)-명룡하목-네로미에르과",
       "species": "원종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["수", "뇌"],
       "ailment": ["수", "뇌"],
       "weakEl": ["화", "용"],
@@ -25697,7 +25679,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -25804,12 +25786,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-멸룡아목-네르기간테과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n"],
-      "title": "MHW",
-      "titleId": ["n"],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n"],
+      "title": ["MHW"],
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "1626.35",
       "large": "2310.14",
@@ -25818,7 +25799,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔", "머리", "날개", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -26033,11 +26014,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-멸룡아목-네르기간테과",
       "species": "특수 개체",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["열상"],
       "weakEl": ["용"],
       "small": "1663.31",
@@ -26047,7 +26028,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔", "머리", "날개", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -26259,11 +26240,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-사룡아목-아마듈라과",
       "species": "원종",
-      "seriesId": ["j"],
-      "infoSeriesId": ["j", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j"],
+      "allSeriesIds": ["j", "k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비"],
       "weakEl": ["용"],
       "small": "44039.7",
@@ -26273,7 +26254,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "다리", "등", "가슴", "꼬리"],
       "weak": [
         {
@@ -26435,11 +26416,11 @@
       "nickname2": "사황룡",
       "type": "고룡종/고룡목-사룡아목-아마듈라과",
       "species": "아종",
-      "seriesId": ["k"],
-      "infoSeriesId": ["k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["k"],
+      "allSeriesIds": ["k"],
+      "title": [],
+
+      "element": [],
       "ailment": ["마비"],
       "weakEl": ["용"],
       "small": "44039.7",
@@ -26449,7 +26430,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "다리", "등", "흉부", "꼬리"],
       "weak": [
         {
@@ -26606,12 +26587,12 @@
       "nickname2": null,
       "type": "고룡종/고룡목-봉룡아목-다렌과",
       "species": "원종",
-      "seriesId": ["j"],
-      "infoSeriesId": ["j", "k"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["j"],
+      "allSeriesIds": ["j", "k"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["뇌"],
       "small": "11446.5",
       "large": "11446.5",
@@ -26620,7 +26601,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔", "앞다리", "분기공", "등"],
       "weak": [
         {
@@ -26718,12 +26699,12 @@
       "nickname2": null,
       "type": "고룡종/고룡목-산룡아목-라오샨룽과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "m", "s"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "m", "s"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "m", "s"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "m", "s"],
+      "title": [],
+
       "element": ["용"],
-      "ailment": [""],
+      "ailment": [],
       "weakEl": ["용"],
       "small": "6960",
       "large": "6960",
@@ -26732,7 +26713,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "어깨", "등"],
       "weak": [
         {
@@ -26834,12 +26815,12 @@
       "nickname2": null,
       "type": "고룡종/고룡목-산룡아목-라오샨룽과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e"],
-      "infoSeriesId": ["b", "c", "d", "e", "f"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "c", "d", "e"],
+      "allSeriesIds": ["b", "c", "d", "e", "f"],
+      "title": [],
+
       "element": ["용"],
-      "ailment": [""],
+      "ailment": [],
       "weakEl": ["용"],
       "small": "6960",
       "large": "6960",
@@ -26848,7 +26829,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "어깨", "등"],
       "weak": [
         {
@@ -26938,10 +26919,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-난휘룡아목-맘타로트과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["뇌", "빙"],
@@ -26952,7 +26933,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔", "갑옷", "꼬리"],
       "weak": [
         {
@@ -27050,10 +27031,9 @@
       "nickname2": "은작룡",
       "type": "고룡종/고룡목-작은룡아목(은작룡아목)-멜제나과",
       "species": "원종",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "MHRSB",
-      "titleId": ["q"],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": ["MHRSB"],
       "element": ["용"],
       "ailment": ["용", "겁혈"],
       "weakEl": ["용"],
@@ -27064,7 +27044,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -27166,10 +27146,10 @@
       "nickname2": "은작룡",
       "type": "고룡종/고룡목-작은룡아목(은작룡아목)-멜제나과",
       "species": "특수 개체",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용", "겁혈"],
       "weakEl": ["용"],
@@ -27180,7 +27160,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -27283,13 +27263,13 @@
       "nickname2": "명적룡",
       "type": "고룡종/고룡목-명등룡아목-지바과",
       "species": "원종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화"],
-      "weakEl": [""],
+      "weakEl": [],
       "small": "4799.78",
       "large": "4799.78",
       "flash": true,
@@ -27297,7 +27277,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "가슴", "등", "다리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -27488,10 +27468,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-원룡아목-밀라보레아스과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "m", "o"],
-      "infoSeriesId": ["a", "b", "c", "d", "e", "f", "j", "k", "m", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "m", "o"],
+      "allSeriesIds": ["a", "b", "c", "d", "e", "f", "j", "k", "m", "o"],
+      "title": [],
+
       "element": ["화", "용"],
       "ailment": ["화", "용"],
       "weakEl": ["용"],
@@ -27502,7 +27482,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "가슴", "날개"],
       "weak": [
         {
@@ -27644,10 +27624,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-원룡아목-밀라보레아스과",
       "species": "아종",
-      "seriesId": ["b", "c", "d", "e", "j", "m"],
-      "infoSeriesId": ["b", "c", "d", "e", "f", "j", "k", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["b", "c", "d", "e", "j", "m"],
+      "allSeriesIds": ["b", "c", "d", "e", "f", "j", "k", "m"],
+      "title": [],
+
       "element": ["화", "용"],
       "ailment": ["화", "폭파"],
       "weakEl": ["용"],
@@ -27658,7 +27638,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "가슴", "날개"],
       "weak": [
         {
@@ -27787,10 +27767,10 @@
       "nickname2": "선조룡",
       "type": "고룡종/고룡목-원룡아목-밀라보레아스과",
       "species": "태초의 존재",
-      "seriesId": ["d", "e", "k", "m"],
-      "infoSeriesId": ["d", "e", "f", "k", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "k", "m"],
+      "allSeriesIds": ["d", "e", "f", "k", "m"],
+      "title": [],
+
       "element": ["뇌", "용"],
       "ailment": ["뇌", "용"],
       "weakEl": ["용"],
@@ -27801,7 +27781,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "가슴", "날개"],
       "weak": [
         {
@@ -27933,10 +27913,9 @@
       "nickname2": null,
       "type": "고룡종/고룡목-천혜룡아목-발파루크과",
       "species": "원종",
-      "seriesId": ["m"],
-      "infoSeriesId": ["m"],
-      "title": "MHXX",
-      "titleId": ["m"],
+      "baseSeriesIds": ["m"],
+      "allSeriesIds": ["m"],
+      "title": ["MHXX"],
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["화", "수", "뇌", "빙"],
@@ -27947,7 +27926,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "몸통", "가슴", "다리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28066,10 +28045,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-천혜룡아목-발파루크과",
       "species": "특수 개체",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["화", "수", "뇌", "빙"],
@@ -28080,7 +28059,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "몸통", "가슴", "다리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28212,10 +28191,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-천혜룡아목-발파루크과",
       "species": "괴이 극복",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["화", "수", "뇌", "빙"],
@@ -28226,7 +28205,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "몸통", "가슴", "다리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28356,11 +28335,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-시투룡아목-발하자크과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n", "o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n", "o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독기"],
       "weakEl": ["화"],
       "small": "1843.95",
@@ -28370,7 +28349,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "몸통", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28509,11 +28488,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-시투룡아목-발하자크과",
       "species": "특수 개체",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["독기"],
       "weakEl": ["화"],
       "small": "1885.86",
@@ -28523,7 +28502,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "몸통", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28669,11 +28648,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-회룡아목-마가라과",
       "species": "원종",
-      "seriesId": ["j", "l", "q"],
-      "infoSeriesId": ["j", "k", "l", "m", "q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["j", "l", "q"],
+      "allSeriesIds": ["j", "k", "l", "m", "q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["광룡증"],
       "weakEl": ["용"],
       "small": "1564.73",
@@ -28683,7 +28662,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28808,11 +28787,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-회룡아목-마가라과",
       "species": "괴이 극복",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["광룡증"],
       "weakEl": ["용"],
       "small": "1527.28",
@@ -28822,7 +28801,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -28945,10 +28924,10 @@
       "nickname2": "폭풍룡",
       "type": "고룡종/고룡목-남룡아목-아마츠마가츠치과",
       "species": "원종",
-      "seriesId": ["i", "l", "q"],
-      "infoSeriesId": ["i", "l", "m", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["i", "l", "q"],
+      "allSeriesIds": ["i", "l", "m", "q"],
+      "title": [],
+
       "element": ["수", "뇌"],
       "ailment": ["수", "뇌"],
       "weakEl": ["용"],
@@ -28959,7 +28938,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "등", "앞다리", "꼬리"],
       "weak": [
         {
@@ -29056,11 +29035,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-지제룡아목-안이슈왈다과",
       "species": "원종",
-      "seriesId": ["o"],
-      "infoSeriesId": ["o"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["o"],
+      "allSeriesIds": ["o"],
+      "title": [],
+
+      "element": [],
       "ailment": ["기절"],
       "weakEl": ["빙"],
       "small": "2910.91",
@@ -29070,7 +29049,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "앞다리", "날개"],
       "weak": [
         {
@@ -29235,10 +29214,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-황룡아목-알바트리온과",
       "species": "원종",
-      "seriesId": ["g", "i", "l", "o"],
-      "infoSeriesId": ["g", "h", "i", "l", "m", "o"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i", "l", "o"],
+      "allSeriesIds": ["g", "h", "i", "l", "m", "o"],
+      "title": [],
+
       "element": ["화", "수", "뇌", "빙", "용"],
       "ailment": ["화", "수", "뇌", "빙", "용", "눈사람"],
       "weakEl": ["빙", "화", "용"],
@@ -29249,7 +29228,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -29370,12 +29349,12 @@
       "nickname2": "비악룡",
       "type": "고룡종/고룡목-악룡아목-야마츠카미과",
       "species": "원종",
-      "seriesId": ["d", "f"],
-      "infoSeriesId": ["d", "f"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "f"],
+      "allSeriesIds": ["d", "f"],
+      "title": [],
+
       "element": ["화"],
-      "ailment": [""],
+      "ailment": [],
       "weakEl": ["용", "빙"],
       "small": "4137",
       "large": "4137",
@@ -29384,7 +29363,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["다리 촉수"],
       "weak": [
         {
@@ -29484,10 +29463,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-(아목 불명)-하룡하목-나즈치과",
       "species": "원종",
-      "seriesId": ["d", "e", "k", "l", "p"],
-      "infoSeriesId": ["d", "e", "f", "k", "l", "m", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "k", "l", "p"],
+      "allSeriesIds": ["d", "e", "f", "k", "l", "m", "p", "q"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["독", "맹독", "피로", "방어력감소"],
       "weakEl": ["화"],
@@ -29498,7 +29477,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -29609,11 +29588,11 @@
       "nickname2": null,
       "type": "고룡종/고룡목-(아목 불명)-하룡하목-나즈치과",
       "species": "괴이 극복",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
+      "element": [],
       "ailment": ["맹독"],
       "weakEl": ["화"],
       "small": "2249.06",
@@ -29623,7 +29602,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -29726,10 +29705,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-해룡아목-오스트가로아과",
       "species": "원종",
-      "seriesId": ["l"],
-      "infoSeriesId": ["l", "m"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["l"],
+      "allSeriesIds": ["l", "m"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["화", "뇌", "용", "폭파", "마비", "뼈상태", "점액상태"],
       "weakEl": ["용"],
@@ -29740,7 +29719,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "분출구", "껍데기", "등"],
       "weak": [
         {
@@ -29848,10 +29827,9 @@
       "nickname2": null,
       "type": "고룡종/고룡목-빙룡아목-이베르카나과",
       "species": "원종",
-      "seriesId": ["o", "q"],
-      "infoSeriesId": ["o", "q"],
-      "title": "MHWIB",
-      "titleId": ["o"],
+      "baseSeriesIds": ["o", "q"],
+      "allSeriesIds": ["o", "q"],
+      "title": ["MHWIB"],
       "element": ["빙"],
       "ailment": ["빙"],
       "weakEl": ["화"],
@@ -29862,7 +29840,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -29959,10 +29937,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-신룡아목-(과 불명)",
       "species": "원종",
-      "seriesId": ["p"],
-      "infoSeriesId": ["p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["p"],
+      "allSeriesIds": ["p", "q"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["용"],
       "weakEl": ["용"],
@@ -29973,7 +29951,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "가슴", "팔", "등", "꼬리"],
       "weak": [
         {
@@ -30113,10 +30091,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-명등룡아목-지바과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n"],
+      "title": [],
+
       "element": ["화", "용"],
       "ailment": ["화", "용"],
       "weakEl": ["화", "용", "수", "빙", "뇌"],
@@ -30127,7 +30105,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "앞다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -30252,10 +30230,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-산룡아목-용룡하목-조라과",
       "species": "원종",
-      "seriesId": ["n"],
-      "infoSeriesId": ["n"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["n"],
+      "allSeriesIds": ["n"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "기절"],
       "weakEl": ["수", "용"],
@@ -30266,7 +30244,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "몸통", "가슴", "다리", "외각", "배열기관", "꼬리"],
       "weak": [
         {
@@ -30363,12 +30341,12 @@
       "nickname2": null,
       "type": "고룡종/고룡목-봉룡아목-지엔과",
       "species": "원종",
-      "seriesId": ["g", "i"],
-      "infoSeriesId": ["g", "h", "i"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["g", "i"],
+      "allSeriesIds": ["g", "h", "i"],
+      "title": [],
+
       "element": ["용"],
-      "ailment": [""],
+      "ailment": [],
       "weakEl": ["빙"],
       "small": "11161.9",
       "large": "11161.9",
@@ -30377,7 +30355,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["송곳니", "앞다리", "등 지느러미"],
       "weak": [
         {
@@ -30468,12 +30446,12 @@
       "nickname2": null,
       "type": "고룡종/고룡목-봉룡아목-지엔과",
       "species": "아종",
-      "seriesId": ["h"],
-      "infoSeriesId": ["h"],
-      "title": "",
-      "titleId": [""],
-      "element": [""],
-      "ailment": [""],
+      "baseSeriesIds": ["h"],
+      "allSeriesIds": ["h"],
+      "title": [],
+
+      "element": [],
+      "ailment": [],
       "weakEl": ["화"],
       "small": "11161.9",
       "large": "11161.9",
@@ -30482,7 +30460,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["송곳니", "앞다리", "등 지느러미"],
       "weak": [
         {
@@ -30572,9 +30550,22 @@
       "nickname2": "풍상룡/바람 풍(風), 날 상(翔), 용 룡(龍)",
       "type": "고룡종/고룡목-강룡아목-크샤나과",
       "species": "원종",
-      "seriesId": ["d", "e", "j", "l", "n", "p"],
-      "infoSeriesId": ["d", "e", "f", "j", "k", "l", "m", "n", "o", "p", "q"],
-      "title": "MH2",
+      "baseSeriesIds": ["d", "e", "j", "l", "n", "p", "s"],
+      "allSeriesIds": [
+        "d",
+        "e",
+        "f",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "s"
+      ],
+      "title": ["MH2"],
       "titleId": ["d"],
       "element": ["용"],
       "ailment": ["빙", "용"],
@@ -30586,7 +30577,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -30708,10 +30699,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-강룡아목-크샤나과",
       "species": "특수 개체",
-      "seriesId": ["d", "e", "k"],
-      "infoSeriesId": ["d", "e", "f", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "k"],
+      "allSeriesIds": ["d", "e", "f", "k"],
+      "title": [],
+
       "element": ["빙", "용"],
       "ailment": ["빙", "방어력감소"],
       "weakEl": ["수", "용"],
@@ -30722,7 +30713,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -30840,10 +30831,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-강룡아목-크샤나과",
       "species": "괴이 극복",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["용"],
       "ailment": ["빙", "용"],
       "weakEl": ["뇌"],
@@ -30854,7 +30845,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -30972,8 +30963,8 @@
       "nickname2": null,
       "type": "고룡종/고룡목-환수아목-키린과",
       "species": "원종",
-      "seriesId": ["a", "c", "d", "e", "j", "l", "n"],
-      "infoSeriesId": [
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l", "n"],
+      "allSeriesIds": [
         "a",
         "b",
         "c",
@@ -30987,8 +30978,8 @@
         "n",
         "o"
       ],
-      "title": "",
-      "titleId": [""],
+      "title": [],
+
       "element": ["뇌"],
       "ailment": ["뇌", "마비"],
       "weakEl": ["화"],
@@ -30999,7 +30990,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔"],
       "weak": [
         {
@@ -31080,10 +31071,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-환수아목-키린과",
       "species": "아종",
-      "seriesId": ["j"],
-      "infoSeriesId": ["j", "k"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["j"],
+      "allSeriesIds": ["j", "k"],
+      "title": [],
+
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["화", "수"],
@@ -31094,7 +31085,7 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["뿔"],
       "weak": [
         {
@@ -31162,10 +31153,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-염룡아목-테스카토과",
       "species": "원종",
-      "seriesId": ["d", "e", "j", "l", "n", "p"],
-      "infoSeriesId": ["d", "e", "f", "j", "k", "l", "m", "n", "o", "p", "q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["d", "e", "j", "l", "n", "p"],
+      "allSeriesIds": ["d", "e", "f", "j", "k", "l", "m", "n", "o", "p", "q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "폭파", "기절"],
       "weakEl": ["수", "빙"],
@@ -31176,7 +31167,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {
@@ -31295,10 +31286,10 @@
       "nickname2": null,
       "type": "고룡종/고룡목-염룡아목-테스카토과",
       "species": "괴이 극복",
-      "seriesId": ["q"],
-      "infoSeriesId": ["q"],
-      "title": "",
-      "titleId": [""],
+      "baseSeriesIds": ["q"],
+      "allSeriesIds": ["q"],
+      "title": [],
+
       "element": ["화"],
       "ailment": ["화", "폭파"],
       "weakEl": ["수"],
@@ -31309,7 +31300,7 @@
       "dung": true,
       "shock": false,
       "pitfall": false,
-      "danger": 4,
+
       "break": ["머리", "날개", "꼬리(절단〇)"],
       "weak": [
         {

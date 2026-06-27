@@ -19,7 +19,7 @@ export async function fetchContent({
 
     if (filterState) {
       filterState.series.forEach((series) =>
-        url.searchParams.append("seriesId_like", series),
+        url.searchParams.append("baseSeriesIds_like", series),
       );
       filterState.type.forEach((type) =>
         url.searchParams.append("type_like", `^${type}`),

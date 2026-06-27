@@ -19,7 +19,7 @@ export default function Default() {
       />
       {showSearchForm && <SearchForm setShowSearchForm={setShowSearchForm} />}
 
-      <main>
+      <main className="bg-(--white) flex flex-col">
         <Outlet />
       </main>
     </>

@@ -133,7 +133,7 @@ export default function Detail() {
 
       {/* 정보 섹션 */}
       <div className="bg-(--white)">
-        <section className="w-full max-w-[1920px] mx-auto flex flex-col gap-5 py-10">
+        <section className="w-full max-w-360 mx-auto flex flex-col gap-5 py-10">
           {/* 기본정보 섹션 */}
           <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
             <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">

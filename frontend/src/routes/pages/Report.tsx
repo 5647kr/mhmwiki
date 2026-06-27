@@ -164,7 +164,7 @@ export default function Report() {
 
       {/* 제보 유형 선택 */}
       <div className="bg-(--cream)">
-        <section className="w-full max-w-[1920px] mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--cream)">
+        <section className="w-full max-w-360 mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--cream)">
           <div className="flex items-center gap-2.5 pb-5">
             <h3 className="text-(--grey) small font-normal">제보 유형 선택</h3>
             <hr className="flex-1 border-0.5 border-(--grey)" />
@@ -289,7 +289,7 @@ export default function Report() {
 
       {/* 제보 내용 작성 */}
       <div className="bg-(--white)">
-        <section className="w-full max-w-[1920px] mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--white)">
+        <section className="w-full max-w-360 mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--white)">
           <div className="flex items-center gap-2.5 pb-5">
             <h3 className="text-(--grey) small font-normal">제보 내용 작성</h3>
             <hr className="flex-1 border-0.5 border-(--grey)" />

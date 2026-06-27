@@ -45,7 +45,7 @@ export default function MonsterHunterMain() {
           <div className="absolute inset-0 bg-black/40 z-10" />
         </div>
 
-        <div className="relative z-20 w-full max-w-[1920px] flex flex-col items-center p-10 md:py-20">
+        <div className="relative z-20 w-full max-w-360 flex flex-col items-center p-10 md:py-20">
           <div className="text-center mb-16">
             <h2 className="small text-(--red) syne tracking-wider">
               MONSTER HUNTER SERIES HISTORY
@@ -60,7 +60,7 @@ export default function MonsterHunterMain() {
           </div>
 
           <div className="w-full">
-            <ul className="relative flex flex-col items-start w-full gap-10 before:absolute before:left-1/2 before:top-0 before:h-full before:w-px before:bg-[#444] before:-translate-x-1/2 py-8">
+            <ul className="relative flex flex-col items-start w-full gap-10 before:absolute before:left-1/2 before:top-0 before:h-full before:w-px before:bg-(--lgrey) before:-translate-x-1/2 py-8">
               {isLoading ? (
                 <HistroySkeleton />
               ) : (

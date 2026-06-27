@@ -5,14 +5,14 @@ import { useFetchStore } from "../../store/fetchStore";
 import { useInfiniteQueryHook, useQueryHook } from "../../hook/useQueryHook";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import Item from "../../components/Item";
+import { Item, ItemSkeleton } from "../../components/Item";
 import { useFilterStore } from "../../store/filterStore";
-import Skeleton from "../../components/Skeleton";
 
 export default function Home() {
   const series = useFetchStore((state) => state.series);
   const type = useFetchStore((state) => state.type);
   const filterState = useFilterStore((state) => state.filterState);
+  const filterReset = useFilterStore((state) => state.filterReset);
   const [isRotating, setIsRotating] = useState(false);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
@@ -34,9 +34,20 @@ export default function Home() {
   const handleRefresh = () => {
     setIsRotating(true);
     refetch();
-    // 0.5초(500ms) 후에 회전 상태를 꺼서 애니메이션 초기화
     setTimeout(() => setIsRotating(false), 500);
   };
+
+  useEffect(() => {
+    if (status === "success" && content.length === 0) {
+      alert("조건에 만족하는 몬스터가 없습니다. 다시 검색해주세요.");
+
+      setTimeout(() => {
+        filterReset("series");
+        filterReset("type");
+        filterReset("weak");
+      }, 0);
+    }
+  }, [content, status, filterReset]);
 
   const todayItem = randomItem?.[0];
 
@@ -186,9 +197,7 @@ export default function Home() {
                         {weak}속성
                       </li>
                     ))}
-                    <li className="border border-(--dgrey) bg-[#0c0c0c] text-[#444] small py-1.25 px-2.5">
-                      위험도 6/10
-                    </li>
+                    <li></li>
                   </ul>
                 </>
               )}
@@ -199,14 +208,17 @@ export default function Home() {
               className="group w-full border border-[#1a1a1a] p-2.5 bg-[#0f0f0f] text-[#444] flex justify-between items-center hover:border-[#444] hover:bg-[#1a1a1a] hover:text-(--white)"
             >
               <span className="small">상세 정보 보기</span>
-              <ArrowRight size={20} className="group-hover:text-(--red)" />
+              <ArrowRight
+                size={20}
+                className="transition-transform duration-200 group-hover:text-(--red) group-hover:translate-x-1"
+              />
             </Link>
           </div>
         </div>
       </section>
 
       {/* filter section */}
-      <section className="bg-(--cream) sticky top-0 z-20">
+      <section className="bg-(--cream) sticky top-15 z-20">
         <FilterForm />
       </section>
 
@@ -225,14 +237,14 @@ export default function Home() {
             <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-(--lgrey)">
               {Array.from({ length: 20 }).map((_, index) => (
                 <li key={`skeleton-${index}`}>
-                  <Skeleton />
+                  <ItemSkeleton />
                 </li>
               ))}
             </ul>
           )}
 
           {status === "success" && content.length > 0 && (
-            <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-(--lgrey)">
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
               {content.map((item: Item, index) => (
                 <li
                   key={item.id}

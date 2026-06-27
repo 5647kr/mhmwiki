@@ -1,4 +1,4 @@
-import Skeleton from "./Skeleton";
+import { ItemSkeleton } from "./Item";
 
 export default function DetailSkeleton() {
   return (
@@ -158,16 +158,16 @@ export default function DetailSkeleton() {
 
           <ul className="mt-10 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-l border-(--lgrey)">
             <li className="w-full">
-              <Skeleton />
+              <ItemSkeleton />
             </li>
             <li className="w-full">
-              <Skeleton />
+              <ItemSkeleton />
             </li>
             <li className="w-full">
-              <Skeleton />
+              <ItemSkeleton />
             </li>
             <li className="w-full">
-              <Skeleton />
+              <ItemSkeleton />
             </li>
           </ul>
         </div>

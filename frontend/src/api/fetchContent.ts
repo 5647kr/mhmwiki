@@ -8,8 +8,9 @@ export async function fetchContent({
   filterState: { series: string[]; type: string[]; weak: string[] };
 }) {
   try {
-    const baseUrl = "http://localhost:3000/monster"; // 개발서버
-    //const baseUrl = "https://mhmwiki-backend.vercel.app/monster"; // 배포 서버
+    // const baseUrl = "http://localhost:3000/monster"; // 개발서버
+    const baseUrl = "https://mhmwiki-backend.vercel.app/monster"; // 배포 서버
+    
     const url = new URL(baseUrl);
 
     if (page) {

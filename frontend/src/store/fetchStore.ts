@@ -17,7 +17,8 @@ export const useFetchStore = create<FetchStore>((set) => ({
   fetchData: async (dataType: string) => {
     set({ isLoading: true });
     try {
-      const response = await fetch(`http://localhost:3000/${dataType}`);
+      // const response = await fetch(`http://localhost:3000/${dataType}`);
+      const response = await fetch(`https://mhmwiki-backend.vercel.app/${dataType}`);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch ${dataType}: ${response.statusText}`);

@@ -63,8 +63,8 @@ export async function fetchContentItem({
   search?: string;
 }) {
   try {
-    let baseUrl = "http://localhost:3000/monster"; // 개발서버
-    //const baseUrl = "https://mhmwiki-backend.vercel.app/monster"; // 배포 서버
+    // let baseUrl = "http://localhost:3000/monster"; // 개발서버
+    let baseUrl = "https://mhmwiki-backend.vercel.app/monster"; // 배포 서버
 
     if (id) {
       baseUrl = `${baseUrl}/${id}`;

@@ -20,7 +20,7 @@ export default function Home() {
   const filterState = useFilterStore((state) => state.filterState);
   const filterReset = useFilterStore((state) => state.filterReset);
   const [isRotating, setIsRotating] = useState(false);
-  const [filterActive, setFilterActive] = useState(false);
+  const [filterActive, setFilterActive] = useState(true);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQueryHook(filterState);

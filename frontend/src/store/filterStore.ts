@@ -3,17 +3,20 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 interface filterStore {
   filterState: { series: string[]; type: string[]; weak: string[] };
+  isActive: boolean;
   setFilterState: (
     key: keyof filterStore["filterState"],
     value: string,
   ) => void;
   filterReset: (key: keyof filterStore["filterState"]) => void;
+  handleActive: () => void;
 }
 
 export const useFilterStore = create<filterStore>()(
   persist(
     (set) => ({
       filterState: { series: [], type: [], weak: [] },
+      isActive: true,
 
       setFilterState: (key, value) => {
         set((state) => {
@@ -37,6 +40,12 @@ export const useFilterStore = create<filterStore>()(
             ...state.filterState,
             [key]: [],
           },
+        }));
+      },
+
+      handleActive: () => {
+        set((state) => ({
+          isActive: !state.isActive,
         }));
       },
     }),

@@ -20,7 +20,8 @@ export default function Home() {
   const filterState = useFilterStore((state) => state.filterState);
   const filterReset = useFilterStore((state) => state.filterReset);
   const [isRotating, setIsRotating] = useState(false);
-  const [filterActive, setFilterActive] = useState(true);
+  const handleActive = useFilterStore((state) => state.handleActive);
+  const isActive = useFilterStore((state) => state.isActive);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQueryHook(filterState);
@@ -42,10 +43,6 @@ export default function Home() {
     setIsRotating(true);
     refetch();
     setTimeout(() => setIsRotating(false), 500);
-  };
-
-  const handleFilterActive = () => {
-    setFilterActive((filterActive) => !filterActive);
   };
 
   useEffect(() => {
@@ -232,15 +229,15 @@ export default function Home() {
       <section className="bg-(--cream) sticky top-15 z-20">
         <div className="flex items-center justify-between p-4 border-b border-(--lgrey)">
           <strong className="syne font-black text-(--grey)">FILTER</strong>
-          <button type="button" onClick={handleFilterActive}>
-            {filterActive ? (
+          <button type="button" onClick={handleActive}>
+            {isActive ? (
               <ChevronUp stroke="var(--grey)" />
             ) : (
               <ChevronDown stroke="var(--grey)" />
             )}
           </button>
         </div>
-        {filterActive && <FilterForm />}
+        {isActive && <FilterForm />}
       </section>
 
       {/* content section */}

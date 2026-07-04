@@ -7,10 +7,10 @@ import DetailSkeleton from "../../components/DetailSkeleton";
 export default function Detail() {
   const { id } = useParams();
   const imgURL = import.meta.env.VITE_IMG_URL;
-  const [_, setisImgLoaded] = useState(true);
+  const [isImgLoaded, setisImgLoaded] = useState(false);
 
   useEffect(() => {
-    setisImgLoaded(true);
+    setisImgLoaded(false);
   }, [id]);
 
   const { data, isFetching } = useQueryHook({
@@ -42,14 +42,15 @@ export default function Detail() {
 
   return (
     <>
+      {!isImgLoaded && <DetailSkeleton />}
       {/* 이미지 섹션 */}
       <section className="bg-(--cream) pt-10 pb-5 px-4 md:px-5 lg:px-6 relative">
-        <div>
-          <div className="absolute right-0 top-[50%] transform translate-y-[-50%] w-[50%] opacity-20">
+        <div className="w-full max-w-480 mx-auto relative">
+          <div className="absolute right-0 top-[50%] transform translate-y-[-50%] opacity-50 hidden lg:block">
             <img
-              onLoad={() => setisImgLoaded(false)}
-              src={imgURL + data.img}
+              src={imgURL + data.icon}
               alt={data.name}
+              className="drop-shadow-[0_0_8px_#b794f4]"
             />
           </div>
 
@@ -62,15 +63,15 @@ export default function Detail() {
           {/* 이미지 */}
           <div className="flex flex-col md:flex-row md:items-center gap-2.5 mt-4">
             <img
-              onLoad={() => setisImgLoaded(false)}
+              onLoad={() => setisImgLoaded(true)}
               src={imgURL + data?.img}
               alt={data.name}
-              className="w-full max-w-100 object-cover vertical-top"
+              className="w-full max-w-150 object-cover vertical-top"
             />
 
             <div className="flex-1">
               <p className="syne small">
-                LARGE MONSER . {data.type.split("/")[0]}
+                LARGE MONSTER . {data.type.split("/")[0]}
               </p>
               <h2 className="font-black title text-(--black)">{data.name}</h2>
               <ul className="flex gap-2.5">
@@ -100,40 +101,42 @@ export default function Detail() {
 
       {/* 이미지 하단 간단 인포칸 */}
       <div className="bg-(--cream) border-t border-(--lgrey)">
-        <ul className="flex w-full ">
-          <li className="border-r border-(--lgrey) p-5 flex-1">
-            <p className="small text-(--grey) pb-2.5">첫 등장 작품</p>
-            <strong className="text-(--dgrey) subHeadingTitle">
-              {firstSeries?.title}
-            </strong>
-            <span className="small text-(--grey) font-normal">
-              ({firstSeries?.open.split("-")[0]})
-            </span>
-          </li>
-          <li className="border-r border-(--lgrey) p-5 flex-1">
-            <p className="small text-(--grey) pb-2.5">출현 작품 수</p>
-            <strong className="text-(--dgrey) subHeadingTitle">
-              {data.allSeriesIds.length}
-              <span className="small text-(--grey) font-normal">작품</span>
-            </strong>
-          </li>
-          <li className="p-5 flex-1">
-            <p className="small text-(--grey) pb-2.5">약점 속성</p>
-            {data.weakEl.map((weak: string, index: number) => (
-              <strong
-                key={index}
-                className="text-(--dgrey) subHeadingTitle after:content-[',_'] last:after:content-none"
-              >
-                {weak}속성
+        <div className="w-full max-w-480 mx-auto">
+          <ul className="flex w-full ">
+            <li className="border-r border-(--lgrey) p-5 flex-1">
+              <p className="small text-(--grey) pb-2.5">첫 등장 작품</p>
+              <strong className="text-(--dgrey) subHeadingTitle">
+                {firstSeries?.title}
               </strong>
-            ))}
-          </li>
-        </ul>
+              <span className="small text-(--grey) font-normal">
+                ({firstSeries?.open.split("-")[0]})
+              </span>
+            </li>
+            <li className="border-r border-(--lgrey) p-5 flex-1">
+              <p className="small text-(--grey) pb-2.5">출현 작품 수</p>
+              <strong className="text-(--dgrey) subHeadingTitle">
+                {data.allSeriesIds.length}
+                <span className="small text-(--grey) font-normal">작품</span>
+              </strong>
+            </li>
+            <li className="p-5 flex-1">
+              <p className="small text-(--grey) pb-2.5">약점 속성</p>
+              {data.weakEl.map((weak: string, index: number) => (
+                <strong
+                  key={index}
+                  className="text-(--dgrey) subHeadingTitle after:content-[',_'] last:after:content-none"
+                >
+                  {weak}속성
+                </strong>
+              ))}
+            </li>
+          </ul>
+        </div>
       </div>
 
       {/* 정보 섹션 */}
       <div className="bg-(--white)">
-        <section className="w-full max-w-360 mx-auto flex flex-col gap-5 py-10">
+        <section className="w-full max-w-480 mx-auto flex flex-col gap-5 py-10">
           {/* 기본정보 섹션 */}
           <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
             <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
@@ -482,18 +485,20 @@ export default function Detail() {
           </div>
 
           {/* 부위파괴 섹션 */}
-          <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
-            <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
-              부위 파괴
-            </h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-              {data.break.map((item: string, index: number) => (
-                <li key={index} className="border border-(--lgrey) p-5">
-                  <p>{item}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {data.break.length > 0 && (
+            <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
+              <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
+                부위 파괴
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+                {data.break.map((item: string, index: number) => (
+                  <li key={index} className="border border-(--lgrey) p-5">
+                    <p>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* 크기 섹션 */}
           <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">

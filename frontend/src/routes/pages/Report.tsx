@@ -143,28 +143,30 @@ export default function Report() {
   return (
     <>
       {/* title */}
-      <section className="py-5 px-4 md:px-5 lg:px-6 bg-(--black) ">
-        <div className="flex gap-2.5 items-center">
-          <hr className="border border-(--red) w-10" />
-          <strong className="text-(--red) small font-normal">
-            DATA REPORT
-          </strong>
-        </div>
-        <h2 className="my-5 text-[80px] text-(--white) syne font-black leading-20">
-          오류 누락
-          <br />
-          데이터 제보
-        </h2>
+      <section className="py-5 px-4 md:px-5 lg:px-6 bg-(--black)">
+        <div className="w-full max-w-480 mx-auto">
+          <div className="flex gap-2.5 items-center">
+            <hr className="border border-(--red) w-10" />
+            <strong className="text-(--red) small font-normal">
+              DATA REPORT
+            </strong>
+          </div>
+          <h2 className="my-5 text-[60px] text-(--white) syne font-black leading-20">
+            오류 누락
+            <br />
+            데이터 제보
+          </h2>
 
-        <p className="text-(--grey) small ">
-          잘못된 정보를 발견하셨나요? 빠진 데이터가 있나요? 헌터 여러분의 제보가
-          MHMWIKI를 완성합니다. <br /> 모든 제보는 검토 후 반영됩니다.
-        </p>
+          <p className="text-(--grey) small ">
+            잘못된 정보를 발견하셨나요? 빠진 데이터가 있나요? 헌터 여러분의
+            제보가 MHMWIKI를 완성합니다. <br /> 모든 제보는 검토 후 반영됩니다.
+          </p>
+        </div>
       </section>
 
       {/* 제보 유형 선택 */}
       <div className="bg-(--cream)">
-        <section className="w-full max-w-360 mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--cream)">
+        <section className="w-full max-w-480 mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--cream)">
           <div className="flex items-center gap-2.5 pb-5">
             <h3 className="text-(--grey) small font-normal">제보 유형 선택</h3>
             <hr className="flex-1 border-0.5 border-(--grey)" />
@@ -289,7 +291,7 @@ export default function Report() {
 
       {/* 제보 내용 작성 */}
       <div className="bg-(--white)">
-        <section className="w-full max-w-360 mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--white)">
+        <section className="w-full max-w-480 mx-auto py-5 px-4 md:px-5 lg:px-6 bg-(--white)">
           <div className="flex items-center gap-2.5 pb-5">
             <h3 className="text-(--grey) small font-normal">제보 내용 작성</h3>
             <hr className="flex-1 border-0.5 border-(--grey)" />

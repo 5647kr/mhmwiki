@@ -120,7 +120,7 @@ export default function FilterForm() {
 
       {/* 선택한것 */}
       {isFilterSelected && (
-        <div className="border-b border-(--lgrey) px-1.25 flex items-center">
+        <div className="px-1.25 flex items-center">
           <h4 className="py-2.5 text-(--grey) border-r border-(--lgrey) min-w-20 text-center">
             필터링
           </h4>

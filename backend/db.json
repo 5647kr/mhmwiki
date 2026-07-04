@@ -14702,7 +14702,7 @@
       "shock": true,
       "pitfall": true,
 
-      "break": [""],
+      "break": [],
       "weak": [
         {
           "부위": "머리",

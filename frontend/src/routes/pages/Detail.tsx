@@ -145,37 +145,31 @@ export default function Detail() {
 
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
               <li>
-                <h4 className="small text-(--grey)">이름</h4>
-                <p className="paragraph font-semibold text-(--dgrey)">
-                  {data.name}
-                </p>
+                <h4 className="paragraph font-bold text-(--grey)">이름</h4>
+                <p className="small">{data.name}</p>
               </li>
               <li>
-                <h4 className="small text-(--grey)">별칭</h4>
-                <p className="paragraph font-semibold text-(--dgrey)">
+                <h4 className="paragraph font-bold text-(--grey)">별칭</h4>
+                <p className="small">
                   {data.nickname1 ? data.nickname1.split("/")[0] : "없음"}
                 </p>
                 <span className="small text-(--grey)">
                   {data.nickname1.split("/")[1]}
                 </span>
-                <p className="paragraph font-semibold text-(--dgrey)">
-                  {data.nickname2 ? data.nickname2 : ""}
+                <p className="small">
+                  {data.nickname2 ? data.nickname2.split("/")[0] : ""}
                 </p>
                 <span className="small text-(--grey)">
                   {data.nickname2 ? data.nickname2.split("/")[1] : ""}
                 </span>
               </li>
               <li>
-                <h4 className="small text-(--grey)">종</h4>
-                <p className="paragraph font-semibold text-(--dgrey)">
-                  {data.species}
-                </p>
+                <h4 className="paragraph font-bold text-(--grey)">종</h4>
+                <p className="small">{data.species}</p>
               </li>
               <li>
-                <h4 className="small text-(--grey)">종별</h4>
-                <p className="paragraph font-semibold text-(--dgrey)">
-                  {data.type.split("/")[0]}
-                </p>
+                <h4 className="paragraph font-bold text-(--grey)">종별</h4>
+                <p className="small">{data.type.split("/")[0]}</p>
                 <span className="small text-(--grey)">
                   {data.type.split("/")[1]}
                 </span>
@@ -183,7 +177,9 @@ export default function Detail() {
             </ul>
 
             <div>
-              <h4 className="small text-(--grey)">출현 시리즈</h4>
+              <h4 className="paragraph font-bold text-(--grey)">
+                출현 시리즈
+              </h4>
               <ul className="mt-5 grid grid-cols-2 gap-5 md:grid-cols-3">
                 {generateSeriesNumArr.map((gen: number) => (
                   <li key={gen} className="flex flex-col gap-1">
@@ -236,13 +232,14 @@ export default function Detail() {
                     {data.weakEl.map((weak: string, index: number) => (
                       <li
                         key={index}
-                        className=" border border-(--lgrey) p-2.5"
+                        className="flex items-center border border-(--lgrey) p-2.5"
                       >
                         <img
                           className="w-10 aspect-square"
                           src={`/icons/${weak}.png`}
                           alt={weak}
                         />
+                        <span className="small ">{weak}속성</span>
                       </li>
                     ))}
                   </ul>
@@ -256,13 +253,14 @@ export default function Detail() {
                     {data.element.map((el: string, index: number) => (
                       <li
                         key={index}
-                        className=" border border-(--lgrey) p-2.5"
+                        className="flex items-center border border-(--lgrey) p-2.5"
                       >
                         <img
                           className="w-10 aspect-square"
                           src={`/icons/${el}.png`}
                           alt={el}
                         />
+                        <span className="small ">{el}속성</span>
                       </li>
                     ))}
                   </ul>
@@ -276,13 +274,19 @@ export default function Detail() {
                     {data.ailment.map((ail: string, index: number) => (
                       <li
                         key={index}
-                        className=" border border-(--lgrey) p-2.5"
+                        className="flex items-center border border-(--lgrey) p-2.5"
                       >
                         <img
                           className="w-10 aspect-square"
                           src={`/icons/${ail}.png`}
                           alt={ail}
                         />
+                        <span>
+                          {ail}
+                          {["화", "수", "뇌", "빙", "용"].includes(ail)
+                            ? "속성 피해"
+                            : ""}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -509,21 +513,21 @@ export default function Detail() {
             <div className="flex mt-10 flex-col md:flex-row border-t border-(--lgrey)">
               <div className="w-full border border-(--lgrey) border-t-0 md:border-r-0 p-5">
                 <h4 className="small text-(--grey) pb-2.5">최소 크기</h4>
-                <strong className="syne paragraph font-black text-(--black)">
+                <strong className="paragraph font-black text-(--black)">
                   {data.small}
                   <span className="text-(--grey) small">cm</span>
                 </strong>
               </div>
               <div className="w-full border border-(--lgrey) border-t-0 md:border-r-0 p-5">
                 <h4 className="small text-(--grey) pb-2.5">평균 크기</h4>
-                <strong className="syne paragraph font-black text-(--black)">
+                <strong className="paragraph font-black text-(--black)">
                   {(parseInt(data.small) + parseInt(data.large)) / 2}
                   <span className="text-(--grey) small">cm</span>
                 </strong>
               </div>
               <div className="w-full border border-(--lgrey) border-t-0 p-5">
                 <h4 className="small text-(--grey) pb-2.5">최대 크기</h4>
-                <strong className="syne paragraph font-black text-(--black)">
+                <strong className="paragraph font-black text-(--black)">
                   {data.large}
                   <span className="text-(--grey) small">cm</span>
                 </strong>

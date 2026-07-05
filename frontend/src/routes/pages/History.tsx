@@ -7,9 +7,6 @@ export default function MonsterHunterMain() {
   const [_, setIsEntered] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const [countdown, setCountdown] = useState<number>(50);
-  const [showTimeline, setShowTimeline] = useState<boolean>(false);
-
   const series = useFetchStore((state) => state.series);
   const isLoading = useFetchStore((state) => state.isLoading);
   const fetchData = useFetchStore((state) => state.fetchData);
@@ -26,24 +23,13 @@ export default function MonsterHunterMain() {
     if (videoRef.current) {
       videoRef.current.muted = false;
       videoRef.current.volume = 0.1;
+
+      videoRef.current.currentTime = 43.4;
+
       videoRef.current.play().catch((err) => {
         console.error("로컬 비디오 재생 실패:", err);
       });
     }
-
-    // 1초마다 숫자를 줄이는 타이머
-    const timer = setInterval(() => {
-      setCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer); // 0초가 되면 타이머 종료
-          setShowTimeline(true); // 타임라인 등장 활성화
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -55,7 +41,6 @@ export default function MonsterHunterMain() {
             src={video}
             className="absolute top-0 left-0 w-full h-full object-contain scale-100"
             playsInline
-            loop
             preload="auto"
           />
           <div className="absolute inset-0 bg-black/40 z-10" />
@@ -74,20 +59,10 @@ export default function MonsterHunterMain() {
               있습니다. <br />
               영상에 맞춰 타임라인을 보시기 바랍니다.
             </p>
-            {countdown > 0 && (
-              <p className="text-(--white) headingTitle mt-50">
-                타임라인이 나타나기까지 {countdown}초 남았습니다.
-              </p>
-            )}
           </div>
 
           <div
-            className={`w-full transition-all duration-1500 ease-out 
-              ${
-                showTimeline
-                  ? "h-auto opacity-100 translate-y-0 pointer-events-auto"
-                  : "h-0 overflow-hidden opacity-0 translate-y-10 pointer-events-none"
-              }`}
+            className="w-full"
           >
             <ul className="relative flex flex-col items-start w-full gap-10 before:absolute before:left-1/2 before:top-0 before:h-full before:w-px before:bg-(--lgrey) before:-translate-x-1/2 py-8">
               {isLoading ? (

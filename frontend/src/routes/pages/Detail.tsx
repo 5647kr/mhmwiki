@@ -78,9 +78,11 @@ export default function Detail() {
                 <li className="border border-(--red) py-1.25 px-2.5 small text-(--red)">
                   {data.type.split("/")[0]}
                 </li>
-                <li className="border border-(--grey) py-1.25 px-2.5 small text-(--grey)">
-                  {data.species}
-                </li>
+                {data.species && (
+                  <li className="border border-(--grey) py-1.25 px-2.5 small text-(--grey)">
+                    {data.species}
+                  </li>
+                )}
                 {data.title.length > 0 && (
                   <>
                     {data.title.map((item: string, index: number) => (
@@ -177,9 +179,7 @@ export default function Detail() {
             </ul>
 
             <div>
-              <h4 className="paragraph font-bold text-(--grey)">
-                출현 시리즈
-              </h4>
+              <h4 className="paragraph font-bold text-(--grey)">출현 시리즈</h4>
               <ul className="mt-5 grid grid-cols-2 gap-5 md:grid-cols-3">
                 {generateSeriesNumArr.map((gen: number) => (
                   <li key={gen} className="flex flex-col gap-1">

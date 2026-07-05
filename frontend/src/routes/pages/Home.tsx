@@ -240,7 +240,10 @@ export default function Home() {
               )}
             </button>
           </div>
-          {isActive && <FilterForm />}
+
+          <div className={isActive ? "block" : "hidden"}>
+            <FilterForm />
+          </div>
         </div>
       </section>
 

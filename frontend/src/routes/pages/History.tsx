@@ -7,7 +7,7 @@ export default function MonsterHunterMain() {
   const [_, setIsEntered] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const [countdown, setCountdown] = useState<number>(49);
+  const [countdown, setCountdown] = useState<number>(50);
   const [showTimeline, setShowTimeline] = useState<boolean>(false);
 
   const series = useFetchStore((state) => state.series);
@@ -25,7 +25,7 @@ export default function MonsterHunterMain() {
 
     if (videoRef.current) {
       videoRef.current.muted = false;
-      videoRef.current.volume = 0.3;
+      videoRef.current.volume = 0.1;
       videoRef.current.play().catch((err) => {
         console.error("로컬 비디오 재생 실패:", err);
       });
@@ -43,13 +43,12 @@ export default function MonsterHunterMain() {
       });
     }, 1000);
 
-    return () => clearInterval(timer); // 컴포넌트 언마운트 시 클리어
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="w-full flex flex-col relative select-none">
       <div className="w-full flex flex-col items-center justify-start relative">
-        {/* 🎬 [핵심] 고화질 로컬 비디오 배경 레이어 */}
         <div className="fixed top-15 left-0 right-0 bottom-0 z-0 pointer-events-none overflow-hidden bg-(--black)">
           <video
             ref={videoRef}
@@ -76,7 +75,7 @@ export default function MonsterHunterMain() {
               영상에 맞춰 타임라인을 보시기 바랍니다.
             </p>
             {countdown > 0 && (
-              <p className="text-(--white) syne headingTitle mt-50">
+              <p className="text-(--white) headingTitle mt-50">
                 타임라인이 나타나기까지 {countdown}초 남았습니다.
               </p>
             )}

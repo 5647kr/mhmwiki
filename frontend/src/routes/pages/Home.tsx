@@ -88,9 +88,9 @@ export default function Home() {
               <h3 className="syne font-black text-(--red) text-[80px] leading-13">
                 MON
                 <br />
-                <span className="syne font-black text-(--grey)">STER</span>
+                <span className="syne font-black text-(--white)">STER</span>
                 <br />
-                <span className="syne font-black text-(--white)">WIKI</span>
+                <span className="syne font-black text-(--grey)">WIKI</span>
               </h3>
             </div>
 
@@ -103,7 +103,7 @@ export default function Home() {
               <ul className="flex gap-2 border border-(--dgrey)">
                 <li className="w-full px-2.5 py-5 border-r border-(--dgrey)">
                   <div>
-                    <h4 className="syne font-black text-(--white) headingTitle">
+                    <h4 className="font-black text-(--white) headingTitle">
                       247
                     </h4>
                     <p className="text-[#444] small">MONSTER</p>
@@ -111,7 +111,7 @@ export default function Home() {
                 </li>
                 <li className="w-full px-2.5 py-5 border-r border-(--dgrey)">
                   <div>
-                    <h4 className="syne font-black text-(--white) headingTitle">
+                    <h4 className="font-black text-(--white) headingTitle">
                       {series.length}
                     </h4>
                     <p className="text-[#444] small">TITLES</p>
@@ -119,7 +119,7 @@ export default function Home() {
                 </li>
                 <li className="w-full px-2.5 py-5 border-r border-(--dgrey)">
                   <div>
-                    <h4 className="syne font-black text-(--white) headingTitle">
+                    <h4 className="font-black text-(--white) headingTitle">
                       {2026 - 2004}
                       <span className="text-(--red) font-bold text-xl">YR</span>
                     </h4>
@@ -128,7 +128,7 @@ export default function Home() {
                 </li>
                 <li className="w-full px-2.5 py-5">
                   <div>
-                    <h4 className="syne font-black text-(--white) headingTitle">
+                    <h4 className="font-black text-(--white) headingTitle">
                       {type.length}
                     </h4>
                     <p className="text-[#444] small">TYPE</p>
@@ -231,7 +231,7 @@ export default function Home() {
       <section className="bg-(--cream) sticky top-15 z-20">
         <div className="w-full max-w-480 mx-auto">
           <div className="flex items-center justify-between p-4 border-b border-(--lgrey)">
-            <strong className="syne font-black text-(--grey)">FILTER</strong>
+            <strong className="font-black text-(--grey)">FILTER</strong>
             <button type="button" onClick={handleActive}>
               {isActive ? (
                 <ChevronUp stroke="var(--grey)" />

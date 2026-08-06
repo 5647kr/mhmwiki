@@ -259,7 +259,7 @@ export default function Home() {
 
         <div className="w-full max-w-480 mx-auto">
           {status === "pending" && (
-            <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-(--lgrey)">
+            <ul className="grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] border-t border-(--lgrey)">
               {Array.from({ length: 20 }).map((_, index) => (
                 <li key={`skeleton-${index}`}>
                   <ItemSkeleton />
@@ -269,7 +269,7 @@ export default function Home() {
           )}
 
           {status === "success" && content.length > 0 && (
-            <ul className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+            <ul className="grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
               {content.map((item: Item, index) => (
                 <li
                   key={item.id}

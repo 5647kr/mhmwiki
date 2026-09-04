@@ -1,4 +1,5 @@
 import { Image } from "lucide-react";
+import unknownIcon from "../../public/icons/unkown.webp";
 
 export function Item(item: Item) {
   const imgURL = import.meta.env.VITE_IMG_URL;
@@ -7,7 +8,7 @@ export function Item(item: Item) {
     <div className="group bg-(--white) shadow-[0_0_0_0.5px_var(--grey)]">
       <div className="p-10">
         <img
-          src={imgURL + item.icon}
+          src={item.icon !== "" ? `${imgURL}${item.icon}` : unknownIcon}
           alt={item.name}
           className="w-full aspect-square group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_8px_#b794f4]"
         />

@@ -3,6 +3,7 @@ import { useQueryHook } from "../../hook/useQueryHook";
 import { useFetchStore } from "../../store/fetchStore";
 import { useEffect, useMemo, useState } from "react";
 import DetailSkeleton from "../../components/DetailSkeleton";
+import unknownIcon from "../../../public/icons/unkown.webp";
 
 export default function Detail() {
   const { id } = useParams();
@@ -48,7 +49,7 @@ export default function Detail() {
         <div className="w-full max-w-480 mx-auto relative">
           <div className="absolute right-0 top-[50%] transform translate-y-[-50%] opacity-50 hidden lg:block">
             <img
-              src={imgURL + data.icon}
+              src={data.icon !== "" ? `${imgURL}${data.icon}` : unknownIcon}
               alt={data.name}
               className="drop-shadow-[0_0_8px_#b794f4]"
             />
@@ -88,8 +89,7 @@ export default function Detail() {
                     {data.title.map((item: string, index: number) => (
                       <li
                         key={index}
-                        className="border border-(--purple) py-1.25 px-2.5 small text-(--purple)"
-                      >
+                        className="border border-(--purple) py-1.25 px-2.5 small text-(--purple)">
                         {item}
                       </li>
                     ))}
@@ -126,8 +126,7 @@ export default function Detail() {
               {data.weakEl.map((weak: string, index: number) => (
                 <strong
                   key={index}
-                  className="text-(--dgrey) subHeadingTitle after:content-[',_'] last:after:content-none"
-                >
+                  className="text-(--dgrey) subHeadingTitle after:content-[',_'] last:after:content-none">
                   {weak}속성
                 </strong>
               ))}
@@ -196,15 +195,13 @@ export default function Detail() {
                               <abbr
                                 key={item.id}
                                 title={item.koTitle}
-                                className="no-underline cursor-pointer"
-                              >
+                                className="no-underline cursor-pointer">
                                 <p
                                   className={`py-1.25 px-2.5 border ${
                                     isFeatured
                                       ? "border-(--red) text-(--red)"
                                       : "border-(-lgrey) text-(--lgrey)"
-                                  }`}
-                                >
+                                  }`}>
                                   {item.title}
                                 </p>
                               </abbr>
@@ -219,274 +216,271 @@ export default function Detail() {
           </div>
 
           {/* 속성 섹션 */}
-          <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
-            <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
-              속성 정보
-            </h3>
+          {data.weakEl.length > 0 && (
+            <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
+              <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
+                속성 정보
+              </h3>
 
-            <ul className="flex flex-col md:flex-row gap-5 mt-10">
-              {data.weakEl.length > 0 && (
-                <li className="w-full">
-                  <h3>약점 속성</h3>
-                  <ul className="flex gap-2.5 flex-wrap">
-                    {data.weakEl.map((weak: string, index: number) => (
-                      <li
-                        key={index}
-                        className="flex items-center border border-(--lgrey) p-2.5"
-                      >
-                        <img
-                          className="w-10 aspect-square"
-                          src={`/icons/${weak}.png`}
-                          alt={weak}
-                        />
-                        <span className="small ">{weak}속성</span>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              )}
+              <ul className="flex flex-col md:flex-row gap-5 mt-10">
+                {data.weakEl.length > 0 && (
+                  <li className="w-full">
+                    <h3>약점 속성</h3>
+                    <ul className="flex gap-2.5 flex-wrap">
+                      {data.weakEl.map((weak: string, index: number) => (
+                        <li
+                          key={index}
+                          className="flex items-center border border-(--lgrey) p-2.5">
+                          <img
+                            className="w-10 aspect-square"
+                            src={`/icons/${weak}.png`}
+                            alt={weak}
+                          />
+                          <span className="small ">{weak}속성</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                )}
 
-              {data.element.length > 0 && (
-                <li className="w-full">
-                  <h3>속성</h3>
-                  <ul className="flex gap-2.5 flex-wrap">
-                    {data.element.map((el: string, index: number) => (
-                      <li
-                        key={index}
-                        className="flex items-center border border-(--lgrey) p-2.5"
-                      >
-                        <img
-                          className="w-10 aspect-square"
-                          src={`/icons/${el}.png`}
-                          alt={el}
-                        />
-                        <span className="small ">{el}속성</span>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              )}
+                {data.element.length > 0 && (
+                  <li className="w-full">
+                    <h3>속성</h3>
+                    <ul className="flex gap-2.5 flex-wrap">
+                      {data.element.map((el: string, index: number) => (
+                        <li
+                          key={index}
+                          className="flex items-center border border-(--lgrey) p-2.5">
+                          <img
+                            className="w-10 aspect-square"
+                            src={`/icons/${el}.png`}
+                            alt={el}
+                          />
+                          <span className="small ">{el}속성</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                )}
 
-              {data.ailment.length > 0 && (
-                <li className="w-full">
-                  <h3>상태 이상</h3>
-                  <ul className="flex gap-2.5 flex-wrap">
-                    {data.ailment.map((ail: string, index: number) => (
-                      <li
-                        key={index}
-                        className="flex items-center border border-(--lgrey) p-2.5"
-                      >
-                        <img
-                          className="w-10 aspect-square"
-                          src={`/icons/${ail}.png`}
-                          alt={ail}
-                        />
-                        <span>
-                          {ail}
-                          {["화", "수", "뇌", "빙", "용"].includes(ail)
-                            ? "속성 피해"
-                            : ""}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              )}
-            </ul>
-          </div>
+                {data.ailment.length > 0 && (
+                  <li className="w-full">
+                    <h3>상태 이상</h3>
+                    <ul className="flex gap-2.5 flex-wrap">
+                      {data.ailment.map((ail: string, index: number) => (
+                        <li
+                          key={index}
+                          className="flex items-center border border-(--lgrey) p-2.5">
+                          <img
+                            className="w-10 aspect-square"
+                            src={`/icons/${ail}.png`}
+                            alt={ail}
+                          />
+                          <span>
+                            {ail}
+                            {["화", "수", "뇌", "빙", "용"].includes(ail)
+                              ? "속성 피해"
+                              : ""}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
 
           {/* 유효 아이템 섹션 -> 이미지 처리 */}
-          <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
-            <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
-              아이템 효과 여부
-            </h3>
+          {data.flash !== "" && (
+            <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
+              <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
+                아이템 효과 여부
+              </h3>
 
-            <table className="w-full table-fixed mt-10 border border-(--lgrey)">
-              <thead className="bg-(--cream)">
-                <tr>
-                  <th className="text-(--black)  py-5">아이템</th>
-                  <th className="text-(--black)  py-5">효과</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
-                  <td>
-                    <img
-                      className="w-14 block mx-auto"
-                      src="/icons/섬광탄.png"
-                      alt="섬광탄"
-                    />
-                  </td>
-                  <td
-                    className={`text-center small ${data.flash ? "text-(--cyan)" : "text-(--red)"}`}
-                  >
-                    {data.flash ? "효과있음" : "효과 없음"}
-                  </td>
-                </tr>
-                <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
-                  <td>
-                    <img
-                      className="w-14 block mx-auto"
-                      src="/icons/거름탄.png"
-                      alt="거름탄"
-                    />
-                  </td>
-                  <td
-                    className={`text-center small ${data.dung ? "text-(--cyan)" : "text-(--red)"}`}
-                  >
-                    {data.dung ? "효과 있음" : "효과 없음"}
-                  </td>
-                </tr>
-                <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
-                  <td>
-                    <img
-                      className="w-14 block mx-auto"
-                      src="/icons/음폭탄.png"
-                      alt="음폭탄"
-                    />
-                  </td>
-                  <td
-                    className={`text-center small ${data.sonic ? "text-(--cyan)" : "text-(--red)"}`}
-                  >
-                    {data.sonic ? "효과 있음" : "효과 없음"}
-                  </td>
-                </tr>
-                <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
-                  <td>
-                    <img
-                      className="w-14 block mx-auto"
-                      src="/icons/마비덫.png"
-                      alt="마비덫"
-                    />
-                  </td>
-                  <td
-                    className={`text-center small ${data.shock ? "text-(--cyan)" : "text-(--red)"}`}
-                  >
-                    {data.shock ? "효과 있음" : "효과 없음"}
-                  </td>
-                </tr>
-                <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
-                  <td>
-                    <img
-                      className="w-14 block mx-auto"
-                      src="/icons/구멍함정.png"
-                      alt="구멍함정"
-                    />
-                  </td>
-                  <td
-                    className={`text-center small ${data.pitfall ? "text-(--cyan)" : "text-(--red)"}`}
-                  >
-                    {data.pitfall ? "효과 있음" : "효과 없음"}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <table className="w-full table-fixed mt-10 border border-(--lgrey)">
+                <thead className="bg-(--cream)">
+                  <tr>
+                    <th className="text-(--black)  py-5">아이템</th>
+                    <th className="text-(--black)  py-5">효과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                    <td>
+                      <img
+                        className="w-14 block mx-auto"
+                        src="/icons/섬광탄.png"
+                        alt="섬광탄"
+                      />
+                    </td>
+                    <td
+                      className={`text-center small ${data.flash ? "text-(--cyan)" : "text-(--red)"}`}>
+                      {data.flash ? "효과있음" : "효과 없음"}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                    <td>
+                      <img
+                        className="w-14 block mx-auto"
+                        src="/icons/거름탄.png"
+                        alt="거름탄"
+                      />
+                    </td>
+                    <td
+                      className={`text-center small ${data.dung ? "text-(--cyan)" : "text-(--red)"}`}>
+                      {data.dung ? "효과 있음" : "효과 없음"}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                    <td>
+                      <img
+                        className="w-14 block mx-auto"
+                        src="/icons/음폭탄.png"
+                        alt="음폭탄"
+                      />
+                    </td>
+                    <td
+                      className={`text-center small ${data.sonic ? "text-(--cyan)" : "text-(--red)"}`}>
+                      {data.sonic ? "효과 있음" : "효과 없음"}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                    <td>
+                      <img
+                        className="w-14 block mx-auto"
+                        src="/icons/마비덫.png"
+                        alt="마비덫"
+                      />
+                    </td>
+                    <td
+                      className={`text-center small ${data.shock ? "text-(--cyan)" : "text-(--red)"}`}>
+                      {data.shock ? "효과 있음" : "효과 없음"}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-(--lgrey) hover:bg-(--cream)">
+                    <td>
+                      <img
+                        className="w-14 block mx-auto"
+                        src="/icons/구멍함정.png"
+                        alt="구멍함정"
+                      />
+                    </td>
+                    <td
+                      className={`text-center small ${data.pitfall ? "text-(--cyan)" : "text-(--red)"}`}>
+                      {data.pitfall ? "효과 있음" : "효과 없음"}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          )}
 
           {/* 약점표 섹션 -> 이미지 처리 */}
-          <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
-            <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
-              약점표
-            </h3>
+          {data.weak.length > 0 && (
+            <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
+              <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
+                약점표
+              </h3>
 
-            <table className="w-full table-fixed border border-(--lgrey) mt-10">
-              <thead className="bg-(--cream)">
-                <tr>
-                  <th className="py-5 subParagraph">부위</th>
-                  <th className="py-5">
-                    <img
-                      className="w-10 block mx-auto"
-                      src="/icons/참격.png"
-                      alt="참격"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-10 block mx-auto"
-                      src="/icons/타격.png"
-                      alt="타격"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-10 block mx-auto"
-                      src="/icons/탄활.png"
-                      alt="탄활"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-8 block mx-auto"
-                      src="/icons/화.png"
-                      alt="화속성"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-8 block mx-auto"
-                      src="/icons/수.png"
-                      alt="수속성"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-8 block mx-auto"
-                      src="/icons/뇌.png"
-                      alt="뇌속성"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-8 block mx-auto"
-                      src="/icons/빙.png"
-                      alt="빙속성"
-                    />
-                  </th>
-                  <th className="py-5">
-                    <img
-                      className="w-8 block mx-auto"
-                      src="/icons/용.png"
-                      alt="용속성"
-                    />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.weak.map(
-                  (
-                    item: {
-                      부위: string;
-                      참격: string;
-                      타격: string;
-                      "탄/활": string;
-                      화: string;
-                      수: string;
-                      뇌: string;
-                      빙: string;
-                      용: string;
-                    },
-                    index: number,
-                  ) => (
-                    <tr
-                      key={index}
-                      className="border-b border-(--lgrey) hover:bg-(--cream)"
-                    >
-                      {Object.entries(item).map(([key, value]) => (
-                        <td key={key} className="text-center py-2.5">
-                          {String(value).split("/")[0]}
-                          {String(value).split("/")[1] && (
-                            <span className="text-(--grey) small block">
-                              {String(value).split("/")[1]}
-                            </span>
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ),
-                )}
-              </tbody>
-            </table>
-          </div>
+              <table className="w-full table-fixed border border-(--lgrey) mt-10">
+                <thead className="bg-(--cream)">
+                  <tr>
+                    <th className="py-5 subParagraph">부위</th>
+                    <th className="py-5">
+                      <img
+                        className="w-10 block mx-auto"
+                        src="/icons/참격.png"
+                        alt="참격"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-10 block mx-auto"
+                        src="/icons/타격.png"
+                        alt="타격"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-10 block mx-auto"
+                        src="/icons/탄활.png"
+                        alt="탄활"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-8 block mx-auto"
+                        src="/icons/화.png"
+                        alt="화속성"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-8 block mx-auto"
+                        src="/icons/수.png"
+                        alt="수속성"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-8 block mx-auto"
+                        src="/icons/뇌.png"
+                        alt="뇌속성"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-8 block mx-auto"
+                        src="/icons/빙.png"
+                        alt="빙속성"
+                      />
+                    </th>
+                    <th className="py-5">
+                      <img
+                        className="w-8 block mx-auto"
+                        src="/icons/용.png"
+                        alt="용속성"
+                      />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.weak.map(
+                    (
+                      item: {
+                        부위: string;
+                        참격: string;
+                        타격: string;
+                        "탄/활": string;
+                        화: string;
+                        수: string;
+                        뇌: string;
+                        빙: string;
+                        용: string;
+                      },
+                      index: number,
+                    ) => (
+                      <tr
+                        key={index}
+                        className="border-b border-(--lgrey) hover:bg-(--cream)">
+                        {Object.entries(item).map(([key, value]) => (
+                          <td key={key} className="text-center py-2.5">
+                            {String(value).split("/")[0]}
+                            {String(value).split("/")[1] && (
+                              <span className="text-(--grey) small block">
+                                {String(value).split("/")[1]}
+                              </span>
+                            )}
+                          </td>
+                        ))}
+                      </tr>
+                    ),
+                  )}
+                </tbody>
+              </table>
+            </div>
+          )}
 
           {/* 부위파괴 섹션 */}
           {data.break.length > 0 && (
@@ -505,56 +499,58 @@ export default function Detail() {
           )}
 
           {/* 크기 섹션 */}
-          <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
-            <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
-              크기 정보
-            </h3>
+          {data.small !== "" && (
+            <div className="border-b border-(--lgrey) pb-10 px-4 md:px-5 lg:px-6">
+              <h3 className="subHeadingTitle pl-4 border-l-4 border-(--red) font-bold">
+                크기 정보
+              </h3>
 
-            <div className="flex mt-10 flex-col md:flex-row border-t border-(--lgrey)">
-              <div className="w-full border border-(--lgrey) border-t-0 md:border-r-0 p-5">
-                <h4 className="small text-(--grey) pb-2.5">최소 크기</h4>
-                <strong className="paragraph font-black text-(--black)">
-                  {data.small}
-                  <span className="text-(--grey) small">cm</span>
-                </strong>
+              <div className="flex mt-10 flex-col md:flex-row border-t border-(--lgrey)">
+                <div className="w-full border border-(--lgrey) border-t-0 md:border-r-0 p-5">
+                  <h4 className="small text-(--grey) pb-2.5">최소 크기</h4>
+                  <strong className="paragraph font-black text-(--black)">
+                    {data.small}
+                    <span className="text-(--grey) small">cm</span>
+                  </strong>
+                </div>
+                <div className="w-full border border-(--lgrey) border-t-0 md:border-r-0 p-5">
+                  <h4 className="small text-(--grey) pb-2.5">평균 크기</h4>
+                  <strong className="paragraph font-black text-(--black)">
+                    {(parseInt(data.small) + parseInt(data.large)) / 2}
+                    <span className="text-(--grey) small">cm</span>
+                  </strong>
+                </div>
+                <div className="w-full border border-(--lgrey) border-t-0 p-5">
+                  <h4 className="small text-(--grey) pb-2.5">최대 크기</h4>
+                  <strong className="paragraph font-black text-(--black)">
+                    {data.large}
+                    <span className="text-(--grey) small">cm</span>
+                  </strong>
+                </div>
               </div>
-              <div className="w-full border border-(--lgrey) border-t-0 md:border-r-0 p-5">
-                <h4 className="small text-(--grey) pb-2.5">평균 크기</h4>
-                <strong className="paragraph font-black text-(--black)">
-                  {(parseInt(data.small) + parseInt(data.large)) / 2}
-                  <span className="text-(--grey) small">cm</span>
-                </strong>
-              </div>
-              <div className="w-full border border-(--lgrey) border-t-0 p-5">
-                <h4 className="small text-(--grey) pb-2.5">최대 크기</h4>
-                <strong className="paragraph font-black text-(--black)">
-                  {data.large}
-                  <span className="text-(--grey) small">cm</span>
-                </strong>
+
+              {/* 그래프 */}
+              <div className="mt-5">
+                <h5 className="small text-(--grey)">
+                  크기 분포 ({data.small} ~ {data.large})
+                </h5>
+
+                <div className="w-full h-2 bg-linear-to-r from-(--yellow) to-(--darkred) mt-2.5" />
+
+                <div className="flex justify-between">
+                  <span className="text-(--grey) text-[12px]">
+                    {data.small}cm
+                  </span>
+                  <span className="text-(--grey) text-[12px]">
+                    {(parseInt(data.small) + parseInt(data.large)) / 2}cm
+                  </span>
+                  <span className="text-(--grey) text-[12px]">
+                    {data.large}cm
+                  </span>
+                </div>
               </div>
             </div>
-
-            {/* 그래프 */}
-            <div className="mt-5">
-              <h5 className="small text-(--grey)">
-                크기 분포 ({data.small} ~ {data.large})
-              </h5>
-
-              <div className="w-full h-2 bg-linear-to-r from-(--yellow) to-(--darkred) mt-2.5" />
-
-              <div className="flex justify-between">
-                <span className="text-(--grey) text-[12px]">
-                  {data.small}cm
-                </span>
-                <span className="text-(--grey) text-[12px]">
-                  {(parseInt(data.small) + parseInt(data.large)) / 2}cm
-                </span>
-                <span className="text-(--grey) text-[12px]">
-                  {data.large}cm
-                </span>
-              </div>
-            </div>
-          </div>
+          )}
 
           {/* 연관 몬스터 섹션 */}
           {data.relate.length > 0 && (
@@ -568,8 +564,7 @@ export default function Detail() {
                   (item: { id: string; icon: string; name: string }) => (
                     <li
                       key={item.id}
-                      className="shadow-[0_0_0_0.5px_var(--grey)]"
-                    >
+                      className="shadow-[0_0_0_0.5px_var(--grey)]">
                       <Link to={`/monster/${item.id}`}>
                         <div>
                           <div className="p-5">

@@ -13,6 +13,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { Item, ItemSkeleton } from "../../components/Item";
 import { useFilterStore } from "../../store/filterStore";
+import unknwonIcon from "../../../public/icons/unkown.webp";
 
 export default function Home() {
   const series = useFetchStore((state) => state.series);
@@ -146,8 +147,7 @@ export default function Home() {
                 type="button"
                 className="bg-[#1a1a1a] border border-[#0f0f0f] p-2.5 absolute left-0 top-0"
                 onClick={handleRefresh}
-                disabled={isFetching}
-              >
+                disabled={isFetching}>
                 <RotateCw
                   size={20}
                   stroke="#444"
@@ -158,7 +158,11 @@ export default function Home() {
                 <Image size={200} stroke="var(--grey)" />
               ) : (
                 <img
-                  src={`https://res.cloudinary.com/dx71aeltq/image/upload/${todayItem?.icon}`}
+                  src={
+                    todayItem?.icon !== ""
+                      ? `https://res.cloudinary.com/dx71aeltq/image/upload/${todayItem?.icon}`
+                      : unknwonIcon
+                  }
                   alt={`${todayItem?.name}`}
                   className="w-50"
                 />
@@ -198,15 +202,14 @@ export default function Home() {
                 ) : (
                   <>
                     <ul className="flex gap-2.5">
-                      {todayItem?.weakEl.map((weak: string, index: number) => (
-                        <li
-                          key={index}
-                          className="border border-(--grey) bg-[#0c0c0c] text-(--grey) small py-1.25 px-2.5"
-                        >
-                          {weak}속성
-                        </li>
-                      ))}
-                      <li></li>
+                      {todayItem?.weakEl.length > 0 &&
+                        todayItem?.weakEl.map((weak: string, index: number) => (
+                          <li
+                            key={index}
+                            className="border border-(--grey) bg-[#0c0c0c] text-(--grey) small py-1.25 px-2.5">
+                            {weak}속성
+                          </li>
+                        ))}
                     </ul>
                   </>
                 )}
@@ -214,8 +217,7 @@ export default function Home() {
 
               <Link
                 to={`/monster/${todayItem?.id}`}
-                className="group w-full border border-[#1a1a1a] p-2.5 bg-[#0f0f0f] text-[#444] flex justify-between items-center hover:border-[#444] hover:bg-[#1a1a1a] hover:text-(--white)"
-              >
+                className="group w-full border border-[#1a1a1a] p-2.5 bg-[#0f0f0f] text-[#444] flex justify-between items-center hover:border-[#444] hover:bg-[#1a1a1a] hover:text-(--white)">
                 <span className="small">상세 정보 보기</span>
                 <ArrowRight
                   size={20}
@@ -273,8 +275,7 @@ export default function Home() {
               {content.map((item: Item, index) => (
                 <li
                   key={item.id}
-                  ref={index === content.length - 1 ? ref : null}
-                >
+                  ref={index === content.length - 1 ? ref : null}>
                   <Link to={`/monster/${item.id}`}>
                     <Item {...item} />
                   </Link>

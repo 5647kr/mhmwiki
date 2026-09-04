@@ -16363,7 +16363,6 @@
       "baseSeriesIds": ["j", "l"],
       "allSeriesIds": ["j", "k", "l", "m"],
       "title": [],
-
       "element": ["빙"],
       "ailment": ["빙", "눈사람"],
       "weakEl": ["뇌", "화"],
@@ -17933,7 +17932,6 @@
       "baseSeriesIds": ["r"],
       "allSeriesIds": ["r"],
       "title": [],
-
       "element": ["화"],
       "ailment": ["화", "독"],
       "weakEl": ["용"],
@@ -18069,7 +18067,6 @@
       "dung": false,
       "shock": true,
       "pitfall": true,
-
       "break": ["머리", "다리", "꼬리(절단〇)"],
       "weak": [
         {
@@ -18660,7 +18657,6 @@
       "baseSeriesIds": ["b", "c", "d", "e", "j"],
       "allSeriesIds": ["b", "c", "d", "e", "f", "j", "k"],
       "title": [],
-
       "element": [],
       "ailment": ["독", "맹독", "기절"],
       "weakEl": ["화"],
@@ -19212,6 +19208,35 @@
         "무리 지어 행동하며 그중에서 특히 크고 강한 독을 가진 수컷 성체가 무리의 리더가 된다. 독을 뱉기 전에 목 주변의 주머니가 부풀지만 그와 동시에 고개를 위로 쳐들었을 때는 안개처럼 독을 내뿜는 모습도 목격되었다.",
         "앞다리의 비늘과 발톱이 비룡의 갑각 수준으로 단단하게 발달했으며, 꼬리에 큰 가시가 나 있어 꼬리만 놓고 보면 가오리를 연상시키기도 한다.",
         "목의 독주머니도 프로기의 것보다 크게 발달했고 보라색을 띄는데, 여기서 뿜어내는 안개 형태의 독은 즈와로포스도 쉽게 쓰러뜨릴 수 있을 정도로 강력하다."
+      ]
+    },
+    {
+      "id": "12ad3472-92e1-4e33-b361-3f2f85f9c4bf",
+      "img": "v1788509844/%E1%84%8B%E1%85%A1%E1%84%85%E1%85%A1%E1%84%8F%E1%85%A6%E1%84%90%E1%85%A1.webp",
+      "icon": "",
+      "name": "아라케타",
+      "nickname1": "분충조/뿜을 분(噴), 찌를 충(衝), 새 조(鳥)",
+      "nickname2": null,
+      "type": "조룡종/",
+      "species": "원종",
+      "baseSeriesIds": ["s"],
+      "allSeriesIds": ["s"],
+      "title": [],
+      "element": [],
+      "ailment": [],
+      "weakEl": [],
+      "small": "",
+      "large": "",
+      "flash": "",
+      "sonic": "",
+      "dung": "",
+      "shock": "",
+      "pitfall": "",
+      "break": [],
+      "weak": [],
+      "relate": [],
+      "eco": [
+        "날개에 달린 공기 주머니가 특징인 조룡종. 이것을 부풀려서 소리를 울리거나 공기를 강하게 분사해 가속하여 단단한 머리 갑각으로 들이받아 공격한다."
       ]
     },
     {
@@ -24714,6 +24739,36 @@
       ]
     },
     {
+      "id": "50c37366-7198-4e75-bd4b-10c0b02ba1f8",
+      "img": "v1788509871/%E1%84%80%E1%85%AE%E1%86%AB%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8C%E1%85%A1.webp",
+      "icon": "",
+      "name": "군드라자",
+      "nickname1": "뇌정룡/우레 뇌(雷), 벼락 정(霆), 용 룡(龍)",
+      "nickname2": null,
+      "type": "고룡종/",
+      "species": "원종",
+      "baseSeriesIds": ["s"],
+      "allSeriesIds": ["s"],
+      "title": [],
+      "element": [],
+      "ailment": [],
+      "weakEl": [],
+      "small": "",
+      "large": "",
+      "flash": "",
+      "sonic": "",
+      "dung": "",
+      "shock": "",
+      "pitfall": "",
+      "break": [],
+      "weak": [],
+      "relate": [],
+      "eco": [
+        "나무를 닮은 긴 몸통과, 허리와 어깨에 나있는 촉수 그리고 머리에 나있는 뒤틀린 뿔이 특징인 고룡. 하늘을 부유하고 폭풍을 일으키며 뇌운을 조종할 수 있는 능력을 가지고 있다.",
+        "인도 신화의 나가에서 모티브를 따온 것으로 추정된다. 특유의 큰 외뿔이 판박이며, 이름 역시 나가의 왕에게 붙는 칭호인 '나가라자'에서 따온 것으로 보인다."
+      ]
+    },
+    {
       "id": "bbd21c28-e8c0-445a-af4b-7694e966dfa2",
       "img": "v1766068212/%EA%B7%B8%EB%9E%80%EB%B0%80%EB%9D%BC%EC%98%A4%EC%8A%A4_mx5jzl.webp",
       "icon": "v1766052890/%EA%B7%B8%EB%9E%80%EB%B0%80%EB%9D%BC%EC%98%A4%EC%8A%A4_xjfkw2.webp",
@@ -24725,7 +24780,6 @@
       "baseSeriesIds": ["h"],
       "allSeriesIds": ["h"],
       "title": [],
-
       "element": ["화"],
       "ailment": ["화"],
       "weakEl": ["용"],
@@ -24736,7 +24790,6 @@
       "dung": false,
       "shock": false,
       "pitfall": false,
-
       "break": ["머리", "가슴", "어깨", "꼬리"],
       "weak": [
         {
@@ -24860,7 +24913,6 @@
       "baseSeriesIds": ["d", "e", "n"],
       "allSeriesIds": ["d", "e", "f", "n", "o"],
       "title": [],
-
       "element": ["화", "용"],
       "ailment": ["화"],
       "weakEl": ["빙"],
@@ -25083,7 +25135,6 @@
       "baseSeriesIds": ["p"],
       "allSeriesIds": ["p", "q"],
       "title": [],
-
       "element": ["뇌"],
       "ailment": ["뇌", "기절"],
       "weakEl": ["용"],

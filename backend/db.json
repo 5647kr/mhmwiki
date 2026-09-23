@@ -8551,10 +8551,10 @@
         "l",
         "m",
         "p",
-        "q"
+        "q",
+        "s"
       ],
       "title": [],
-
       "element": ["뇌"],
       "ailment": ["뇌", "마비", "기절"],
       "weakEl": ["화"],
@@ -31204,9 +31204,8 @@
       "type": "고룡종/고룡목-염룡아목-테스카토과",
       "species": "원종",
       "baseSeriesIds": ["d", "e", "j", "l", "n", "p"],
-      "allSeriesIds": ["d", "e", "f", "j", "k", "l", "m", "n", "o", "p", "q"],
+      "allSeriesIds": ["d", "e", "f", "j", "k", "l", "m", "n", "o", "p", "q", "s"],
       "title": [],
-
       "element": ["화"],
       "ailment": ["화", "폭파", "기절"],
       "weakEl": ["수", "빙"],

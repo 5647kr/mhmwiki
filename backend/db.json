@@ -8538,7 +8538,7 @@
       "nickname2": null,
       "type": "비룡종/용반목-용각아목-기괴룡하목-희백룡상과-푸루푸루과",
       "species": "원종",
-      "baseSeriesIds": ["a", "c", "d", "e", "j", "l", "p"],
+      "baseSeriesIds": ["a", "c", "d", "e", "j", "l", "p", "s"],
       "allSeriesIds": [
         "a",
         "b",
@@ -31203,7 +31203,7 @@
       "nickname2": null,
       "type": "고룡종/고룡목-염룡아목-테스카토과",
       "species": "원종",
-      "baseSeriesIds": ["d", "e", "j", "l", "n", "p"],
+      "baseSeriesIds": ["d", "e", "j", "l", "n", "p", "s"],
       "allSeriesIds": ["d", "e", "f", "j", "k", "l", "m", "n", "o", "p", "q", "s"],
       "title": [],
       "element": ["화"],
